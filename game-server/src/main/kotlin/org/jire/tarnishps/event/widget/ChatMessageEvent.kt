@@ -1,12 +1,12 @@
 package org.jire.tarnishps.event.widget
 
-import com.osroyale.game.event.impl.log.ChatLogEvent
-import com.osroyale.game.world.World
-import com.osroyale.game.world.entity.mob.player.Player
-import com.osroyale.game.world.entity.mob.player.relations.ChatColor
-import com.osroyale.game.world.entity.mob.player.relations.ChatEffect
-import com.osroyale.game.world.entity.mob.player.relations.ChatMessage
-import com.osroyale.util.ChatCodec
+import com.dm.game.event.impl.log.ChatLogEvent
+import com.dm.game.world.World
+import com.dm.game.world.entity.mob.player.Player
+import com.dm.game.world.entity.mob.player.relations.ChatColor
+import com.dm.game.world.entity.mob.player.relations.ChatEffect
+import com.dm.game.world.entity.mob.player.relations.ChatMessage
+import com.dm.util.ChatCodec
 import java.util.*
 
 /**

@@ -1,12 +1,12 @@
 package plugin.click.object;
 
-import com.osroyale.content.lms.LMSGame;
-import com.osroyale.content.lms.lobby.LMSLobby;
-import com.osroyale.game.event.impl.ObjectClickEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.items.Item;
-import com.osroyale.game.world.position.Position;
+import com.dm.content.lms.LMSGame;
+import com.dm.content.lms.lobby.LMSLobby;
+import com.dm.game.event.impl.ObjectClickEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.items.Item;
+import com.dm.game.world.position.Position;
 
 public class LMSGamePlugin extends PluginContext {
 

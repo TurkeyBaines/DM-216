@@ -1,20 +1,20 @@
 package plugin.click.item;
 
-import com.osroyale.game.Animation;
-import com.osroyale.game.event.impl.ItemClickEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.task.impl.ObjectPlacementEvent;
-import com.osroyale.game.world.World;
-import com.osroyale.game.world.entity.mob.Direction;
-import com.osroyale.game.world.entity.mob.data.LockType;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.items.Item;
-import com.osroyale.game.world.object.CustomGameObject;
-import com.osroyale.game.world.pathfinding.TraversalMap;
-import com.osroyale.game.world.position.Area;
-import com.osroyale.game.world.position.Position;
-import com.osroyale.util.chance.Chance;
-import com.osroyale.util.chance.WeightedChance;
+import com.dm.game.Animation;
+import com.dm.game.event.impl.ItemClickEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.task.impl.ObjectPlacementEvent;
+import com.dm.game.world.World;
+import com.dm.game.world.entity.mob.Direction;
+import com.dm.game.world.entity.mob.data.LockType;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.items.Item;
+import com.dm.game.world.object.CustomGameObject;
+import com.dm.game.world.pathfinding.TraversalMap;
+import com.dm.game.world.position.Area;
+import com.dm.game.world.position.Position;
+import com.dm.util.chance.Chance;
+import com.dm.util.chance.WeightedChance;
 
 import java.util.Arrays;
 

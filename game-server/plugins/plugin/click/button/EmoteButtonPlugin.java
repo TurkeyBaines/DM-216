@@ -1,9 +1,9 @@
 package plugin.click.button;
 
-import com.osroyale.content.emote.Emote;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.util.Utility;
+import com.dm.content.emote.Emote;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.util.Utility;
 
 public class EmoteButtonPlugin extends PluginContext {
 

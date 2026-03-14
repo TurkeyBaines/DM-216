@@ -1,15 +1,15 @@
 package plugin.itemon.item;
 
-import com.osroyale.Config;
-import com.osroyale.content.clanchannel.content.ClanTaskKey;
-import com.osroyale.content.consume.PotionData;
-import com.osroyale.game.event.impl.ItemOnItemEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.entity.skill.Skill;
-import com.osroyale.game.world.items.Item;
-import com.osroyale.game.world.items.ItemDefinition;
-import com.osroyale.net.packet.out.SendMessage;
+import com.dm.Config;
+import com.dm.content.clanchannel.content.ClanTaskKey;
+import com.dm.content.consume.PotionData;
+import com.dm.game.event.impl.ItemOnItemEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.entity.skill.Skill;
+import com.dm.game.world.items.Item;
+import com.dm.game.world.items.ItemDefinition;
+import com.dm.net.packet.out.SendMessage;
 
 public class DecantPotionPlugin extends PluginContext {
 

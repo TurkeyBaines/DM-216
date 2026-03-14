@@ -1,12 +1,12 @@
 package plugin.itemon.item.birdhouse;
 
-import com.osroyale.content.skill.impl.hunter.birdhouse.BirdhouseData;
-import com.osroyale.content.skill.impl.hunter.birdhouse.action.CreateBirdHouse;
-import com.osroyale.game.event.impl.ItemOnItemEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.entity.skill.SkillData;
-import com.osroyale.game.world.items.Item;
+import com.dm.content.skill.impl.hunter.birdhouse.BirdhouseData;
+import com.dm.content.skill.impl.hunter.birdhouse.action.CreateBirdHouse;
+import com.dm.game.event.impl.ItemOnItemEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.entity.skill.SkillData;
+import com.dm.game.world.items.Item;
 
 public class CreateBirdhousePlugin extends PluginContext {
 

@@ -1,23 +1,23 @@
 package plugin.click.object.birdhouse;
 
-import com.osroyale.content.skill.impl.hunter.birdhouse.BirdhouseData;
-import com.osroyale.content.skill.impl.hunter.birdhouse.BirdhouseSeedData;
-import com.osroyale.content.skill.impl.hunter.birdhouse.Birdhouses;
-import com.osroyale.content.skill.impl.hunter.birdhouse.PlayerBirdHouseData;
-import com.osroyale.content.skill.impl.hunter.birdhouse.action.FillBirdhouse;
-import com.osroyale.content.skill.impl.hunter.birdhouse.action.PlaceBirdhouse;
-import com.osroyale.game.event.impl.ItemOnObjectEvent;
-import com.osroyale.game.event.impl.ObjectClickEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.entity.mob.player.persist.PlayerSerializer;
-import com.osroyale.game.world.entity.skill.SkillData;
-import com.osroyale.game.world.items.Item;
-import com.osroyale.game.world.object.CustomGameObject;
-import com.osroyale.game.world.object.GameObject;
-import com.osroyale.game.world.object.ObjectDirection;
-import com.osroyale.game.world.object.ObjectType;
-import com.osroyale.net.packet.out.SendAddObject;
+import com.dm.content.skill.impl.hunter.birdhouse.BirdhouseData;
+import com.dm.content.skill.impl.hunter.birdhouse.BirdhouseSeedData;
+import com.dm.content.skill.impl.hunter.birdhouse.Birdhouses;
+import com.dm.content.skill.impl.hunter.birdhouse.PlayerBirdHouseData;
+import com.dm.content.skill.impl.hunter.birdhouse.action.FillBirdhouse;
+import com.dm.content.skill.impl.hunter.birdhouse.action.PlaceBirdhouse;
+import com.dm.game.event.impl.ItemOnObjectEvent;
+import com.dm.game.event.impl.ObjectClickEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.entity.mob.player.persist.PlayerSerializer;
+import com.dm.game.world.entity.skill.SkillData;
+import com.dm.game.world.items.Item;
+import com.dm.game.world.object.CustomGameObject;
+import com.dm.game.world.object.GameObject;
+import com.dm.game.world.object.ObjectDirection;
+import com.dm.game.world.object.ObjectType;
+import com.dm.net.packet.out.SendAddObject;
 
 public class BirdhouseInteractionPlugin extends PluginContext {
 

@@ -1,8 +1,8 @@
 package plugin.click.button;
 
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.entity.mob.player.exchange.ExchangeSession;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.entity.mob.player.exchange.ExchangeSession;
 
 public class ExchangeSessionButtonPlugin extends PluginContext {
 

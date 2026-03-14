@@ -45,7 +45,6 @@ import net.runelite.api.NPCComposition;
 import net.runelite.api.NpcID;
 import net.runelite.api.Player;
 import net.runelite.api.Tile;
-import net.runelite.api.TileItem;
 import net.runelite.api.coords.LocalPoint;
 import net.runelite.api.coords.WorldPoint;
 import net.runelite.api.events.AnimationChanged;
@@ -60,7 +59,7 @@ import net.runelite.client.eventbus.EventBus;
 import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.events.NpcLootReceived;
 import net.runelite.client.events.PlayerLootReceived;
-import com.osroyale.Item;
+import com.dm.Item;
 
 @Singleton
 @Slf4j

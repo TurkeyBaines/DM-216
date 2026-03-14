@@ -1,13 +1,13 @@
 package plugin.click.button;
 
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.combat.attack.FightType;
-import com.osroyale.game.world.entity.combat.magic.Autocast;
-import com.osroyale.game.world.entity.combat.weapon.WeaponInterface;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.position.Area;
-import com.osroyale.net.packet.out.SendMessage;
-import com.osroyale.net.packet.out.SendSpecialEnabled;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.combat.attack.FightType;
+import com.dm.game.world.entity.combat.magic.Autocast;
+import com.dm.game.world.entity.combat.weapon.WeaponInterface;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.position.Area;
+import com.dm.net.packet.out.SendMessage;
+import com.dm.net.packet.out.SendSpecialEnabled;
 
 import java.util.Arrays;
 import java.util.Optional;

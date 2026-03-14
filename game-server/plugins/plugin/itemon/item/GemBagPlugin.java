@@ -1,11 +1,11 @@
 package plugin.itemon.item;
 
-import com.osroyale.game.event.impl.ItemClickEvent;
-import com.osroyale.game.event.impl.PickupItemEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.items.Item;
-import com.osroyale.game.world.items.ItemDefinition;
+import com.dm.game.event.impl.ItemClickEvent;
+import com.dm.game.event.impl.PickupItemEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.items.Item;
+import com.dm.game.world.items.ItemDefinition;
 
 public class GemBagPlugin extends PluginContext {
     @Override

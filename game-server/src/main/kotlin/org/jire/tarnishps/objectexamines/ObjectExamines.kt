@@ -2,7 +2,7 @@ package org.jire.tarnishps.objectexamines
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import com.osroyale.Config
+import com.dm.Config
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap
 import java.nio.file.Path

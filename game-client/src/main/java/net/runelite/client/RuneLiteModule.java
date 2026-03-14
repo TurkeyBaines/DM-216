@@ -164,7 +164,7 @@ public class RuneLiteModule extends AbstractModule
 	@DoNotRename
 	Client provideClient(@Nullable Applet applet)
 	{
-		return applet instanceof com.osroyale.Client ? (com.osroyale.Client) applet : null;
+		return applet instanceof com.dm.Client ? (com.dm.Client) applet : null;
 	}
 	@Provides
 	@Singleton

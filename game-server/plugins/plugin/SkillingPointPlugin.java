@@ -1,10 +1,10 @@
 package plugin;
 
-import com.osroyale.content.dialogue.DialogueFactory;
-import com.osroyale.content.store.Store;
-import com.osroyale.game.event.impl.NpcClickEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
+import com.dm.content.dialogue.DialogueFactory;
+import com.dm.content.store.Store;
+import com.dm.game.event.impl.NpcClickEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
 
 public class SkillingPointPlugin extends PluginContext {
 
@@ -12,7 +12,7 @@ public class SkillingPointPlugin extends PluginContext {
     protected boolean firstClickNpc(Player player, NpcClickEvent event) {
         if (event.getNpc().id == 6533) {
             DialogueFactory factory = player.dialogueFactory;
-            factory.sendNpcChat(6533, "Why, hello #name!", "I am the official Tarnish skilling NPC.", "How may I help you today?");
+            factory.sendNpcChat(6533, "Why, hello #name!", "I am the official Dead Men skilling NPC.", "How may I help you today?");
 
             factory.sendOption("How do I get skilling points?", () -> {
                 factory.sendNpcChat(6533,

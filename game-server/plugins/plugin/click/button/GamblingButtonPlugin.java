@@ -1,8 +1,8 @@
 package plugin.click.button;
 
-import com.osroyale.content.gambling.GambleType;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
+import com.dm.content.gambling.GambleType;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
 
 public class GamblingButtonPlugin extends PluginContext {
 

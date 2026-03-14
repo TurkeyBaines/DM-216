@@ -1,14 +1,14 @@
 package plugin;
 
-import com.osroyale.game.event.impl.DropItemEvent;
-import com.osroyale.game.event.impl.MovementEvent;
-import com.osroyale.game.event.impl.PickupItemEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.UpdateFlag;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.items.Item;
-import com.osroyale.game.world.position.Area;
-import com.osroyale.game.world.position.Position;
+import com.dm.game.event.impl.DropItemEvent;
+import com.dm.game.event.impl.MovementEvent;
+import com.dm.game.event.impl.PickupItemEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.UpdateFlag;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.items.Item;
+import com.dm.game.world.position.Area;
+import com.dm.game.world.position.Position;
 
 public class ValueIconPlugin extends PluginContext {
 

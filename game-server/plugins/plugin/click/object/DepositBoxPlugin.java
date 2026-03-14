@@ -1,13 +1,13 @@
 package plugin.click.object;
 
-import com.osroyale.game.event.impl.ItemContainerContextMenuEvent;
-import com.osroyale.game.event.impl.ObjectClickEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.object.GameObject;
-import com.osroyale.net.packet.out.SendInventoryInterface;
-import com.osroyale.net.packet.out.SendItemOnInterface;
-import com.osroyale.net.packet.out.SendString;
+import com.dm.game.event.impl.ItemContainerContextMenuEvent;
+import com.dm.game.event.impl.ObjectClickEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.object.GameObject;
+import com.dm.net.packet.out.SendInventoryInterface;
+import com.dm.net.packet.out.SendItemOnInterface;
+import com.dm.net.packet.out.SendString;
 
 public class DepositBoxPlugin extends PluginContext {
 
@@ -20,7 +20,7 @@ public class DepositBoxPlugin extends PluginContext {
 
         System.out.println(gameObject.getDefinition().getName());
         player.interfaceManager.setMain(4465);
-        player.send(new SendString("The Bank of Tarnish - Deposit Box", 7421));
+        player.send(new SendString("The Bank of Dead Men - Deposit Box", 7421));
         player.send(new SendInventoryInterface(4465, 197));
         player.send(new SendItemOnInterface(7423, player.inventory.toArray()));
 

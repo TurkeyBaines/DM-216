@@ -40,8 +40,8 @@ import java.util.Queue;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
-import com.osroyale.Item;
-import com.osroyale.ItemDefinition;
+import com.dm.Item;
+import com.dm.ItemDefinition;
 
 import javax.inject.Inject;
 
@@ -78,7 +78,6 @@ import net.runelite.client.input.MouseManager;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
 import net.runelite.client.plugins.grounditems.config.HighlightTier;
-import net.runelite.client.plugins.grounditems.config.MenuHighlightMode;
 import net.runelite.client.ui.overlay.OverlayManager;
 import net.runelite.client.util.ColorUtil;
 import net.runelite.client.util.QuantityFormatter;

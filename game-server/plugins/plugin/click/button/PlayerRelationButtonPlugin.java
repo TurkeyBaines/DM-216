@@ -1,9 +1,9 @@
 package plugin.click.button;
 
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.net.packet.out.SendInputMessage;
-import com.osroyale.util.Utility;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.net.packet.out.SendInputMessage;
+import com.dm.util.Utility;
 
 public class PlayerRelationButtonPlugin extends PluginContext {
 

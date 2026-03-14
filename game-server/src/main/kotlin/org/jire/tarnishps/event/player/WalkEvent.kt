@@ -1,15 +1,15 @@
 package org.jire.tarnishps.event.player
 
-import com.osroyale.content.activity.Activity
-import com.osroyale.content.activity.impl.duelarena.DuelArenaActivity
-import com.osroyale.content.activity.impl.duelarena.DuelRule
-import com.osroyale.game.Animation
-import com.osroyale.game.world.entity.mob.data.LockType
-import com.osroyale.game.world.entity.mob.data.PacketType
-import com.osroyale.game.world.entity.mob.player.Player
-import com.osroyale.game.world.entity.mob.player.PlayerRight
-import com.osroyale.game.world.position.Position
-import com.osroyale.net.packet.out.SendMessage
+import com.dm.content.activity.Activity
+import com.dm.content.activity.impl.duelarena.DuelArenaActivity
+import com.dm.content.activity.impl.duelarena.DuelRule
+import com.dm.game.Animation
+import com.dm.game.world.entity.mob.data.LockType
+import com.dm.game.world.entity.mob.data.PacketType
+import com.dm.game.world.entity.mob.player.Player
+import com.dm.game.world.entity.mob.player.PlayerRight
+import com.dm.game.world.position.Position
+import com.dm.net.packet.out.SendMessage
 import org.jire.tarnishps.event.Event
 import java.util.*
 

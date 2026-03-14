@@ -1,13 +1,13 @@
 package plugin.command;
 
-import com.osroyale.content.dialogue.DialogueFactory;
-import com.osroyale.game.plugin.extension.CommandExtension;
-import com.osroyale.game.world.World;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.entity.mob.player.PlayerRight;
-import com.osroyale.game.world.entity.mob.player.command.Command;
-import com.osroyale.game.world.entity.mob.player.command.CommandParser;
-import com.osroyale.net.discord.DiscordPlugin;
+import com.dm.content.dialogue.DialogueFactory;
+import com.dm.game.plugin.extension.CommandExtension;
+import com.dm.game.world.World;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.entity.mob.player.PlayerRight;
+import com.dm.game.world.entity.mob.player.command.Command;
+import com.dm.game.world.entity.mob.player.command.CommandParser;
+import com.dm.net.discord.DiscordPlugin;
 
 public class ManagerCommandPlugin extends CommandExtension {
 

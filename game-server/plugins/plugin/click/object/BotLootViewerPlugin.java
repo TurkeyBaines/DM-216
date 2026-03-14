@@ -1,14 +1,14 @@
 package plugin.click.object;
 
-import com.osroyale.content.bot.BotUtility;
-import com.osroyale.game.event.impl.ObjectClickEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.items.Item;
-import com.osroyale.net.packet.out.SendItemOnInterfaceSlot;
-import com.osroyale.net.packet.out.SendString;
-import com.osroyale.util.MutableNumber;
-import com.osroyale.util.Utility;
+import com.dm.content.bot.BotUtility;
+import com.dm.game.event.impl.ObjectClickEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.items.Item;
+import com.dm.net.packet.out.SendItemOnInterfaceSlot;
+import com.dm.net.packet.out.SendString;
+import com.dm.util.MutableNumber;
+import com.dm.util.Utility;
 
 import java.util.LinkedList;
 import java.util.List;

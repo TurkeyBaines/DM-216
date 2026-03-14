@@ -1,12 +1,12 @@
 package org.jire.tarnishps.event.widget
 
-import com.osroyale.content.achievement.AchievementHandler
-import com.osroyale.content.achievement.AchievementKey
-import com.osroyale.game.world.entity.mob.UpdateFlag
-import com.osroyale.game.world.entity.mob.player.Player
-import com.osroyale.game.world.entity.mob.player.appearance.Appearance
-import com.osroyale.game.world.entity.mob.player.appearance.Gender
-import com.osroyale.net.packet.`in`.AppearanceChangePacketListener
+import com.dm.content.achievement.AchievementHandler
+import com.dm.content.achievement.AchievementKey
+import com.dm.game.world.entity.mob.UpdateFlag
+import com.dm.game.world.entity.mob.player.Player
+import com.dm.game.world.entity.mob.player.appearance.Appearance
+import com.dm.game.world.entity.mob.player.appearance.Gender
+import com.dm.net.packet.`in`.AppearanceChangePacketListener
 
 /**
  * @author Jire

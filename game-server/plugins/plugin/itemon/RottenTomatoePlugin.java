@@ -1,18 +1,18 @@
 package plugin.itemon;
 
-import com.osroyale.content.dialogue.DialogueFactory;
-import com.osroyale.content.staff.PlayerManagement;
-import com.osroyale.game.event.impl.ItemClickEvent;
-import com.osroyale.game.event.impl.ItemOnNpcEvent;
-import com.osroyale.game.event.impl.ItemOnObjectEvent;
-import com.osroyale.game.event.impl.ItemOnPlayerEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.npc.Npc;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.entity.mob.player.PlayerRight;
-import com.osroyale.net.packet.out.SendString;
-import com.osroyale.net.packet.out.SendTooltip;
-import com.osroyale.util.Utility;
+import com.dm.content.dialogue.DialogueFactory;
+import com.dm.content.staff.PlayerManagement;
+import com.dm.game.event.impl.ItemClickEvent;
+import com.dm.game.event.impl.ItemOnNpcEvent;
+import com.dm.game.event.impl.ItemOnObjectEvent;
+import com.dm.game.event.impl.ItemOnPlayerEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.npc.Npc;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.entity.mob.player.PlayerRight;
+import com.dm.net.packet.out.SendString;
+import com.dm.net.packet.out.SendTooltip;
+import com.dm.util.Utility;
 
 import java.util.Optional;
 

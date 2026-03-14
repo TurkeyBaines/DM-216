@@ -1,9 +1,9 @@
 package org.jire.tarnishps.event.widget
 
-import com.osroyale.content.DropDisplay
-import com.osroyale.content.DropDisplay.DropType
-import com.osroyale.game.world.entity.mob.npc.drop.NpcDropManager
-import com.osroyale.game.world.entity.mob.player.Player
+import com.dm.content.DropDisplay
+import com.dm.content.DropDisplay.DropType
+import com.dm.game.world.entity.mob.npc.drop.NpcDropManager
+import com.dm.game.world.entity.mob.player.Player
 
 /**
  * @author Jire

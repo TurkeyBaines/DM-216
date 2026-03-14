@@ -1,16 +1,16 @@
 package org.jire.tarnishps.event.`object`
 
-import com.osroyale.content.combat.cannon.CannonManager
-import com.osroyale.content.event.EventDispatcher
-import com.osroyale.content.event.impl.ObjectInteractionEvent
-import com.osroyale.game.event.impl.ObjectClickEvent
-import com.osroyale.game.plugin.PluginManager
-import com.osroyale.game.world.World
-import com.osroyale.game.world.entity.mob.data.PacketType
-import com.osroyale.game.world.entity.mob.player.Player
-import com.osroyale.game.world.`object`.GameObject
-import com.osroyale.game.world.`object`.GameObjectDefinition
-import com.osroyale.game.world.position.Position
+import com.dm.content.combat.cannon.CannonManager
+import com.dm.content.event.EventDispatcher
+import com.dm.content.event.impl.ObjectInteractionEvent
+import com.dm.game.event.impl.ObjectClickEvent
+import com.dm.game.plugin.PluginManager
+import com.dm.game.world.World
+import com.dm.game.world.entity.mob.data.PacketType
+import com.dm.game.world.entity.mob.player.Player
+import com.dm.game.world.`object`.GameObject
+import com.dm.game.world.`object`.GameObjectDefinition
+import com.dm.game.world.position.Position
 import org.jire.tarnishps.WorldTask
 import java.util.*
 

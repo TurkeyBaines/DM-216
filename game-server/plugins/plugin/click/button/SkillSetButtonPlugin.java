@@ -1,14 +1,14 @@
 package plugin.click.button;
 
-import com.osroyale.content.SkillSet;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.UpdateFlag;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.entity.mob.player.PlayerRight;
-import com.osroyale.game.world.entity.skill.Skill;
-import com.osroyale.game.world.position.Area;
-import com.osroyale.net.packet.out.SendInputAmount;
-import com.osroyale.net.packet.out.SendMessage;
+import com.dm.content.SkillSet;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.UpdateFlag;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.entity.mob.player.PlayerRight;
+import com.dm.game.world.entity.skill.Skill;
+import com.dm.game.world.position.Area;
+import com.dm.net.packet.out.SendInputAmount;
+import com.dm.net.packet.out.SendMessage;
 
 public class SkillSetButtonPlugin extends PluginContext {
 

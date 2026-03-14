@@ -1,10 +1,10 @@
 package org.jire.tarnishps.event.player
 
-import com.osroyale.game.event.impl.ItemOnPlayerEvent
-import com.osroyale.game.plugin.PluginManager
-import com.osroyale.game.world.World
-import com.osroyale.game.world.entity.mob.player.Player
-import com.osroyale.net.packet.out.SendMessage
+import com.dm.game.event.impl.ItemOnPlayerEvent
+import com.dm.game.plugin.PluginManager
+import com.dm.game.world.World
+import com.dm.game.world.entity.mob.player.Player
+import com.dm.net.packet.out.SendMessage
 import org.jire.tarnishps.event.Event
 import kotlin.jvm.optionals.getOrNull
 

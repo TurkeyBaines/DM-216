@@ -1,15 +1,15 @@
 package plugin.click.item;
 
-import com.osroyale.content.collectionlog.CollectionLog;
-import com.osroyale.content.collectionlog.CollectionLogData;
-import com.osroyale.content.pet.Pets;
-import com.osroyale.game.event.impl.ItemClickEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.items.Item;
-import com.osroyale.game.world.items.ItemDefinition;
-import com.osroyale.util.Items;
-import com.osroyale.util.Utility;
+import com.dm.content.collectionlog.CollectionLog;
+import com.dm.content.collectionlog.CollectionLogData;
+import com.dm.content.pet.Pets;
+import com.dm.game.event.impl.ItemClickEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.items.Item;
+import com.dm.game.world.items.ItemDefinition;
+import com.dm.util.Items;
+import com.dm.util.Utility;
 
 public class WintertodtSupplyCrate extends PluginContext {
 

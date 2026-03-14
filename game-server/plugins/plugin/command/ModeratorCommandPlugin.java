@@ -1,15 +1,15 @@
 package plugin.command;
 
-import com.osroyale.game.plugin.extension.CommandExtension;
-import com.osroyale.game.world.World;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.entity.mob.player.PlayerRight;
-import com.osroyale.game.world.entity.mob.player.command.Command;
-import com.osroyale.game.world.entity.mob.player.command.CommandParser;
-import com.osroyale.net.packet.out.SendItemOnInterface;
-import com.osroyale.net.packet.out.SendMessage;
-import com.osroyale.net.packet.out.SendScrollbar;
-import com.osroyale.net.packet.out.SendString;
+import com.dm.game.plugin.extension.CommandExtension;
+import com.dm.game.world.World;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.entity.mob.player.PlayerRight;
+import com.dm.game.world.entity.mob.player.command.Command;
+import com.dm.game.world.entity.mob.player.command.CommandParser;
+import com.dm.net.packet.out.SendItemOnInterface;
+import com.dm.net.packet.out.SendMessage;
+import com.dm.net.packet.out.SendScrollbar;
+import com.dm.net.packet.out.SendString;
 import plugin.itemon.RottenTomatoePlugin;
 
 import java.util.ArrayList;
@@ -29,7 +29,7 @@ public class ModeratorCommandPlugin extends CommandExtension {
                 int length = staffs.size() < 25 ? 25 : staffs.size();
                 player.send(new SendString("", 37113));
                 player.send(new SendString("", 37107));
-                player.send(new SendString("Tarnish Online Players", 37103));
+                player.send(new SendString("Dead Men Online Players", 37103));
                 player.send(new SendScrollbar(37110, length * 20));
                 for (int index = 0, string = 37111; index < length; index++, string++) {
                     if (index < staffs.size()) {

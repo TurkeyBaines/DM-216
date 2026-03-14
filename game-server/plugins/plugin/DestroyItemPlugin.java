@@ -1,8 +1,8 @@
 package plugin;
 
-import com.osroyale.game.event.impl.DropItemEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
+import com.dm.game.event.impl.DropItemEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
 
 public class DestroyItemPlugin extends PluginContext {
 

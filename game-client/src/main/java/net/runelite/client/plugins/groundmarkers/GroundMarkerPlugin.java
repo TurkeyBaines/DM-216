@@ -230,7 +230,7 @@ public class GroundMarkerPlugin extends Plugin
 			final int regionId = worldPoint.getRegionID();
 			final GroundMarkerPoint point = new GroundMarkerPoint(regionId, worldPoint.getRegionX(), worldPoint.getRegionY(), worldPoint.getPlane(), null, null);
 
-			com.osroyale.Client cl = com.osroyale.Client.instance;
+			com.dm.Client cl = com.dm.Client.instance;
 
 			char c = '\u07D0';
 			cl.menuActionName[cl.menuActionRow] = getPoints(regionId).contains(point) ? UNMARK : MARK;

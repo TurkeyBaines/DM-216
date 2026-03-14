@@ -1,14 +1,14 @@
 package plugin.click.object;
 
-import com.osroyale.content.activity.randomevent.RandomEventHandler;
-import com.osroyale.content.skill.impl.agility.Agility;
-import com.osroyale.content.skill.impl.agility.obstacle.Obstacle;
-import com.osroyale.content.skill.impl.agility.obstacle.ObstacleType;
-import com.osroyale.game.event.impl.ObjectClickEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.Interactable;
-import com.osroyale.game.world.World;
-import com.osroyale.game.world.entity.mob.player.Player;
+import com.dm.content.activity.randomevent.RandomEventHandler;
+import com.dm.content.skill.impl.agility.Agility;
+import com.dm.content.skill.impl.agility.obstacle.Obstacle;
+import com.dm.content.skill.impl.agility.obstacle.ObstacleType;
+import com.dm.game.event.impl.ObjectClickEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.Interactable;
+import com.dm.game.world.World;
+import com.dm.game.world.entity.mob.player.Player;
 
 public class AgilityObjectClickPlugin extends PluginContext {
 

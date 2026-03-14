@@ -6,7 +6,7 @@ plugins {
 }
 
 application {
-    mainClass.set("com.osroyale.Main")
+    mainClass.set("com.dm.Main")
     applicationDefaultJvmArgs += arrayOf(
         "-XX:-OmitStackTraceInFastThrow",
         "--enable-preview",

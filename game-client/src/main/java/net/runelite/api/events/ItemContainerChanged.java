@@ -24,7 +24,7 @@
  */
 package net.runelite.api.events;
 
-import com.osroyale.ItemContainer;
+import com.dm.ItemContainer;
 import lombok.Value;
 
 /**

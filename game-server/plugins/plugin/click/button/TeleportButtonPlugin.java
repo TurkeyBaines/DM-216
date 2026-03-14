@@ -1,9 +1,9 @@
 package plugin.click.button;
 
-import com.osroyale.content.skill.impl.magic.teleport.TeleportType;
-import com.osroyale.content.teleport.TeleportHandler;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
+import com.dm.content.skill.impl.magic.teleport.TeleportType;
+import com.dm.content.teleport.TeleportHandler;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
 
 public class TeleportButtonPlugin extends PluginContext {
 

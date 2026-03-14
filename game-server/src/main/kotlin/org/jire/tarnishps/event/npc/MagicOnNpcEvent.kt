@@ -1,11 +1,11 @@
 package org.jire.tarnishps.event.npc
 
-import com.osroyale.content.skill.impl.hunter.net.impl.Butterfly
-import com.osroyale.content.skill.impl.hunter.net.impl.Impling
-import com.osroyale.game.world.entity.combat.magic.CombatSpell
-import com.osroyale.game.world.entity.mob.npc.Npc
-import com.osroyale.game.world.entity.mob.player.Player
-import com.osroyale.net.packet.out.SendMessage
+import com.dm.content.skill.impl.hunter.net.impl.Butterfly
+import com.dm.content.skill.impl.hunter.net.impl.Impling
+import com.dm.game.world.entity.combat.magic.CombatSpell
+import com.dm.game.world.entity.mob.npc.Npc
+import com.dm.game.world.entity.mob.player.Player
+import com.dm.net.packet.out.SendMessage
 
 /**
  * @author Jire

@@ -1,10 +1,8 @@
 package plugin.click.button;
 
-import com.osroyale.content.dialogue.Dialogue;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-
-import java.util.concurrent.TimeUnit;
+import com.dm.content.dialogue.Dialogue;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
 
 public class DialogueButtonPlugin extends PluginContext {
 

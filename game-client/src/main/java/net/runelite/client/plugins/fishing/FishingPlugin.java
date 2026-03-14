@@ -26,7 +26,7 @@
 package net.runelite.client.plugins.fishing;
 
 import com.google.inject.Provides;
-import com.osroyale.ItemContainer;
+import com.dm.ItemContainer;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
@@ -152,12 +152,12 @@ public class FishingPlugin extends Plugin
 	@Subscribe
 	public void onItemContainerChanged(ItemContainerChanged event)
 	{
-		if (event.getItemContainer() != com.osroyale.Client.instance.getInventory() && event.getItemContainer() != com.osroyale.Client.instance.getEquipment())
+		if (event.getItemContainer() != com.dm.Client.instance.getInventory() && event.getItemContainer() != com.dm.Client.instance.getEquipment())
 		{
 			return;
 		}
 
-		final boolean showOverlays = session.getLastFishCaught() != null || canPlayerFish(com.osroyale.Client.instance.getInventory()) || canPlayerFish(com.osroyale.Client.instance.getEquipment());
+		final boolean showOverlays = session.getLastFishCaught() != null || canPlayerFish(com.dm.Client.instance.getInventory()) || canPlayerFish(com.dm.Client.instance.getEquipment());
 
 		if (!showOverlays)
 		{
@@ -218,7 +218,7 @@ public class FishingPlugin extends Plugin
 			return false;
 		}
 
-		for (com.osroyale.Item item : itemContainer.getItems())
+		for (com.dm.Item item : itemContainer.getItems())
 		{
 			switch (item.itemId)
 			{

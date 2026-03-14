@@ -1,7 +1,7 @@
 package org.jire.tarnishps.event.widget
 
-import com.osroyale.game.world.entity.mob.player.Player
-import com.osroyale.util.Utility
+import com.dm.game.world.entity.mob.player.Player
+import com.dm.util.Utility
 import kotlin.jvm.optionals.getOrNull
 
 /**

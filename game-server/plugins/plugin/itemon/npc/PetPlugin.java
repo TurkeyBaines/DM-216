@@ -1,18 +1,18 @@
 package plugin.itemon.npc;
 
-import com.osroyale.content.dialogue.DialogueFactory;
-import com.osroyale.content.dialogue.Expression;
-import com.osroyale.content.pet.PetData;
-import com.osroyale.content.pet.Pets;
-import com.osroyale.game.Animation;
-import com.osroyale.game.event.impl.DropItemEvent;
-import com.osroyale.game.event.impl.ItemOnNpcEvent;
-import com.osroyale.game.event.impl.NpcClickEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.World;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.net.packet.out.SendMessage;
-import com.osroyale.util.Utility;
+import com.dm.content.dialogue.DialogueFactory;
+import com.dm.content.dialogue.Expression;
+import com.dm.content.pet.PetData;
+import com.dm.content.pet.Pets;
+import com.dm.game.Animation;
+import com.dm.game.event.impl.DropItemEvent;
+import com.dm.game.event.impl.ItemOnNpcEvent;
+import com.dm.game.event.impl.NpcClickEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.World;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.net.packet.out.SendMessage;
+import com.dm.util.Utility;
 
 /**
  * The Pet insurance plugin.

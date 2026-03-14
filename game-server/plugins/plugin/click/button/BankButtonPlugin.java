@@ -1,10 +1,10 @@
 package plugin.click.button;
 
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.items.Item;
-import com.osroyale.game.world.items.containers.bank.VaultCurrency;
-import com.osroyale.net.packet.out.*;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.items.Item;
+import com.dm.game.world.items.containers.bank.VaultCurrency;
+import com.dm.net.packet.out.*;
 
 public class BankButtonPlugin extends PluginContext {
 

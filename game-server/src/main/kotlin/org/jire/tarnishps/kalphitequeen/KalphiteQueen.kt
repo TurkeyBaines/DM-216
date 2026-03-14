@@ -1,18 +1,18 @@
 package org.jire.tarnishps.kalphitequeen
 
-import com.osroyale.game.Animation
-import com.osroyale.game.Graphic
-import com.osroyale.game.world.entity.combat.CombatType
-import com.osroyale.game.world.entity.combat.CombatUtil.createStrategyArray
-import com.osroyale.game.world.entity.combat.CombatUtil.randomStrategy
-import com.osroyale.game.world.entity.combat.attack.FightType
-import com.osroyale.game.world.entity.combat.hit.Hit
-import com.osroyale.game.world.entity.combat.strategy.CombatStrategy
-import com.osroyale.game.world.entity.combat.strategy.npc.MultiStrategy
-import com.osroyale.game.world.entity.combat.strategy.npc.NpcMeleeStrategy
-import com.osroyale.game.world.entity.mob.Mob
-import com.osroyale.game.world.entity.mob.npc.Npc
-import com.osroyale.util.RandomUtils
+import com.dm.game.Animation
+import com.dm.game.Graphic
+import com.dm.game.world.entity.combat.CombatType
+import com.dm.game.world.entity.combat.CombatUtil.createStrategyArray
+import com.dm.game.world.entity.combat.CombatUtil.randomStrategy
+import com.dm.game.world.entity.combat.attack.FightType
+import com.dm.game.world.entity.combat.hit.Hit
+import com.dm.game.world.entity.combat.strategy.CombatStrategy
+import com.dm.game.world.entity.combat.strategy.npc.MultiStrategy
+import com.dm.game.world.entity.combat.strategy.npc.NpcMeleeStrategy
+import com.dm.game.world.entity.mob.Mob
+import com.dm.game.world.entity.mob.npc.Npc
+import com.dm.util.RandomUtils
 import org.jire.tarnishps.WorldTask.schedule
 
 /**

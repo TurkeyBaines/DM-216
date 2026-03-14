@@ -1,14 +1,14 @@
 package plugin.click.item;
 
-import com.osroyale.content.skill.impl.magic.teleport.Teleportation;
-import com.osroyale.game.event.impl.ItemClickEvent;
-import com.osroyale.game.event.impl.ItemContainerContextMenuEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.items.Item;
-import com.osroyale.game.world.items.containers.equipment.Equipment;
-import com.osroyale.game.world.position.Position;
-import com.osroyale.util.Utility;
+import com.dm.content.skill.impl.magic.teleport.Teleportation;
+import com.dm.game.event.impl.ItemClickEvent;
+import com.dm.game.event.impl.ItemContainerContextMenuEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.items.Item;
+import com.dm.game.world.items.containers.equipment.Equipment;
+import com.dm.game.world.position.Position;
+import com.dm.util.Utility;
 import plugin.click.object.FountainOfRunePlugin;
 
 public class AmuletOfGloryPlugin extends PluginContext {

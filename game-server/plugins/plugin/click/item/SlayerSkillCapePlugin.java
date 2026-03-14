@@ -1,12 +1,12 @@
 package plugin.click.item;
 
-import com.osroyale.content.dialogue.DialogueFactory;
-import com.osroyale.game.event.impl.ItemClickEvent;
-import com.osroyale.game.event.impl.ItemContainerContextMenuEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.items.Item;
-import com.osroyale.net.packet.out.SendMessage;
+import com.dm.content.dialogue.DialogueFactory;
+import com.dm.game.event.impl.ItemClickEvent;
+import com.dm.game.event.impl.ItemContainerContextMenuEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.items.Item;
+import com.dm.net.packet.out.SendMessage;
 
 public class SlayerSkillCapePlugin extends PluginContext {
 

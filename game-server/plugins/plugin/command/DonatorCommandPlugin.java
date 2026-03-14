@@ -1,15 +1,15 @@
 package plugin.command;
 
-import com.osroyale.Config;
-import com.osroyale.content.Yell;
-import com.osroyale.content.skill.impl.magic.teleport.Teleportation;
-import com.osroyale.content.skill.impl.magic.teleport.TeleportationData;
-import com.osroyale.game.plugin.extension.CommandExtension;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.entity.mob.player.PlayerRight;
-import com.osroyale.game.world.entity.mob.player.command.Command;
-import com.osroyale.game.world.entity.mob.player.command.CommandParser;
-import com.osroyale.net.packet.out.SendMessage;
+import com.dm.Config;
+import com.dm.content.Yell;
+import com.dm.content.skill.impl.magic.teleport.Teleportation;
+import com.dm.content.skill.impl.magic.teleport.TeleportationData;
+import com.dm.game.plugin.extension.CommandExtension;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.entity.mob.player.PlayerRight;
+import com.dm.game.world.entity.mob.player.command.Command;
+import com.dm.game.world.entity.mob.player.command.CommandParser;
+import com.dm.net.packet.out.SendMessage;
 
 
 public class DonatorCommandPlugin extends CommandExtension {

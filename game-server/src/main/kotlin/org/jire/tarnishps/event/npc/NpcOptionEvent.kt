@@ -1,13 +1,13 @@
 package org.jire.tarnishps.event.npc
 
-import com.osroyale.content.event.EventDispatcher
-import com.osroyale.content.event.InteractionEvent
-import com.osroyale.game.action.impl.NpcFaceAction
-import com.osroyale.game.event.Event
-import com.osroyale.game.event.impl.NpcClickEvent
-import com.osroyale.game.plugin.PluginManager
-import com.osroyale.game.world.entity.mob.npc.Npc
-import com.osroyale.game.world.entity.mob.player.Player
+import com.dm.content.event.EventDispatcher
+import com.dm.content.event.InteractionEvent
+import com.dm.game.action.impl.NpcFaceAction
+import com.dm.game.event.Event
+import com.dm.game.event.impl.NpcClickEvent
+import com.dm.game.plugin.PluginManager
+import com.dm.game.world.entity.mob.npc.Npc
+import com.dm.game.world.entity.mob.player.Player
 
 /**
  * @author Jire

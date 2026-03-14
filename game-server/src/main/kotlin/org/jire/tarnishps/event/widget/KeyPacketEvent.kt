@@ -1,7 +1,7 @@
 package org.jire.tarnishps.event.widget
 
-import com.osroyale.game.world.entity.mob.data.PacketType
-import com.osroyale.game.world.entity.mob.player.Player
+import com.dm.game.world.entity.mob.data.PacketType
+import com.dm.game.world.entity.mob.player.Player
 import java.awt.event.KeyEvent
 
 /**

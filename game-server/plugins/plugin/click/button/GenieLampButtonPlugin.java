@@ -1,12 +1,12 @@
 package plugin.click.button;
 
-import com.osroyale.content.GenieLamp;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.entity.skill.Skill;
-import com.osroyale.game.world.items.Item;
-import com.osroyale.net.packet.out.SendMessage;
-import com.osroyale.util.Utility;
+import com.dm.content.GenieLamp;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.entity.skill.Skill;
+import com.dm.game.world.items.Item;
+import com.dm.net.packet.out.SendMessage;
+import com.dm.util.Utility;
 
 import java.util.concurrent.TimeUnit;
 

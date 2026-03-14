@@ -1,13 +1,13 @@
 package plugin;
 
-import com.osroyale.content.dialogue.DialogueFactory;
-import com.osroyale.content.dialogue.Expression;
-import com.osroyale.game.event.impl.NpcClickEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.net.packet.out.SendMessage;
-import com.osroyale.util.Items;
-import com.osroyale.util.Utility;
+import com.dm.content.dialogue.DialogueFactory;
+import com.dm.content.dialogue.Expression;
+import com.dm.game.event.impl.NpcClickEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.net.packet.out.SendMessage;
+import com.dm.util.Items;
+import com.dm.util.Utility;
 
 public class HastaSpearPlugin extends PluginContext {
 

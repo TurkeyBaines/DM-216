@@ -1,14 +1,14 @@
 package plugin.click.npc;
 
-import com.osroyale.content.dialogue.DialogueFactory;
-import com.osroyale.content.dialogue.impl.RoyalKingDialogue;
-import com.osroyale.content.skill.impl.slayer.SlayerTab;
-import com.osroyale.content.store.Store;
-import com.osroyale.content.store.impl.RecipeForDisasterStore;
-import com.osroyale.game.event.impl.NpcClickEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.entity.mob.player.PlayerRight;
+import com.dm.content.dialogue.DialogueFactory;
+import com.dm.content.dialogue.impl.RoyalKingDialogue;
+import com.dm.content.skill.impl.slayer.SlayerTab;
+import com.dm.content.store.Store;
+import com.dm.content.store.impl.RecipeForDisasterStore;
+import com.dm.game.event.impl.NpcClickEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.entity.mob.player.PlayerRight;
 
 public class NpcSecondClickPlugin extends PluginContext {
 
@@ -35,7 +35,7 @@ public class NpcSecondClickPlugin extends PluginContext {
                 player.tradingPost.openOverviewInterface();
                 break;
             case 7481:
-                Store.STORES.get("Tarnish Vote Store").open(player);
+                Store.STORES.get("Dead Men Vote Store").open(player);
                 break;
 
             case 1603:

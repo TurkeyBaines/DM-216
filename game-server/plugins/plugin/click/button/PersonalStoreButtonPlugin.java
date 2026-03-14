@@ -1,9 +1,9 @@
 package plugin.click.button;
 
-import com.osroyale.content.store.StoreType;
-import com.osroyale.content.store.impl.PersonalStore;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
+import com.dm.content.store.StoreType;
+import com.dm.content.store.impl.PersonalStore;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
 
 public class PersonalStoreButtonPlugin extends PluginContext {
 

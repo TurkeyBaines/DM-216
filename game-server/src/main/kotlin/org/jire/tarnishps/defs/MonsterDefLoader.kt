@@ -2,8 +2,8 @@ package org.jire.tarnishps.defs
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import com.osroyale.game.world.entity.mob.npc.definition.NpcDefinition
-import com.osroyale.game.world.entity.skill.Skill
+import com.dm.game.world.entity.mob.npc.definition.NpcDefinition
+import com.dm.game.world.entity.skill.Skill
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap
 import java.io.File

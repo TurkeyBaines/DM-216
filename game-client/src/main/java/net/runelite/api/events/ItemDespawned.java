@@ -24,7 +24,7 @@
  */
 package net.runelite.api.events;
 
-import com.osroyale.Item;
+import com.dm.Item;
 import lombok.Value;
 import net.runelite.api.Tile;
 

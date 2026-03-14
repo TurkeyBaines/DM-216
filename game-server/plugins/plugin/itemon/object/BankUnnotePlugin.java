@@ -1,10 +1,10 @@
 package plugin.itemon.object;
 
-import com.osroyale.game.event.impl.ItemOnObjectEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.items.Item;
-import com.osroyale.game.world.object.GameObjectDefinition;
+import com.dm.game.event.impl.ItemOnObjectEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.items.Item;
+import com.dm.game.world.object.GameObjectDefinition;
 
 public class BankUnnotePlugin extends PluginContext {
 

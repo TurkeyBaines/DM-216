@@ -1,7 +1,7 @@
 package org.jire.tarnishps.event
 
-import com.osroyale.content.gambling.GambleStage
-import com.osroyale.game.world.entity.mob.player.Player
+import com.dm.content.gambling.GambleStage
+import com.dm.game.world.entity.mob.player.Player
 
 /**
  * @author Jire

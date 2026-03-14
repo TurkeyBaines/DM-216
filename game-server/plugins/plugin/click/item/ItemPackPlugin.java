@@ -1,13 +1,13 @@
 package plugin.click.item;
 
-import com.osroyale.content.ItemPack;
-import com.osroyale.game.event.impl.ItemClickEvent;
-import com.osroyale.game.event.impl.ItemOnItemEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.items.Item;
-import com.osroyale.net.packet.out.SendMessage;
-import com.osroyale.util.Utility;
+import com.dm.content.ItemPack;
+import com.dm.game.event.impl.ItemClickEvent;
+import com.dm.game.event.impl.ItemOnItemEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.items.Item;
+import com.dm.net.packet.out.SendMessage;
+import com.dm.util.Utility;
 
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;

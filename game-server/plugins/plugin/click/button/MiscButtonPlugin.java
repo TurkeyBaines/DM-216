@@ -1,16 +1,16 @@
 package plugin.click.button;
 
-import com.osroyale.Config;
-import com.osroyale.content.WellOfGoodwill;
-import com.osroyale.content.skill.impl.agility.Agility;
-import com.osroyale.content.skill.impl.construction.BuildableInterface;
-import com.osroyale.content.skill.impl.construction.BuildableType;
-import com.osroyale.content.skill.impl.magic.teleport.TeleportType;
-import com.osroyale.content.teleport.TeleportHandler;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.net.packet.out.SendInputAmount;
-import com.osroyale.net.packet.out.SendURL;
+import com.dm.Config;
+import com.dm.content.WellOfGoodwill;
+import com.dm.content.skill.impl.agility.Agility;
+import com.dm.content.skill.impl.construction.BuildableInterface;
+import com.dm.content.skill.impl.construction.BuildableType;
+import com.dm.content.skill.impl.magic.teleport.TeleportType;
+import com.dm.content.teleport.TeleportHandler;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.net.packet.out.SendInputAmount;
+import com.dm.net.packet.out.SendURL;
 import plugin.itemon.RottenTomatoePlugin;
 
 public class MiscButtonPlugin extends PluginContext {

@@ -1,15 +1,15 @@
 package plugin.click.item;
 
-import com.osroyale.content.activity.Activity;
-import com.osroyale.content.consume.FoodData;
-import com.osroyale.game.Animation;
-import com.osroyale.game.UpdatePriority;
-import com.osroyale.game.event.impl.ItemClickEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.entity.skill.Skill;
-import com.osroyale.game.world.items.Item;
-import com.osroyale.net.packet.out.SendMessage;
+import com.dm.content.activity.Activity;
+import com.dm.content.consume.FoodData;
+import com.dm.game.Animation;
+import com.dm.game.UpdatePriority;
+import com.dm.game.event.impl.ItemClickEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.entity.skill.Skill;
+import com.dm.game.world.items.Item;
+import com.dm.net.packet.out.SendMessage;
 
 import java.util.Optional;
 

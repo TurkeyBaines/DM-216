@@ -1,7 +1,7 @@
 package org.jire.tarnishps.event.`object`
 
-import com.osroyale.game.world.entity.mob.player.Player
-import com.osroyale.net.packet.out.SendMessage
+import com.dm.game.world.entity.mob.player.Player
+import com.dm.net.packet.out.SendMessage
 import org.jire.tarnishps.objectexamines.ObjectExamines
 
 /**

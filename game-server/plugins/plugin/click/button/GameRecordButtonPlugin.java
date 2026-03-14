@@ -1,8 +1,8 @@
 package plugin.click.button;
 
-import com.osroyale.content.activity.ActivityType;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
+import com.dm.content.activity.ActivityType;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
 
 public class GameRecordButtonPlugin extends PluginContext {
 

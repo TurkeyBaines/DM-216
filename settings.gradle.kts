@@ -1,6 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 
-rootProject.name = "tarnish"
+rootProject.name = "Dead Men]#"
 
 dependencyResolutionManagement {
     repositories {

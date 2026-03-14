@@ -1,19 +1,19 @@
 package plugin.click.button;
 
-import com.osroyale.content.StarterKit;
-import com.osroyale.content.clanchannel.channel.ClanChannelHandler;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.World;
-import com.osroyale.game.world.entity.combat.strategy.player.special.CombatSpecial;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.entity.mob.player.PlayerRight;
-import com.osroyale.game.world.entity.mob.player.persist.PlayerSerializer;
-import com.osroyale.util.Utility;
+import com.dm.content.StarterKit;
+import com.dm.content.clanchannel.channel.ClanChannelHandler;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.World;
+import com.dm.game.world.entity.combat.strategy.player.special.CombatSpecial;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.entity.mob.player.PlayerRight;
+import com.dm.game.world.entity.mob.player.persist.PlayerSerializer;
+import com.dm.util.Utility;
 
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
-import static com.osroyale.content.StarterKit.refresh;
+import static com.dm.content.StarterKit.refresh;
 
 public class StarterKitButtonPlugin extends PluginContext {
 
@@ -81,8 +81,8 @@ public class StarterKitButtonPlugin extends PluginContext {
             player.needsStarter = false;
             player.right = kit.getRight();
             player.playerAssistant.setSidebar(false);
-            player.message("<col=3559a5>Tarnish: </col>You will now be playing as " + Utility.getAOrAn(name) + " <col=3559a5>" + name + "</col> player.");
-            player.message("<col=3559a5>Tarnish: </col>If you have any questions please visit our forums or contact a staff member.");
+            player.message("<col=3559a5>Dead Men: </col>You will now be playing as " + Utility.getAOrAn(name) + " <col=3559a5>" + name + "</col> player.");
+            player.message("<col=3559a5>Dead Men: </col>If you have any questions please visit our forums or contact a staff member.");
             player.locking.unlock();
             player.runEnergy = 100;
             CombatSpecial.restore(player, 100);
@@ -90,7 +90,7 @@ public class StarterKitButtonPlugin extends PluginContext {
             player.interfaceManager.close();
 
             PlayerSerializer.save(player);
-            ClanChannelHandler.connect(player, "tarnish");
+            ClanChannelHandler.connect(player, "Dead Men");
             World.sendMessage("<col=FF0000>" + player.getName() + " is a new player and has just joined!");
         }
     }

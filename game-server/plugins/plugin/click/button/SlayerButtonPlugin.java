@@ -1,11 +1,11 @@
 package plugin.click.button;
 
-import com.osroyale.content.dialogue.DialogueFactory;
-import com.osroyale.content.skill.impl.slayer.SlayerTab;
-import com.osroyale.content.skill.impl.slayer.TaskDifficulty;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.net.packet.out.SendString;
+import com.dm.content.dialogue.DialogueFactory;
+import com.dm.content.skill.impl.slayer.SlayerTab;
+import com.dm.content.skill.impl.slayer.TaskDifficulty;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.net.packet.out.SendString;
 
 public class SlayerButtonPlugin extends PluginContext {
 

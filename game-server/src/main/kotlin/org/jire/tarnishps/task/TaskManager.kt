@@ -1,6 +1,6 @@
 package org.jire.tarnishps.task
 
-import com.osroyale.game.task.Task
+import com.dm.game.task.Task
 import it.unimi.dsi.fastutil.objects.Object2BooleanMap
 import it.unimi.dsi.fastutil.objects.Object2BooleanOpenHashMap
 import org.jctools.queues.MessagePassingQueue

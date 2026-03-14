@@ -1,10 +1,10 @@
 package plugin.click.item;
 
-import com.osroyale.game.event.impl.ItemClickEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.items.Item;
-import com.osroyale.net.packet.out.SendMessage;
+import com.dm.game.event.impl.ItemClickEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.items.Item;
+import com.dm.net.packet.out.SendMessage;
 
 /**
  * Created by Daniel on 2018-01-04.

@@ -2,12 +2,12 @@ package org.jire.tarnishps.defs
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import com.osroyale.game.world.entity.combat.ranged.RangedAmmunition
-import com.osroyale.game.world.entity.combat.ranged.RangedWeaponDefinition
-import com.osroyale.game.world.entity.combat.ranged.RangedWeaponType
-import com.osroyale.game.world.entity.combat.weapon.WeaponInterface
-import com.osroyale.game.world.items.ItemDefinition
-import com.osroyale.game.world.items.containers.equipment.EquipmentType
+import com.dm.game.world.entity.combat.ranged.RangedAmmunition
+import com.dm.game.world.entity.combat.ranged.RangedWeaponDefinition
+import com.dm.game.world.entity.combat.ranged.RangedWeaponType
+import com.dm.game.world.entity.combat.weapon.WeaponInterface
+import com.dm.game.world.items.ItemDefinition
+import com.dm.game.world.items.containers.equipment.EquipmentType
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap
 import java.io.File

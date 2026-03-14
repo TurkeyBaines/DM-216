@@ -1,18 +1,18 @@
 package plugin.click.button;
 
-import com.osroyale.Config;
-import com.osroyale.content.clanchannel.ClanMember;
-import com.osroyale.content.clanchannel.ClanRank;
-import com.osroyale.content.clanchannel.channel.ClanChannel;
-import com.osroyale.content.clanchannel.channel.ClanChannelHandler;
-import com.osroyale.content.clanchannel.content.ClanMemberComporator;
-import com.osroyale.content.clanchannel.content.ClanViewer;
-import com.osroyale.content.dialogue.impl.ClanRankDialogue;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.net.packet.out.SendConfig;
-import com.osroyale.net.packet.out.SendInputMessage;
-import com.osroyale.net.packet.out.SendMessage;
+import com.dm.Config;
+import com.dm.content.clanchannel.ClanMember;
+import com.dm.content.clanchannel.ClanRank;
+import com.dm.content.clanchannel.channel.ClanChannel;
+import com.dm.content.clanchannel.channel.ClanChannelHandler;
+import com.dm.content.clanchannel.content.ClanMemberComporator;
+import com.dm.content.clanchannel.content.ClanViewer;
+import com.dm.content.dialogue.impl.ClanRankDialogue;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.net.packet.out.SendConfig;
+import com.dm.net.packet.out.SendInputMessage;
+import com.dm.net.packet.out.SendMessage;
 
 import java.util.List;
 

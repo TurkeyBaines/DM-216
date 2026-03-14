@@ -1,7 +1,7 @@
 package org.jire.tarnishps
 
-import com.osroyale.game.task.Task
-import com.osroyale.game.world.World
+import com.dm.game.task.Task
+import com.dm.game.world.World
 
 /**
  * @author Jire

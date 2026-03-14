@@ -1,16 +1,16 @@
 package plugin.click.button;
 
-import com.osroyale.content.DropDisplay;
-import com.osroyale.content.ProfileViewer;
-import com.osroyale.content.achievement.AchievementWriter;
-import com.osroyale.content.activity.ActivityType;
-import com.osroyale.content.simulator.DropSimulator;
-import com.osroyale.content.tittle.TitleManager;
-import com.osroyale.content.writer.InterfaceWriter;
-import com.osroyale.content.writer.impl.InformationWriter;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.net.packet.out.SendURL;
+import com.dm.content.DropDisplay;
+import com.dm.content.ProfileViewer;
+import com.dm.content.achievement.AchievementWriter;
+import com.dm.content.activity.ActivityType;
+import com.dm.content.simulator.DropSimulator;
+import com.dm.content.tittle.TitleManager;
+import com.dm.content.writer.InterfaceWriter;
+import com.dm.content.writer.impl.InformationWriter;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.net.packet.out.SendURL;
 
 public class QuestTabButtonPlugin extends PluginContext {
 

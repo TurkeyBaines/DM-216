@@ -1,18 +1,18 @@
 package plugin.click.object;
 
-import com.osroyale.content.Obelisks;
-import com.osroyale.content.WellOfGoodwill;
-import com.osroyale.content.dialogue.DialogueFactory;
-import com.osroyale.content.shootingstar.ShootingStar;
-import com.osroyale.content.store.impl.PersonalStore;
-import com.osroyale.game.action.impl.FlaxPickingAction;
-import com.osroyale.game.event.impl.ObjectClickEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.World;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.entity.mob.player.PlayerRight;
-import com.osroyale.game.world.object.GameObject;
-import com.osroyale.net.packet.out.SendMessage;
+import com.dm.content.Obelisks;
+import com.dm.content.WellOfGoodwill;
+import com.dm.content.dialogue.DialogueFactory;
+import com.dm.content.shootingstar.ShootingStar;
+import com.dm.content.store.impl.PersonalStore;
+import com.dm.game.action.impl.FlaxPickingAction;
+import com.dm.game.event.impl.ObjectClickEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.World;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.entity.mob.player.PlayerRight;
+import com.dm.game.world.object.GameObject;
+import com.dm.net.packet.out.SendMessage;
 
 public class ObjectSecondClickPlugin extends PluginContext {
 

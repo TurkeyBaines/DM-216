@@ -26,7 +26,7 @@
  */
 package net.runelite.client.rs;
 
-import com.osroyale.Configuration;
+import com.dm.Configuration;
 import lombok.extern.slf4j.Slf4j;
 import net.runelite.client.ui.FatalErrorDialog;
 import net.runelite.client.ui.SplashScreen;
@@ -62,7 +62,7 @@ public class ClientLoader implements Supplier<Applet>
 	}
 
 	private static Applet loadVanilla() throws IOException, ClassNotFoundException, InstantiationException, IllegalAccessException {
-		Class<com.osroyale.Client> clientClass = com.osroyale.Client.class;
+		Class<com.dm.Client> clientClass = com.dm.Client.class;
 		return ClientLoader.loadFromClass(clientClass);
 	}
 

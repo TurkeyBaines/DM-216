@@ -1,12 +1,12 @@
 package plugin.click.button;
 
-import com.osroyale.Config;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.net.packet.out.SendConfig;
-import com.osroyale.net.packet.out.SendExpCounter;
-import com.osroyale.net.packet.out.SendExpCounterSetting;
-import com.osroyale.net.packet.out.SendMessage;
+import com.dm.Config;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.net.packet.out.SendConfig;
+import com.dm.net.packet.out.SendExpCounter;
+import com.dm.net.packet.out.SendExpCounterSetting;
+import com.dm.net.packet.out.SendMessage;
 
 public class ExperienceCounterButtonPlugin extends PluginContext {
 

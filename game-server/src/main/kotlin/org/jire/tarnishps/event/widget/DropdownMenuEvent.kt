@@ -1,16 +1,16 @@
 package org.jire.tarnishps.event.widget
 
-import com.osroyale.content.clanchannel.ClanRank
-import com.osroyale.content.clanchannel.ClanRepository
-import com.osroyale.content.clanchannel.ClanType
-import com.osroyale.content.clanchannel.channel.ClanChannel
-import com.osroyale.content.clanchannel.content.ClanViewer
-import com.osroyale.content.simulator.DropSimulator
-import com.osroyale.content.simulator.Simulation
-import com.osroyale.game.world.entity.mob.player.Player
-import com.osroyale.game.world.entity.mob.player.PlayerRight
-import com.osroyale.net.packet.out.SendMessage
-import com.osroyale.util.MessageColor
+import com.dm.content.clanchannel.ClanRank
+import com.dm.content.clanchannel.ClanRepository
+import com.dm.content.clanchannel.ClanType
+import com.dm.content.clanchannel.channel.ClanChannel
+import com.dm.content.clanchannel.content.ClanViewer
+import com.dm.content.simulator.DropSimulator
+import com.dm.content.simulator.Simulation
+import com.dm.game.world.entity.mob.player.Player
+import com.dm.game.world.entity.mob.player.PlayerRight
+import com.dm.net.packet.out.SendMessage
+import com.dm.util.MessageColor
 
 /**
  * @author Jire

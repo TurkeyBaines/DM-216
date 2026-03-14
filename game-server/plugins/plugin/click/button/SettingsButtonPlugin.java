@@ -1,19 +1,19 @@
 package plugin.click.button;
 
-import com.osroyale.Config;
-import com.osroyale.content.achievement.AchievementWriter;
-import com.osroyale.content.collectionlog.CollectionLog;
-import com.osroyale.content.simulator.DropSimulator;
-import com.osroyale.content.tittle.TitleManager;
-import com.osroyale.content.writer.InterfaceWriter;
-import com.osroyale.content.writer.impl.SettingWriter;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.entity.mob.player.PlayerRight;
-import com.osroyale.net.packet.out.SendConfig;
-import com.osroyale.net.packet.out.SendMessage;
-import com.osroyale.net.packet.out.SendScreenMode;
-import com.osroyale.net.packet.out.SendString;
+import com.dm.Config;
+import com.dm.content.achievement.AchievementWriter;
+import com.dm.content.collectionlog.CollectionLog;
+import com.dm.content.simulator.DropSimulator;
+import com.dm.content.tittle.TitleManager;
+import com.dm.content.writer.InterfaceWriter;
+import com.dm.content.writer.impl.SettingWriter;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.entity.mob.player.PlayerRight;
+import com.dm.net.packet.out.SendConfig;
+import com.dm.net.packet.out.SendMessage;
+import com.dm.net.packet.out.SendScreenMode;
+import com.dm.net.packet.out.SendString;
 
 public class SettingsButtonPlugin extends PluginContext {
 

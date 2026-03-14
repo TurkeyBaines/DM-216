@@ -1,15 +1,15 @@
 package plugin.click.button;
 
-import com.osroyale.content.activity.Activity;
-import com.osroyale.content.combat.SkullHeadIconType;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.entity.mob.player.PlayerRight;
-import com.osroyale.game.world.entity.mob.prayer.Prayer;
-import com.osroyale.game.world.entity.skill.Skill;
-import com.osroyale.net.packet.out.SendConfig;
-import com.osroyale.net.packet.out.SendMessage;
-import com.osroyale.util.Utility;
+import com.dm.content.activity.Activity;
+import com.dm.content.combat.SkullHeadIconType;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.entity.mob.player.PlayerRight;
+import com.dm.game.world.entity.mob.prayer.Prayer;
+import com.dm.game.world.entity.skill.Skill;
+import com.dm.net.packet.out.SendConfig;
+import com.dm.net.packet.out.SendMessage;
+import com.dm.util.Utility;
 
 public class PrayerButtonPlugin extends PluginContext {
 

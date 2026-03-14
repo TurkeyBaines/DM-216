@@ -1,33 +1,33 @@
 package plugin.command;
 
-import com.osroyale.Config;
-import com.osroyale.content.activity.randomevent.impl.MimeEvent;
-import com.osroyale.content.bloodmoney.BloodMoneyChest;
-import com.osroyale.content.dialogue.DialogueFactory;
-import com.osroyale.content.tittle.PlayerTitle;
-import com.osroyale.game.Graphic;
-import com.osroyale.game.plugin.extension.CommandExtension;
-import com.osroyale.game.task.Task;
-import com.osroyale.game.world.Interactable;
-import com.osroyale.game.world.World;
-import com.osroyale.game.world.entity.combat.hit.Hit;
-import com.osroyale.game.world.entity.mob.UpdateFlag;
-import com.osroyale.game.world.entity.mob.npc.Npc;
-import com.osroyale.game.world.entity.mob.npc.definition.NpcDefinition;
-import com.osroyale.game.world.entity.mob.player.*;
-import com.osroyale.game.world.entity.mob.player.command.Command;
-import com.osroyale.game.world.entity.mob.player.command.CommandParser;
-import com.osroyale.game.world.entity.mob.player.profile.ProfileRepository;
-import com.osroyale.game.world.entity.skill.Skill;
-import com.osroyale.game.world.items.Item;
-import com.osroyale.game.world.position.Area;
-import com.osroyale.game.world.position.Position;
-import com.osroyale.net.packet.out.SendInputAmount;
-import com.osroyale.net.packet.out.SendInputMessage;
-import com.osroyale.net.packet.out.SendMessage;
-import com.osroyale.net.packet.out.SendString;
-import com.osroyale.util.StringUtils;
-import com.osroyale.util.Utility;
+import com.dm.Config;
+import com.dm.content.activity.randomevent.impl.MimeEvent;
+import com.dm.content.bloodmoney.BloodMoneyChest;
+import com.dm.content.dialogue.DialogueFactory;
+import com.dm.content.tittle.PlayerTitle;
+import com.dm.game.Graphic;
+import com.dm.game.plugin.extension.CommandExtension;
+import com.dm.game.task.Task;
+import com.dm.game.world.Interactable;
+import com.dm.game.world.World;
+import com.dm.game.world.entity.combat.hit.Hit;
+import com.dm.game.world.entity.mob.UpdateFlag;
+import com.dm.game.world.entity.mob.npc.Npc;
+import com.dm.game.world.entity.mob.npc.definition.NpcDefinition;
+import com.dm.game.world.entity.mob.player.*;
+import com.dm.game.world.entity.mob.player.command.Command;
+import com.dm.game.world.entity.mob.player.command.CommandParser;
+import com.dm.game.world.entity.mob.player.profile.ProfileRepository;
+import com.dm.game.world.entity.skill.Skill;
+import com.dm.game.world.items.Item;
+import com.dm.game.world.position.Area;
+import com.dm.game.world.position.Position;
+import com.dm.net.packet.out.SendInputAmount;
+import com.dm.net.packet.out.SendInputMessage;
+import com.dm.net.packet.out.SendMessage;
+import com.dm.net.packet.out.SendString;
+import com.dm.util.StringUtils;
+import com.dm.util.Utility;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -246,7 +246,7 @@ public class OwnerCommandPlugin extends CommandExtension {
             @Override
             public void execute(Player player, CommandParser parser) {
                 Config.DOUBLE_EXPERIENCE = !Config.DOUBLE_EXPERIENCE;
-                World.sendMessage("<col=CF2192>Tarnish: </col>Double experience is now " + (Config.DOUBLE_EXPERIENCE ? "activated" : "de-activated") + ".");
+                World.sendMessage("<col=CF2192>Dead Men: </col>Double experience is now " + (Config.DOUBLE_EXPERIENCE ? "activated" : "de-activated") + ".");
             }
         });
 

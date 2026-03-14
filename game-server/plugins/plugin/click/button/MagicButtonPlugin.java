@@ -1,25 +1,25 @@
 package plugin.click.button;
 
-import com.osroyale.Config;
-import com.osroyale.content.activity.Activity;
-import com.osroyale.content.lms.LMSGame;
-import com.osroyale.content.lms.lobby.LMSLobby;
-import com.osroyale.content.skill.impl.magic.spell.impl.BonesToBananas;
-import com.osroyale.content.skill.impl.magic.spell.impl.BonesToPeaches;
-import com.osroyale.content.skill.impl.magic.spell.impl.MagicTeleports;
-import com.osroyale.content.skill.impl.magic.spell.impl.Vengeance;
-import com.osroyale.content.skill.impl.magic.teleport.Teleportation;
-import com.osroyale.game.Animation;
-import com.osroyale.game.Graphic;
-import com.osroyale.game.event.impl.ItemContainerContextMenuEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.World;
-import com.osroyale.game.world.entity.combat.magic.MagicRune;
-import com.osroyale.game.world.entity.mob.data.PacketType;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.entity.mob.player.PlayerRight;
-import com.osroyale.game.world.entity.skill.Skill;
-import com.osroyale.net.packet.out.SendMessage;
+import com.dm.Config;
+import com.dm.content.activity.Activity;
+import com.dm.content.lms.LMSGame;
+import com.dm.content.lms.lobby.LMSLobby;
+import com.dm.content.skill.impl.magic.spell.impl.BonesToBananas;
+import com.dm.content.skill.impl.magic.spell.impl.BonesToPeaches;
+import com.dm.content.skill.impl.magic.spell.impl.MagicTeleports;
+import com.dm.content.skill.impl.magic.spell.impl.Vengeance;
+import com.dm.content.skill.impl.magic.teleport.Teleportation;
+import com.dm.game.Animation;
+import com.dm.game.Graphic;
+import com.dm.game.event.impl.ItemContainerContextMenuEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.World;
+import com.dm.game.world.entity.combat.magic.MagicRune;
+import com.dm.game.world.entity.mob.data.PacketType;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.entity.mob.player.PlayerRight;
+import com.dm.game.world.entity.skill.Skill;
+import com.dm.net.packet.out.SendMessage;
 
 public class MagicButtonPlugin extends PluginContext {
 

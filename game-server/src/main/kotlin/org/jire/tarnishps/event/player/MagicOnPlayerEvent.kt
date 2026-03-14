@@ -1,7 +1,7 @@
 package org.jire.tarnishps.event.player
 
-import com.osroyale.game.world.entity.combat.magic.CombatSpell
-import com.osroyale.game.world.entity.mob.player.Player
+import com.dm.game.world.entity.combat.magic.CombatSpell
+import com.dm.game.world.entity.mob.player.Player
 
 /**
  * @author Jire

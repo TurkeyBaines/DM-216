@@ -1,8 +1,8 @@
 package org.jire.tarnishps.event.npc
 
-import com.osroyale.content.event.impl.FirstNpcClick
-import com.osroyale.game.world.entity.mob.npc.Npc
-import com.osroyale.game.world.entity.mob.player.Player
+import com.dm.content.event.impl.FirstNpcClick
+import com.dm.game.world.entity.mob.npc.Npc
+import com.dm.game.world.entity.mob.player.Player
 
 /**
  * @author Jire

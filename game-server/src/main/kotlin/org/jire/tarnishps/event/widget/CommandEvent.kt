@@ -1,11 +1,11 @@
 package org.jire.tarnishps.event.widget
 
-import com.osroyale.content.clanchannel.channel.ClanChannel
-import com.osroyale.game.event.impl.CommandEvent
-import com.osroyale.game.plugin.PluginManager
-import com.osroyale.game.world.entity.mob.player.Player
-import com.osroyale.game.world.entity.mob.player.command.CommandParser
-import com.osroyale.util.Utility
+import com.dm.content.clanchannel.channel.ClanChannel
+import com.dm.game.event.impl.CommandEvent
+import com.dm.game.plugin.PluginManager
+import com.dm.game.world.entity.mob.player.Player
+import com.dm.game.world.entity.mob.player.command.CommandParser
+import com.dm.util.Utility
 
 /**
  * @author Jire

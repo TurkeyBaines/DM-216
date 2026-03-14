@@ -1,14 +1,13 @@
 package plugin.click.button;
 
-import com.osroyale.content.dialogue.impl.PrestigeDialogue;
-import com.osroyale.content.prestige.PrestigeData;
-import com.osroyale.content.store.Store;
-import com.osroyale.game.event.impl.ItemClickEvent;
-import com.osroyale.game.event.impl.NpcClickEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.World;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.entity.skill.Skill;
+import com.dm.content.dialogue.impl.PrestigeDialogue;
+import com.dm.content.prestige.PrestigeData;
+import com.dm.content.store.Store;
+import com.dm.game.event.impl.ItemClickEvent;
+import com.dm.game.event.impl.NpcClickEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.entity.skill.Skill;
 
 public class PrestigeButtonPlugin extends PluginContext {
 

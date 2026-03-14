@@ -1,24 +1,24 @@
 package plugin.click.item;
 
-import com.osroyale.content.achievement.AchievementHandler;
-import com.osroyale.content.achievement.AchievementKey;
-import com.osroyale.content.combat.cannon.Cannon;
-import com.osroyale.content.combat.cannon.CannonManager;
-import com.osroyale.content.skill.impl.magic.teleport.Teleportation;
-import com.osroyale.content.skill.impl.woodcutting.BirdsNest;
-import com.osroyale.content.store.Store;
-import com.osroyale.content.tittle.PlayerTitle;
-import com.osroyale.game.action.impl.SpadeAction;
-import com.osroyale.game.event.impl.ItemClickEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.entity.mob.prayer.Prayer;
-import com.osroyale.game.world.position.Position;
-import com.osroyale.net.packet.out.SendInputMessage;
-import com.osroyale.net.packet.out.SendMessage;
-import com.osroyale.net.packet.out.SendString;
-import com.osroyale.util.Stopwatch;
-import com.osroyale.util.Utility;
+import com.dm.content.achievement.AchievementHandler;
+import com.dm.content.achievement.AchievementKey;
+import com.dm.content.combat.cannon.Cannon;
+import com.dm.content.combat.cannon.CannonManager;
+import com.dm.content.skill.impl.magic.teleport.Teleportation;
+import com.dm.content.skill.impl.woodcutting.BirdsNest;
+import com.dm.content.store.Store;
+import com.dm.content.tittle.PlayerTitle;
+import com.dm.game.action.impl.SpadeAction;
+import com.dm.game.event.impl.ItemClickEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.entity.mob.prayer.Prayer;
+import com.dm.game.world.position.Position;
+import com.dm.net.packet.out.SendInputMessage;
+import com.dm.net.packet.out.SendMessage;
+import com.dm.net.packet.out.SendString;
+import com.dm.util.Stopwatch;
+import com.dm.util.Utility;
 
 import java.util.concurrent.TimeUnit;
 

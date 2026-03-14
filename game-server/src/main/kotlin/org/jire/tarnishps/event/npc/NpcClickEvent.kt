@@ -1,9 +1,9 @@
 package org.jire.tarnishps.event.npc
 
-import com.osroyale.game.world.World
-import com.osroyale.game.world.entity.mob.data.PacketType
-import com.osroyale.game.world.entity.mob.npc.Npc
-import com.osroyale.game.world.entity.mob.player.Player
+import com.dm.game.world.World
+import com.dm.game.world.entity.mob.data.PacketType
+import com.dm.game.world.entity.mob.npc.Npc
+import com.dm.game.world.entity.mob.player.Player
 import kotlin.jvm.optionals.getOrNull
 
 /**

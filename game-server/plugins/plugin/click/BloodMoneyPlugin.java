@@ -1,15 +1,15 @@
 package plugin.click;
 
-import com.osroyale.content.activity.impl.barrows.BarrowsUtility;
-import com.osroyale.content.bloodmoney.BloodMoneyChest;
-import com.osroyale.game.action.impl.ChestAction;
-import com.osroyale.game.event.impl.ObjectClickEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.items.Item;
-import com.osroyale.game.world.position.Area;
-import com.osroyale.net.packet.out.SendURL;
-import com.osroyale.util.Utility;
+import com.dm.content.activity.impl.barrows.BarrowsUtility;
+import com.dm.content.bloodmoney.BloodMoneyChest;
+import com.dm.game.action.impl.ChestAction;
+import com.dm.game.event.impl.ObjectClickEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.items.Item;
+import com.dm.game.world.position.Area;
+import com.dm.net.packet.out.SendURL;
+import com.dm.util.Utility;
 
 /**
  * Created by Daniel on 2018-02-03.

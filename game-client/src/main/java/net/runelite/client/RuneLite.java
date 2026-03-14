@@ -31,7 +31,7 @@ import com.google.common.annotations.VisibleForTesting;
 import com.google.inject.Guice;
 import com.google.inject.Inject;
 import com.google.inject.Injector;
-import com.osroyale.Configuration;
+import com.dm.Configuration;
 import joptsimple.*;
 import joptsimple.util.EnumConverter;
 import lombok.Getter;

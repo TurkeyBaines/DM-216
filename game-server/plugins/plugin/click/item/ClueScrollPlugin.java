@@ -1,17 +1,17 @@
 package plugin.click.item;
 
-import com.osroyale.content.ActivityLog;
-import com.osroyale.content.achievement.AchievementHandler;
-import com.osroyale.content.achievement.AchievementKey;
-import com.osroyale.game.event.impl.ItemClickEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.World;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.items.Item;
-import com.osroyale.net.discord.DiscordPlugin;
-import com.osroyale.net.packet.out.SendItemOnInterface;
-import com.osroyale.util.Utility;
-import com.osroyale.util.chance.Chance;
+import com.dm.content.ActivityLog;
+import com.dm.content.achievement.AchievementHandler;
+import com.dm.content.achievement.AchievementKey;
+import com.dm.game.event.impl.ItemClickEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.World;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.items.Item;
+import com.dm.net.discord.DiscordPlugin;
+import com.dm.net.packet.out.SendItemOnInterface;
+import com.dm.util.Utility;
+import com.dm.util.chance.Chance;
 
 /**
  * Handles opening the clue scroll
@@ -64,7 +64,7 @@ public class ClueScrollPlugin extends PluginContext {
 
             for (String announcement : ITEMS_ANNOUNCED) {
                 if (name.contains(announcement)) {
-                    World.sendMessage("<icon=12><col=5739B3> Tarnish: <col=" + player.right.getColor() + ">" + player.getName() + " </col>has received " + Utility.getAOrAn(name) + " <col=5739B3>" + name + " </col>from <col=5739B3>" + item.getName().toLowerCase() + "</col>.");
+                    World.sendMessage("<icon=12><col=5739B3> Dead Men: <col=" + player.right.getColor() + ">" + player.getName() + " </col>has received " + Utility.getAOrAn(name) + " <col=5739B3>" + name + " </col>from <col=5739B3>" + item.getName().toLowerCase() + "</col>.");
                     DiscordPlugin.sendSimpleMessage(player.getName() + " has just received " + Utility.getAOrAn(name) + " " + name + " from " + item.getName().toLowerCase() + "!");
                 }
             }

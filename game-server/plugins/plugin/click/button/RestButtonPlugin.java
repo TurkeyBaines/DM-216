@@ -1,9 +1,9 @@
 package plugin.click.button;
 
-import com.osroyale.game.Animation;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.net.packet.out.SendMessage;
+import com.dm.game.Animation;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.net.packet.out.SendMessage;
 
 public class RestButtonPlugin extends PluginContext {
 

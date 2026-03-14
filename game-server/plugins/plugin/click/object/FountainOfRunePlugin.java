@@ -1,13 +1,13 @@
 package plugin.click.object;
 
-import com.osroyale.game.Graphic;
-import com.osroyale.game.event.impl.ObjectClickEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.World;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.items.Item;
-import com.osroyale.net.discord.DiscordPlugin;
-import com.osroyale.util.Utility;
+import com.dm.game.Graphic;
+import com.dm.game.event.impl.ObjectClickEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.World;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.items.Item;
+import com.dm.net.discord.DiscordPlugin;
+import com.dm.util.Utility;
 
 /**
  * Created by Daniel on 2018-02-06.
@@ -42,7 +42,7 @@ public class FountainOfRunePlugin extends PluginContext {
 
                 if (eternal) {
                     player.message("<col=FF0000>You found an amulet of eternal glory!");
-                    World.sendMessage("<col=BA383E>Tarnish: <col=" + player.right.getColor() + ">" + player.getName() + " </col>has just found an <col=BA383E>amulet of eternal glory </col>from the <col=BA383E>fountain of rune</col>!");
+                    World.sendMessage("<col=BA383E>Dead Men: <col=" + player.right.getColor() + ">" + player.getName() + " </col>has just found an <col=BA383E>amulet of eternal glory </col>from the <col=BA383E>fountain of rune</col>!");
                     DiscordPlugin.sendSimpleMessage(player.getName() + " has just found an amulet of eternal glory from the fountain of rune!");
                 }
 

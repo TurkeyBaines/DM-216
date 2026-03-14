@@ -1,7 +1,7 @@
 package org.jire.tarnishps.event.npc
 
-import com.osroyale.game.world.entity.mob.npc.Npc
-import com.osroyale.game.world.entity.mob.player.Player
+import com.dm.game.world.entity.mob.npc.Npc
+import com.dm.game.world.entity.mob.player.Player
 
 /**
  * @author Jire

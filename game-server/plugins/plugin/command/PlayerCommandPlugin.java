@@ -1,22 +1,22 @@
 package plugin.command;
 
 
-import com.osroyale.Config;
-import com.osroyale.content.DropDisplay;
-import com.osroyale.content.Waypoints;
-import com.osroyale.content.skill.impl.magic.teleport.Teleportation;
-import com.osroyale.content.triviabot.TriviaBot;
-import com.osroyale.game.plugin.extension.CommandExtension;
-import com.osroyale.game.world.World;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.entity.mob.player.PlayerRight;
-import com.osroyale.game.world.entity.mob.player.command.Command;
-import com.osroyale.game.world.entity.mob.player.command.CommandParser;
-import com.osroyale.game.world.position.Area;
-import com.osroyale.net.packet.out.*;
-import com.osroyale.util.Utility;
-import com.osroyale.util.tools.LogPrinter;
-import com.osroyale.util.tools.LogReader;
+import com.dm.Config;
+import com.dm.content.DropDisplay;
+import com.dm.content.Waypoints;
+import com.dm.content.skill.impl.magic.teleport.Teleportation;
+import com.dm.content.triviabot.TriviaBot;
+import com.dm.game.plugin.extension.CommandExtension;
+import com.dm.game.world.World;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.entity.mob.player.PlayerRight;
+import com.dm.game.world.entity.mob.player.command.Command;
+import com.dm.game.world.entity.mob.player.command.CommandParser;
+import com.dm.game.world.position.Area;
+import com.dm.net.packet.out.*;
+import com.dm.util.Utility;
+import com.dm.util.tools.LogPrinter;
+import com.dm.util.tools.LogReader;
 
 import java.util.*;
 
@@ -134,7 +134,7 @@ public class PlayerCommandPlugin extends CommandExtension {
                 } else {
                     LogPrinter.printReferralLog(player);
                     player.inventory.add(995, 10000000);
-                    player.send(new SendMessage("You have claimed your referral! Welcome to Tarnish!"));
+                    player.send(new SendMessage("You have claimed your referral! Welcome to Dead Men!"));
                     LogPrinter.printToplist(player, toplist.toString());
                 }
             }
@@ -148,7 +148,7 @@ public class PlayerCommandPlugin extends CommandExtension {
                 } else {
                     LogPrinter.printReferralLog(player);
                     player.inventory.add(995, 10000000);
-                    player.send(new SendMessage("You have claimed your referral! Welcome to Tarnish!"));
+                    player.send(new SendMessage("You have claimed your referral! Welcome to Dead Men!"));
                    // LogPrinter.printToplist(player, String.valueOf(name));
                 }
             }
@@ -209,7 +209,7 @@ public class PlayerCommandPlugin extends CommandExtension {
                                              }
                                              player.inventory.add(new Item(reward[0].reward_id, reward[0].give_amount));
                                              AchievementHandler.activate(player, AchievementKey.VOTE);
-                                             player.send(new SendMessage("Thank you for supporting Tarnish!"));
+                                             player.send(new SendMessage("Thank you for supporting Dead Men!"));
                                          }
                                      } catch (Exception e) {
                                          player.send(new SendMessage("Api Services are currently offline. Please check back shortly"));
@@ -259,7 +259,7 @@ public class PlayerCommandPlugin extends CommandExtension {
 
                 player.send(new SendString("", 37113));
                 player.send(new SendString("", 37107));
-                player.send(new SendString("Tarnish Online Staff", 37103));
+                player.send(new SendString("Dead Men Online Staff", 37103));
                 player.send(new SendScrollbar(37110, length * 20));
 
                 for (int index = 0, string = 37111; index < length; index++, string++) {
@@ -305,7 +305,7 @@ public class PlayerCommandPlugin extends CommandExtension {
                              int length = staffs.size() < 25 ? 25 : staffs.size();
                              player.send(new SendString("", 37113));
                              player.send(new SendString("", 37107));
-                             player.send(new SendString("Tarnish Online Players", 37103));
+                             player.send(new SendString("Dead Men Online Players", 37103));
                              player.send(new SendScrollbar(37110, length * 20));
                              for (int index = 0, string = 37111; index < length; index++, string++) {
                                  if (index < staffs.size()) {

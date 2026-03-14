@@ -1,9 +1,9 @@
 package plugin.click.button;
 
-import com.osroyale.content.DropDisplay;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.npc.drop.NpcDropManager;
-import com.osroyale.game.world.entity.mob.player.Player;
+import com.dm.content.DropDisplay;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.npc.drop.NpcDropManager;
+import com.dm.game.world.entity.mob.player.Player;
 
 import java.util.List;
 

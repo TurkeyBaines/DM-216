@@ -1,10 +1,10 @@
 package plugin.click.button;
 
-import com.osroyale.content.skill.guides.GuideData;
-import com.osroyale.content.skill.guides.SkillGuides;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.net.packet.out.SendRemoveInterface;
+import com.dm.content.skill.guides.GuideData;
+import com.dm.content.skill.guides.SkillGuides;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.net.packet.out.SendRemoveInterface;
 
 public class SkillGuideButtonPlugin extends PluginContext {
 

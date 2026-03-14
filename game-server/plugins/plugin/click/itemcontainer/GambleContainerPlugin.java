@@ -1,9 +1,9 @@
 package plugin.click.itemcontainer;
 
-import com.osroyale.game.event.impl.ItemContainerContextMenuEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.net.packet.out.SendInputAmount;
+import com.dm.game.event.impl.ItemContainerContextMenuEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.net.packet.out.SendInputAmount;
 
 public class GambleContainerPlugin extends PluginContext {
 

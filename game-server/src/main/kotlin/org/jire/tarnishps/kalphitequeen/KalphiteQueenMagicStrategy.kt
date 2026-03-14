@@ -1,15 +1,15 @@
 package org.jire.tarnishps.kalphitequeen
 
-import com.osroyale.game.Animation
-import com.osroyale.game.Graphic
-import com.osroyale.game.Projectile
-import com.osroyale.game.world.entity.combat.hit.CombatHit
-import com.osroyale.game.world.entity.combat.hit.Hit
-import com.osroyale.game.world.entity.combat.projectile.CombatProjectile
-import com.osroyale.game.world.entity.combat.strategy.npc.NpcMagicStrategy
-import com.osroyale.game.world.entity.mob.Mob
-import com.osroyale.game.world.entity.mob.npc.Npc
-import com.osroyale.game.world.region.RegionManager
+import com.dm.game.Animation
+import com.dm.game.Graphic
+import com.dm.game.Projectile
+import com.dm.game.world.entity.combat.hit.CombatHit
+import com.dm.game.world.entity.combat.hit.Hit
+import com.dm.game.world.entity.combat.projectile.CombatProjectile
+import com.dm.game.world.entity.combat.strategy.npc.NpcMagicStrategy
+import com.dm.game.world.entity.mob.Mob
+import com.dm.game.world.entity.mob.npc.Npc
+import com.dm.game.world.region.RegionManager
 
 /**
  * @author Jire

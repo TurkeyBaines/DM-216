@@ -1,11 +1,11 @@
 package org.jire.tarnishps.event.widget
 
-import com.osroyale.game.world.World
-import com.osroyale.game.world.entity.mob.player.Player
-import com.osroyale.game.world.entity.mob.player.relations.PrivateChatMessage
-import com.osroyale.net.packet.ClientPackets
-import com.osroyale.util.ChatCodec
-import com.osroyale.util.Utility
+import com.dm.game.world.World
+import com.dm.game.world.entity.mob.player.Player
+import com.dm.game.world.entity.mob.player.relations.PrivateChatMessage
+import com.dm.net.packet.ClientPackets
+import com.dm.util.ChatCodec
+import com.dm.util.Utility
 import kotlin.jvm.optionals.getOrNull
 
 /**

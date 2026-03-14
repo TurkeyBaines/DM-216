@@ -1,10 +1,10 @@
 package plugin.click.object.wintertodt;
 
-import com.osroyale.content.wintertodt.Wintertodt;
-import com.osroyale.game.event.impl.ItemOnItemEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.items.Item;
+import com.dm.content.wintertodt.Wintertodt;
+import com.dm.game.event.impl.ItemOnItemEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.items.Item;
 
 public class FletchKindlingPlugin extends PluginContext {
 

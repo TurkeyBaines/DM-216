@@ -1,35 +1,35 @@
 package plugin.click.npc;
 
-import com.osroyale.content.activity.impl.magearena.MageArena;
-import com.osroyale.content.activity.impl.recipefordisaster.RecipeForDisaster;
-import com.osroyale.content.activity.panel.ActivityPanel;
-import com.osroyale.content.dialogue.DialogueFactory;
-import com.osroyale.content.dialogue.Expression;
-import com.osroyale.content.dialogue.impl.*;
-import com.osroyale.content.pet.Pets;
-import com.osroyale.content.skill.impl.thieving.Thieving;
-import com.osroyale.content.store.Store;
-import com.osroyale.content.store.impl.SkillcapeStore;
-import com.osroyale.game.Animation;
-import com.osroyale.game.Graphic;
-import com.osroyale.game.event.impl.NpcClickEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.World;
-import com.osroyale.game.world.entity.combat.strategy.player.special.CombatSpecial;
-import com.osroyale.game.world.entity.mob.UpdateFlag;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.entity.mob.player.PlayerRight;
-import com.osroyale.game.world.items.Item;
-import com.osroyale.game.world.position.Position;
-import com.osroyale.net.packet.out.SendMessage;
-import com.osroyale.net.packet.out.SendRunEnergy;
-import com.osroyale.net.packet.out.SendString;
-import com.osroyale.util.Utility;
+import com.dm.content.activity.impl.magearena.MageArena;
+import com.dm.content.activity.impl.recipefordisaster.RecipeForDisaster;
+import com.dm.content.activity.panel.ActivityPanel;
+import com.dm.content.dialogue.DialogueFactory;
+import com.dm.content.dialogue.Expression;
+import com.dm.content.dialogue.impl.*;
+import com.dm.content.pet.Pets;
+import com.dm.content.skill.impl.thieving.Thieving;
+import com.dm.content.store.Store;
+import com.dm.content.store.impl.SkillcapeStore;
+import com.dm.game.Animation;
+import com.dm.game.Graphic;
+import com.dm.game.event.impl.NpcClickEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.World;
+import com.dm.game.world.entity.combat.strategy.player.special.CombatSpecial;
+import com.dm.game.world.entity.mob.UpdateFlag;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.entity.mob.player.PlayerRight;
+import com.dm.game.world.items.Item;
+import com.dm.game.world.position.Position;
+import com.dm.net.packet.out.SendMessage;
+import com.dm.net.packet.out.SendRunEnergy;
+import com.dm.net.packet.out.SendString;
+import com.dm.util.Utility;
 
 import java.util.Iterator;
 import java.util.concurrent.TimeUnit;
 
-import static com.osroyale.content.pet.PetData.JAD;
+import static com.dm.content.pet.PetData.JAD;
 
 public class NpcFirstClickPlugin extends PluginContext {
 

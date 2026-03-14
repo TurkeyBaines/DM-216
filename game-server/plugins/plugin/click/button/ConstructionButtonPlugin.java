@@ -1,9 +1,9 @@
 package plugin.click.button;
 
-import com.osroyale.content.skill.impl.construction.BuildableInterface;
-import com.osroyale.content.skill.impl.construction.BuildableType;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
+import com.dm.content.skill.impl.construction.BuildableInterface;
+import com.dm.content.skill.impl.construction.BuildableType;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
 
 public class ConstructionButtonPlugin extends PluginContext {
 

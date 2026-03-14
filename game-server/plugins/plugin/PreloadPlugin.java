@@ -1,18 +1,18 @@
 package plugin;
 
-import com.osroyale.Config;
-import com.osroyale.content.preloads.Preload;
-import com.osroyale.content.preloads.PreloadRepository;
-import com.osroyale.content.preloads.RandomItem;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.UpdateFlag;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.items.Item;
-import com.osroyale.game.world.position.Area;
-import com.osroyale.net.packet.out.SendItemOnInterface;
-import com.osroyale.net.packet.out.SendScrollbar;
-import com.osroyale.net.packet.out.SendString;
-import com.osroyale.net.packet.out.SendTooltip;
+import com.dm.Config;
+import com.dm.content.preloads.Preload;
+import com.dm.content.preloads.PreloadRepository;
+import com.dm.content.preloads.RandomItem;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.UpdateFlag;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.items.Item;
+import com.dm.game.world.position.Area;
+import com.dm.net.packet.out.SendItemOnInterface;
+import com.dm.net.packet.out.SendScrollbar;
+import com.dm.net.packet.out.SendString;
+import com.dm.net.packet.out.SendTooltip;
 
 public class PreloadPlugin extends PluginContext {
 

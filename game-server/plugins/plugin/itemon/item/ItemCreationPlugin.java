@@ -1,15 +1,15 @@
 package plugin.itemon.item;
 
-import com.osroyale.content.ItemCreation;
-import com.osroyale.content.dialogue.DialogueFactory;
-import com.osroyale.content.skill.impl.slayer.SlayerUnlockable;
-import com.osroyale.game.event.impl.ItemOnItemEvent;
-import com.osroyale.game.plugin.PluginContext;
-import com.osroyale.game.world.entity.mob.player.Player;
-import com.osroyale.game.world.entity.skill.Skill;
-import com.osroyale.game.world.items.Item;
-import com.osroyale.net.packet.out.SendMessage;
-import com.osroyale.util.Utility;
+import com.dm.content.ItemCreation;
+import com.dm.content.dialogue.DialogueFactory;
+import com.dm.content.skill.impl.slayer.SlayerUnlockable;
+import com.dm.game.event.impl.ItemOnItemEvent;
+import com.dm.game.plugin.PluginContext;
+import com.dm.game.world.entity.mob.player.Player;
+import com.dm.game.world.entity.skill.Skill;
+import com.dm.game.world.items.Item;
+import com.dm.net.packet.out.SendMessage;
+import com.dm.util.Utility;
 
 import java.util.Arrays;
 
