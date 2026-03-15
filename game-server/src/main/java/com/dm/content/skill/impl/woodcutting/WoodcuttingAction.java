@@ -87,7 +87,7 @@ public class WoodcuttingAction extends SkillIdAction<Player> {
             } else if (tree == TreeData.MAGIC_TREE) {
                 getMob().forClan(channel -> channel.activateTask(ClanTaskKey.MAGIC_LOG, getMob().getName()));
             }
-                if (object.active() && (tree.logs == 1 || tree.logs != 1 && Utility.random(8) <= 0) && !Area.inSuperDonatorZone(object) && !Area.inRegularDonatorZone(object)) {
+                if (object.active() && (tree.logs == 1 || tree.logs != 1 && Utility.random(8) <= 0)) {
                     this.cancel();
                     getMob().resetAnimation();
                     object.getGenericAttributes().set("logs", -1);

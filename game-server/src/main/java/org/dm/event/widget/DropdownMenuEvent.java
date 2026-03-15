@@ -26,7 +26,7 @@ public final class DropdownMenuEvent implements WidgetEvent {
 
     @Override
     public void handle(Player player) {
-        if (player.debug && PlayerRight.isDeveloper(player)) {
+        if (player.debug && PlayerRight.isOwner(player)) {
             player.send(new SendMessage(
                     "[DropdownMenuPacketListener] Identification: " + identification + " | Value: " + value,
                     MessageColor.DEVELOPER

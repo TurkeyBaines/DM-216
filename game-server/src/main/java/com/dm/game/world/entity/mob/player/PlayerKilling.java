@@ -29,7 +29,7 @@ public class PlayerKilling {
             }
         }
 
-        int reward = PlayerRight.getBloodMoney(killer);
+        int reward = 10;
 
         killer.inventory.addOrDrop(new Item(13307, reward));
         killer.message("<col=295EFF>You were rewarded with " + reward + " blood money for that kill.");

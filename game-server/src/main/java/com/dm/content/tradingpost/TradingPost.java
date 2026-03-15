@@ -496,28 +496,8 @@ public class TradingPost  {
         player.send(new SendInterfaceVisibility(80146, isHidden));
     }
 
-    private int getSlotSizeByDonatorRank() {
-        switch (player.right) {
-            case KING_DONATOR -> {
-                return MAX_LISTING_SIZE;
-            }
-            case ELITE_DONATOR -> {
-                return 18;
-
-            }
-            case EXTREME_DONATOR -> {
-                return 15;
-            }
-            case SUPER_DONATOR -> {
-                return 12;
-            }
-            case DONATOR -> {
-                return 10;
-            }
-            default -> {
-                return 5;
-            }
-        }
+    private int getSlotSize() {
+        return 5;
     }
 
     private void openSellingOverlay() {
@@ -574,7 +554,7 @@ public class TradingPost  {
             player.send(new SendMessage("Unable to add listing with a price of zero."));
             return;
         }
-        if(myListings.size() > getSlotSizeByDonatorRank()) {
+        if(myListings.size() > getSlotSize()) {
             player.send(new SendMessage("Unable to add listing with max number listings listed."));
             return;
         }

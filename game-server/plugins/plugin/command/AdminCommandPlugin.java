@@ -80,7 +80,6 @@ public class AdminCommandPlugin extends CommandExtension {
             public void execute(Player player, CommandParser parser) {
                 player.dragonfireCharges = 50;
                 player.slayer.setPoints(50000);
-                player.donation.setCredits(50000);
                 player.votePoints = 500000;
                 player.pestPoints = 500000;
                 player.skillingPoints = 500000;
@@ -97,7 +96,7 @@ public class AdminCommandPlugin extends CommandExtension {
                         name.append(" ").append(parser.nextString());
                     }
                     World.search(name.toString()).ifPresent(other -> {
-                        if (PlayerRight.isDeveloper(other)) {
+                        if (PlayerRight.isOwner(other)) {
                             return;
                         }
 

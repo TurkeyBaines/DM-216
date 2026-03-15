@@ -35,8 +35,8 @@ public final class HighscoreService {
 
             ista.setInt(1, player.getMemberId());
             ista.setString(2, player.getName());
-            ista.setInt(3, getRank(player.right));
-            ista.setInt(4, getRank(player.right));
+            ista.setInt(3, getRank());
+            ista.setInt(4, getRank());
             ista.setInt(5, player.prestige.totalPrestige);
 
             for (int x = 0; x < Skill.SKILL_COUNT; x++) {
@@ -56,13 +56,7 @@ public final class HighscoreService {
         }
     }
 
-    private static int getRank(PlayerRight right) {
-        if (right == PlayerRight.ULTIMATE_IRONMAN)
-            return 3;
-        if (right == PlayerRight.HARDCORE_IRONMAN)
-            return 2;
-        if (right == PlayerRight.IRONMAN)
-            return 1;
+    private static int getRank() {
         return 0;
     }
 

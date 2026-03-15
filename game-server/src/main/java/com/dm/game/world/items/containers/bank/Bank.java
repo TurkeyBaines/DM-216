@@ -54,10 +54,6 @@ public class Bank extends ItemContainer {
 
     /** Opens the bank itemcontainer. */
     public void open() {
-        if (player.right.equals(PlayerRight.ULTIMATE_IRONMAN)) {
-            player.send(new SendMessage("As an ultimate iron man you may not use banks!"));
-            return;
-        }
         if (player.bankPin.hasPin() && !player.bankPin.entered) {
             player.bankPin.enter();
             return;

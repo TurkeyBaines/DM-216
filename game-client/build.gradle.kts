@@ -7,7 +7,7 @@ plugins {
     id("com.gradleup.shadow")
 }
 
-group = "com.osroyale"
+group = "com.dm"
 version = "1.0"
 
 dependencies {
@@ -91,7 +91,7 @@ dependencies {
 }
 
 application {
-    mainClass.set("com.osroyale.Client")
+    mainClass.set("com.dm.Client")
     applicationDefaultJvmArgs += arrayOf(
         "-XX:-OmitStackTraceInFastThrow",
         "-Xmx2g",

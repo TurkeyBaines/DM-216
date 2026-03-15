@@ -1,6 +1,5 @@
 package org.dm.event;
 
-import com.dm.content.gambling.GambleStage;
 import com.dm.game.world.entity.mob.player.Player;
 
 /**
@@ -14,9 +13,7 @@ public interface Event {
      * @return true if the event can be handled, false otherwise.
      */
     default boolean canHandle(Player player) {
-        return !player.isDead()
-                && player.getGambling().getStage() != GambleStage.PLACING_BET
-                && player.getGambling().getStage() != GambleStage.IN_PROGRESS;
+        return !player.isDead();
     }
 
     /**

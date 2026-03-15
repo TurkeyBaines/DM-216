@@ -196,7 +196,7 @@ public class NpcFirstClickPlugin extends PluginContext {
                     return true;
                 }
 
-                int length = PlayerRight.isDonator(player) ? 1 : 2;
+                int length = 2;
                 if (!player.restoreDelay.elapsed(length, TimeUnit.MINUTES)) {
                     player.dialogueFactory.sendNpcChat(id, "You can only do this once every " + length + " minutes!", "Time Passed: " + Utility.getTime(player.restoreDelay.elapsedTime())).execute();
                     return true;
@@ -251,7 +251,7 @@ public class NpcFirstClickPlugin extends PluginContext {
             }
            /* case 311: {
                 DialogueFactory factory = player.dialogueFactory;
-                if (!PlayerRight.isIronman(player) && !PlayerRight.isDeveloper(player)) {
+                if (!PlayerRight.isIronman(player) && !PlayerRight.isOwner(player)) {
                     factory.sendNpcChat(id, "Sorry, but you need to be an Ironman to speak to me!").execute();
                     return true;
                 }
@@ -271,34 +271,6 @@ public class NpcFirstClickPlugin extends PluginContext {
                 factory.execute();
                 break;
             }*/
-            case 311: {
-                DialogueFactory factory = player.dialogueFactory;
-                if (!PlayerRight.isIronman(player) && !PlayerRight.isDeveloper(player)) {
-                    factory.sendNpcChat(id, "Sorry, but you need to be an Ironman to speak to me!").execute();
-                    return true;
-                }
-                factory.sendNpcChat(id, "Welcome, my friend. How may I help you?");
-                factory.sendOption("Claim armor", player.playerAssistant::claimIronmanArmour, "Open general store", () -> {
-                    Store.STORES.get("Ironman General Store").open(player);
-                }, "Open skilling tools", () -> {
-                    Store.STORES.get("Ironman Skilling Tools").open(player);
-                }, "Open herblore supplies", () -> {
-                    Store.STORES.get("Herblore Supplies").open(player);
-                }, "Reset rank", () -> {
-                    factory.sendNpcChat(id, "Are you sure you want to reset your rank?");
-                    factory.sendOption("Yes", () -> {
-                        factory.onAction(() -> {
-                            player.right = PlayerRight.PLAYER;
-                            player.updateFlags.add(UpdateFlag.APPEARANCE);
-                            player.dialogueFactory.sendNpcChat(id, "You are no longer an Ironman!", "Re-log for the changes to take effect.").execute();
-                        });
-                    }, "No", factory::clear);
-                });
-                factory.execute();
-                break;
-            }
-		/* Ironman shop */
-
 
 		/* Melee shop */
             case 3216: {
@@ -402,11 +374,6 @@ public class NpcFirstClickPlugin extends PluginContext {
 		/* Construction dialogue */
             case 5419:
                 player.dialogueFactory.sendDialogue(new ConstructionDialogue());
-                break;
-
-		/* King Royal dialogue */
-            case 5523:
-                player.dialogueFactory.sendDialogue(new RoyalKingDialogue(0));
                 break;
 
 		/* Clanmaster Dialogue. */

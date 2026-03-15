@@ -56,110 +56,102 @@ public final class AppearanceChangePacketListener implements PacketListener {
 			case MALE:
 
 				if (!VALID_MALE_HEAD_MODELS.contains(appearance.getHead())) {
-					player.send(new SendMessage(PlayerRight.isDeveloper(player) ? String.format("Cannot change appearance - Invalid head id %d", appearance.getHead()) : "You cannot change your appearance, because you have an invalid head id."));
+					player.send(new SendMessage(PlayerRight.isOwner(player) ? String.format("Cannot change appearance - Invalid head id %d", appearance.getHead()) : "You cannot change your appearance, because you have an invalid head id."));
 					return false;
 				}
 
 				if (!VALID_MALE_JAW_MODELS.contains(appearance.getBeard())) {
-					player.send(new SendMessage(PlayerRight.isDeveloper(player) ? String.format("Cannot change appearance - Invalid jaw id %d", appearance.getBeard()) : "You cannot change your appearance, because you have an invalid jaw id."));
+					player.send(new SendMessage(PlayerRight.isOwner(player) ? String.format("Cannot change appearance - Invalid jaw id %d", appearance.getBeard()) : "You cannot change your appearance, because you have an invalid jaw id."));
 					return false;
 				}
 
 				if (!VALID_MALE_TORSO_MODELS.contains(appearance.getTorso())) {
-					player.send(new SendMessage(PlayerRight.isDeveloper(player) ? String.format("Cannot change appearance - Invalid torso id %d", appearance.getTorso()) : "You cannot change your appearance, because you have an invalid torso id."));
+					player.send(new SendMessage(PlayerRight.isOwner(player) ? String.format("Cannot change appearance - Invalid torso id %d", appearance.getTorso()) : "You cannot change your appearance, because you have an invalid torso id."));
 					return false;
 				}
 
 				if (!VALID_MALE_ARM_MODELS.contains(appearance.getArms())) {
-					player.send(new SendMessage(PlayerRight.isDeveloper(player) ? String.format("Cannot change appearance - Invalid arm id %d", appearance.getHead()) : "You cannot change your appearance, because you have an invalid arm id."));
+					player.send(new SendMessage(PlayerRight.isOwner(player) ? String.format("Cannot change appearance - Invalid arm id %d", appearance.getHead()) : "You cannot change your appearance, because you have an invalid arm id."));
 					return false;
 				}
 
 				if (!(appearance.getHands() >= 33 && appearance.getHands() <= 34)) {
-					player.send(new SendMessage(PlayerRight.isDeveloper(player) ? String.format("Cannot change appearance - Invalid hand id %d", appearance.getHands()) : "You cannot change your appearance, because you have an invalid hand id."));
+					player.send(new SendMessage(PlayerRight.isOwner(player) ? String.format("Cannot change appearance - Invalid hand id %d", appearance.getHands()) : "You cannot change your appearance, because you have an invalid hand id."));
 					return false;
 				}
 
 				if (!VALID_MALE_LEG_MODLES.contains(appearance.getLegs())) {
-					player.send(new SendMessage(PlayerRight.isDeveloper(player) ? String.format("Cannot change appearance - Invalid leg id %d", appearance.getLegs()) : "You cannot change your appearance, because you have an invalid leg id."));
+					player.send(new SendMessage(PlayerRight.isOwner(player) ? String.format("Cannot change appearance - Invalid leg id %d", appearance.getLegs()) : "You cannot change your appearance, because you have an invalid leg id."));
 					return false;
 				}
 
 				if (!(appearance.getFeet() >= 42 && appearance.getFeet() <= 43)) {
-					player.send(new SendMessage(PlayerRight.isDeveloper(player) ? String.format("Cannot change appearance - Invalid feet id %d", appearance.getFeet()) : "You cannot change your appearance, because you have an invalid feet id."));
+					player.send(new SendMessage(PlayerRight.isOwner(player) ? String.format("Cannot change appearance - Invalid feet id %d", appearance.getFeet()) : "You cannot change your appearance, because you have an invalid feet id."));
 					return false;
 				}
 				break;
 
 			case FEMALE:
 				if (!VALID_FEMALE_HEAD_MODELS.contains(appearance.getHead())) {
-					player.send(new SendMessage(PlayerRight.isDeveloper(player) ? String.format("Cannot change appearance - Invalid head id %d", appearance.getHead()) : "You cannot change your appearance, because you have an invalid head id."));
+					player.send(new SendMessage(PlayerRight.isOwner(player) ? String.format("Cannot change appearance - Invalid head id %d", appearance.getHead()) : "You cannot change your appearance, because you have an invalid head id."));
 					return false;
 				}
 
 				if (appearance.getBeard() != -1) {
-					player.send(new SendMessage(PlayerRight.isDeveloper(player) ? String.format("Cannot change appearance - Invalid jaw id %d", appearance.getBeard()) : "You cannot change your appearance, because you have an invalid jaw id."));
+					player.send(new SendMessage(PlayerRight.isOwner(player) ? String.format("Cannot change appearance - Invalid jaw id %d", appearance.getBeard()) : "You cannot change your appearance, because you have an invalid jaw id."));
 					return false;
 				}
 
 				if (!VALID_FEMALE_TORSO_MODELS.contains(appearance.getTorso())) {
-					player.send(new SendMessage(PlayerRight.isDeveloper(player) ? String.format("Cannot change appearance - Invalid torso id %d", appearance.getTorso()) : "You cannot change your appearance, because you have an invalid torso id."));
+					player.send(new SendMessage(PlayerRight.isOwner(player) ? String.format("Cannot change appearance - Invalid torso id %d", appearance.getTorso()) : "You cannot change your appearance, because you have an invalid torso id."));
 					return false;
 				}
 
 				if (!VALID_FEMALE_ARM_MODELS.contains(appearance.getArms())) {
-					player.send(new SendMessage(PlayerRight.isDeveloper(player) ? String.format("Cannot change appearance - Invalid arm id %d", appearance.getHead()) : "You cannot change your appearance, because you have an invalid arm id."));
+					player.send(new SendMessage(PlayerRight.isOwner(player) ? String.format("Cannot change appearance - Invalid arm id %d", appearance.getHead()) : "You cannot change your appearance, because you have an invalid arm id."));
 					return false;
 				}
 
 				if (!(appearance.getHands() >= 67 && appearance.getHands() <= 68)) {
-					player.send(new SendMessage(PlayerRight.isDeveloper(player) ? String.format("Cannot change appearance - Invalid hand id %d", appearance.getHands()) : "You cannot change your appearance, because you have an invalid hand id."));
+					player.send(new SendMessage(PlayerRight.isOwner(player) ? String.format("Cannot change appearance - Invalid hand id %d", appearance.getHands()) : "You cannot change your appearance, because you have an invalid hand id."));
 					return false;
 				}
 
 				if (!VALID_FEMALE_LEG_MODELS.contains(appearance.getLegs())) {
-					player.send(new SendMessage(PlayerRight.isDeveloper(player) ? String.format("Cannot change appearance - Invalid leg id %d", appearance.getLegs()) : "You cannot change your appearance, because you have an invalid leg id."));
+					player.send(new SendMessage(PlayerRight.isOwner(player) ? String.format("Cannot change appearance - Invalid leg id %d", appearance.getLegs()) : "You cannot change your appearance, because you have an invalid leg id."));
 					return false;
 				}
 
 				if (!(appearance.getFeet() >= 79 && appearance.getFeet() <= 80)) {
-					player.send(new SendMessage(PlayerRight.isDeveloper(player) ? String.format("Cannot change appearance - Invalid feet id %d", appearance.getFeet()) : "You cannot change your appearance, because you have an invalid feet id."));
+					player.send(new SendMessage(PlayerRight.isOwner(player) ? String.format("Cannot change appearance - Invalid feet id %d", appearance.getFeet()) : "You cannot change your appearance, because you have an invalid feet id."));
 					return false;
 				}
 				break;
 		}
 
 		if (!(appearance.getHairColor() >= 0 && appearance.getHairColor() <= 11)) {
-			player.send(new SendMessage(PlayerRight.isDeveloper(player) ? String.format("Cannot change appearance - Invalid hair color %d", appearance.getHairColor()) : "Cannot change appearance, invalid hair color."));
+			player.send(new SendMessage(PlayerRight.isOwner(player) ? String.format("Cannot change appearance - Invalid hair color %d", appearance.getHairColor()) : "Cannot change appearance, invalid hair color."));
 			return false;
 		}
 
 		if (!(appearance.getTorsoColor() >= 0 && appearance.getTorsoColor() <= 15)) {
-			player.send(new SendMessage(PlayerRight.isDeveloper(player) ? String.format("Cannot change appearance, invalid torso color %d", appearance.getTorsoColor()) : "Cannot change appearance, invalid torso color."));
+			player.send(new SendMessage(PlayerRight.isOwner(player) ? String.format("Cannot change appearance, invalid torso color %d", appearance.getTorsoColor()) : "Cannot change appearance, invalid torso color."));
 			return false;
 		}
 
 		if (!(appearance.getLegsColor() >= 0 && appearance.getLegsColor() <= 15)) {
-			player.send(new SendMessage(PlayerRight.isDeveloper(player) ? String.format("Cannot change appearance, invalid leg color %d", appearance.getLegsColor()) : "Cannot change appearance, invalid leg color."));
+			player.send(new SendMessage(PlayerRight.isOwner(player) ? String.format("Cannot change appearance, invalid leg color %d", appearance.getLegsColor()) : "Cannot change appearance, invalid leg color."));
 			return false;
 		}
 
 		if (!(appearance.getFeetColor() >= 0 && appearance.getFeetColor() <= 5)) {
-			player.send(new SendMessage(PlayerRight.isDeveloper(player) ? String.format("Cannot change appearance, invalid feet color %d", appearance.getFeetColor()) : "Cannot change appearance, invalid feet color."));
+			player.send(new SendMessage(PlayerRight.isOwner(player) ? String.format("Cannot change appearance, invalid feet color %d", appearance.getFeetColor()) : "Cannot change appearance, invalid feet color."));
 			return false;
 		}
 
 		if (!(appearance.getSkinColor() >= 0 && appearance.getSkinColor() <= 9)) {
-			player.send(new SendMessage(PlayerRight.isDeveloper(player) ? String.format("Cannot change appearance, invalid skin color %d", appearance.getSkinColor()) : "Cannot change appearance, invalid skin color."));
+			player.send(new SendMessage(PlayerRight.isOwner(player) ? String.format("Cannot change appearance, invalid skin color %d", appearance.getSkinColor()) : "Cannot change appearance, invalid skin color."));
 			return false;
-		}
-
-		int[] DONATOR_SKINS = { 8, 9 };
-
-		for (int skin : DONATOR_SKINS) {
-			if (appearance.getSkinColor() == skin && !PlayerRight.isDonator(player)) {
-				player.message("You need to be a donator to use this skin!");
-			}
 		}
 		return true;
 	}

@@ -65,11 +65,6 @@ public class BankVault {
     public boolean add(VaultCurrency currency, long amount, boolean message) {
         long container = getContainer(currency);
 
-        if (player.right == PlayerRight.ULTIMATE_IRONMAN) {
-            player.inventory.addOrDrop(new Item(currency.id, (int) amount));
-            return true;
-        }
-
         if (container + amount >= Long.MAX_VALUE) {
             return false;
         }

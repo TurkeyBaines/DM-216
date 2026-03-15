@@ -13,7 +13,6 @@ import com.dm.content.clanchannel.ClanRepository;
 import com.dm.content.clanchannel.channel.ClanChannel;
 import com.dm.content.clanchannel.content.ClanMemberComporator;
 import com.dm.content.dailyeffect.impl.DailySlayerTaskSkip;
-import com.dm.content.dailyeffect.impl.DailySlayerTaskTeleport;
 import com.dm.content.dailyeffect.impl.DailySpellBookSwap;
 import com.dm.content.emote.EmoteUnlockable;
 import com.dm.content.overrides.Overrides;
@@ -263,30 +262,6 @@ public final class PlayerPersistFile implements PlayerPersistable {
                 @Override
                 Object write(Player player) {
                     return player.playTime;
-                }
-            },
-
-            new PlayerJSONProperty("money-spent") {
-                @Override
-                void read(Player player, JsonElement property) {
-                    player.donation.setSpent(property.getAsInt());
-                }
-
-                @Override
-                Object write(Player player) {
-                    return player.donation.getSpent();
-                }
-            },
-
-            new PlayerJSONProperty("donation-credits") {
-                @Override
-                void read(Player player, JsonElement property) {
-                    player.donation.setCredits(property.getAsInt());
-                }
-
-                @Override
-                Object write(Player player) {
-                    return player.donation.getCredits();
                 }
             },
 
@@ -1267,42 +1242,6 @@ public final class PlayerPersistFile implements PlayerPersistable {
                 }
             },
 
-            new PlayerJSONProperty("preset-death-open") {
-                @Override
-                void read(Player player, JsonElement property) {
-                    player.presetManager.deathOpen = property.getAsBoolean();
-                }
-
-                @Override
-                Object write(Player player) {
-                    return player.presetManager.deathOpen;
-                }
-            },
-
-            new PlayerJSONProperty("preset-death-open") {
-                @Override
-                void read(Player player, JsonElement property) {
-                    player.presetManager.deathOpen = property.getAsBoolean();
-                }
-
-                @Override
-                Object write(Player player) {
-                    return player.presetManager.deathOpen;
-                }
-            },
-
-            new PlayerJSONProperty("preset-automatic-deposit") {
-                @Override
-                void read(Player player, JsonElement property) {
-                    player.presetManager.autoDeposit = property.getAsBoolean();
-                }
-
-                @Override
-                Object write(Player player) {
-                    return player.presetManager.autoDeposit;
-                }
-            },
-
             new PlayerJSONProperty("hidden-brother") {
                 @Override
                 void read(Player player, JsonElement property) {
@@ -1633,19 +1572,6 @@ public final class PlayerPersistFile implements PlayerPersistable {
                 @Override
                 Object write(Player player) {
                     return player.appearance;
-                }
-            },
-
-            new PlayerJSONProperty("preset") {
-                @Override
-                void read(Player player, JsonElement property) {
-                    Preset[] loaded = gson().fromJson(property, Preset[].class);
-                    System.arraycopy(loaded, 0, player.presetManager.preset, 0, loaded.length);
-                }
-
-                @Override
-                Object write(Player player) {
-                    return player.presetManager.preset;
                 }
             },
 
@@ -2041,18 +1967,6 @@ public final class PlayerPersistFile implements PlayerPersistable {
                 @Override
                 Object write(Player player) {
                     return player.dailySlayerTaskSkip;
-                }
-            },
-
-            new PlayerJSONProperty("daily-slayer-task-teleport") {
-                @Override
-                void read(Player player, JsonElement property) {
-                    player.dailySlayerTaskTeleport = gson().fromJson(property, DailySlayerTaskTeleport.class);
-                }
-
-                @Override
-                Object write(Player player) {
-                    return player.dailySlayerTaskTeleport;
                 }
             },
 

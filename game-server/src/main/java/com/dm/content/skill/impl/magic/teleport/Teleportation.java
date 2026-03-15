@@ -1,8 +1,6 @@
 package com.dm.content.skill.impl.magic.teleport;
 
 import com.dm.content.activity.Activity;
-import com.dm.content.lms.LMSGame;
-import com.dm.content.lms.lobby.LMSLobby;
 import com.dm.game.action.impl.TeleportAction;
 import com.dm.game.world.entity.mob.Mob;
 import com.dm.game.world.entity.mob.data.PacketType;
@@ -60,10 +58,6 @@ public class Teleportation {
             return false;
         }
 
-        if(LMSLobby.lobbyMembers.contains(player) || LMSGame.isActivePlayer(player)) {
-            return false;
-        }
-
         if (player.locking.locked(PacketType.TELEPORT)) {
             return false;
         }
@@ -73,7 +67,7 @@ public class Teleportation {
             return false;
         }
 
-        if (player.wilderness > wilderness && !PlayerRight.isDeveloper(player)) {
+        if (player.wilderness > wilderness && !PlayerRight.isAdministrator(player)) {
             player.send(new SendMessage("You can't teleport past " + wilderness + " wilderness!"));
             return false;
         }

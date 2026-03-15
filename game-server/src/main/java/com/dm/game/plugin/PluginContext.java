@@ -84,7 +84,7 @@ public class PluginContext implements PlayerEventListener {
     private boolean handlePickupItemEvent(Player player, PickupItemEvent event) {
         if (onPickupItem(player, event)) {
             logger.log(Level.INFO, String.format("player=%s picked up item=%d amount=%d position=%s", player.getName(), event.getItem().getId(), event.getItem().getAmount(), event.getPosition()));
-            if (PlayerRight.isDeveloper(player)) {
+            if (PlayerRight.isOwner(player)) {
                 player.send(new SendMessage(String.format("[%s]: item=%d position=%s", this.getClass().getSimpleName(), event.getItem().getId(), event.getPosition().toString())));
             }
             World.getDataBus().publish(new PickupItemLogEvent(player, event.getGroundItem()));
@@ -100,7 +100,7 @@ public class PluginContext implements PlayerEventListener {
     private boolean handleDropItemEvent(Player player, DropItemEvent event) {
         if (onDropItem(player, event)) {
             logger.log(Level.INFO, String.format("player=%s dropped item=%d amount=%d slot=%d position=%s", player.getName(), event.getItem().getId(), event.getItem().getAmount(), event.getSlot(), event.getPosition()));
-            if (PlayerRight.isDeveloper(player)) {
+            if (PlayerRight.isOwner(player)) {
                 player.send(new SendMessage(String.format("[%s]: item=%d amount=%d slot=%d position=%s", this.getClass().getSimpleName(), event.getItem().getId(), event.getItem().getAmount(), event.getSlot(), event.getPosition())));
             }
             return true;
@@ -117,7 +117,7 @@ public class PluginContext implements PlayerEventListener {
                 case 1:
                     if (firstClickItemContainer(player, event)) {
                         logger.log(Level.INFO, String.format("[%s, type=%d]: first item interfaceId=%d (removeId=%d, removeSlot=%d)", this.getClass().getSimpleName(), event.getType(), event.getInterfaceId(), event.getRemoveId(), event.getRemoveSlot()));
-                        if (PlayerRight.isDeveloper(player)) {
+                        if (PlayerRight.isOwner(player)) {
                             player.send(new SendMessage(String.format("[%s, type=%d]: interfaceId=%d (removeId=%d, removeSlot=%d)", this.getClass().getSimpleName(), event.getType(), event.getInterfaceId(), event.getRemoveId(), event.getRemoveSlot())));
                         }
                         return true;
@@ -128,7 +128,7 @@ public class PluginContext implements PlayerEventListener {
                     if (secondClickItemContainer(player, event)) {
                         logger.log(Level.INFO, String.format("[%s, type=%d]: second item interfaceId=%d (removeId=%d, removeSlot=%d)", this.getClass().getSimpleName(), event.getType(), event.getInterfaceId(), event.getRemoveId(), event.getRemoveSlot()));
 
-                        if (PlayerRight.isDeveloper(player)) {
+                        if (PlayerRight.isOwner(player)) {
                             player.send(new SendMessage(String.format("[%s, type=%d]: interfaceId=%d (removeId=%d, removeSlot=%d)", this.getClass().getSimpleName(), event.getType(), event.getInterfaceId(), event.getRemoveId(), event.getRemoveSlot())));
                         }
                         return true;
@@ -139,7 +139,7 @@ public class PluginContext implements PlayerEventListener {
                     if (thirdClickItemContainer(player, event)) {
                         logger.log(Level.INFO, String.format("[%s, type=%d]: third item interfaceId=%d (removeId=%d, removeSlot=%d)", this.getClass().getSimpleName(), event.getType(), event.getInterfaceId(), event.getRemoveId(), event.getRemoveSlot()));
 
-                        if (PlayerRight.isDeveloper(player)) {
+                        if (PlayerRight.isOwner(player)) {
                             player.send(new SendMessage(String.format("[%s, type=%d]: interfaceId=%d (removeId=%d, removeSlot=%d)", this.getClass().getSimpleName(), event.getType(), event.getInterfaceId(), event.getRemoveId(), event.getRemoveSlot())));
                         }
                         return true;
@@ -150,7 +150,7 @@ public class PluginContext implements PlayerEventListener {
                     if (fourthClickItemContainer(player, event)) {
                         logger.log(Level.INFO, String.format("[%s, type=%d]: fourth item interfaceId=%d (removeId=%d, removeSlot=%d)", this.getClass().getSimpleName(), event.getType(), event.getInterfaceId(), event.getRemoveId(), event.getRemoveSlot()));
 
-                        if (PlayerRight.isDeveloper(player)) {
+                        if (PlayerRight.isOwner(player)) {
                             player.send(new SendMessage(String.format("[%s, type=%d]: interfaceId=%d (removeId=%d, removeSlot=%d)", this.getClass().getSimpleName(), event.getType(), event.getInterfaceId(), event.getRemoveId(), event.getRemoveSlot())));
                         }
                         return true;
@@ -161,7 +161,7 @@ public class PluginContext implements PlayerEventListener {
                     if (fifthClickItemContainer(player, event)) {
                         logger.log(Level.INFO, String.format("[%s, type=%d]: fifth item interfaceId=%d (removeId=%d, removeSlot=%d)", this.getClass().getSimpleName(), event.getType(), event.getInterfaceId(), event.getRemoveId(), event.getRemoveSlot()));
 
-                        if (PlayerRight.isDeveloper(player) ) {
+                        if (PlayerRight.isOwner(player) ) {
                             player.send(new SendMessage(String.format("[%s, type=%d]: interfaceId=%d (removeId=%d, removeSlot=%d)", this.getClass().getSimpleName(), event.getType(), event.getInterfaceId(), event.getRemoveId(), event.getRemoveSlot())));
                         }
                         return true;
@@ -172,7 +172,7 @@ public class PluginContext implements PlayerEventListener {
                     if (sixthClickItemContainer(player, event)) {
                         logger.log(Level.INFO, String.format("[%s, type=%d]: sixth item interfaceId=%d (removeId=%d, removeSlot=%d)", this.getClass().getSimpleName(), event.getType(), event.getInterfaceId(), event.getRemoveId(), event.getRemoveSlot()));
 
-                        if (PlayerRight.isDeveloper(player) ) {
+                        if (PlayerRight.isOwner(player) ) {
                             player.send(new SendMessage(String.format("[%s, type=%d]: interfaceId=%d (removeId=%d, removeSlot=%d)", this.getClass().getSimpleName(), event.getType(), event.getInterfaceId(), event.getRemoveId(), event.getRemoveSlot())));
                         }
                         return true;
@@ -183,7 +183,7 @@ public class PluginContext implements PlayerEventListener {
                     if (allButOneItemContainer(player, event)) {
                         logger.log(Level.INFO, String.format("[%s, type=%d]: seventh item interfaceId=%d (removeId=%d, removeSlot=%d)", this.getClass().getSimpleName(), event.getType(), event.getInterfaceId(), event.getRemoveId(), event.getRemoveSlot()));
 
-                        if (PlayerRight.isDeveloper(player)) {
+                        if (PlayerRight.isOwner(player)) {
                             player.send(new SendMessage(String.format("[%s, type=%d]: interfaceId=%d (removeId=%d, removeSlot=%d)", this.getClass().getSimpleName(), event.getType(), event.getInterfaceId(), event.getRemoveId(), event.getRemoveSlot())));
                         }
                         return true;
@@ -194,7 +194,7 @@ public class PluginContext implements PlayerEventListener {
                     if (modifiableXItemContainer(player, event)) {
                         logger.log(Level.INFO, String.format("[%s, type=%d]: eight item interfaceId=%d (removeId=%d, removeSlot=%d)", this.getClass().getSimpleName(), event.getType(), event.getInterfaceId(), event.getRemoveId(), event.getRemoveSlot()));
 
-                        if (PlayerRight.isDeveloper(player) ) {
+                        if (PlayerRight.isOwner(player) ) {
                             player.send(new SendMessage(String.format("[%s, type=%d]: interfaceId=%d (removeId=%d, removeSlot=%d)", this.getClass().getSimpleName(), event.getType(), event.getInterfaceId(), event.getRemoveId(), event.getRemoveSlot())));
                         }
                         return true;

@@ -53,8 +53,10 @@ public enum PacketType {
 
             int button = (int) object;
 
-            if (button == 2458)//logout
+            if (button == 2458) {//logout
+                mob.getPlayer().logout();
                 return true;
+            }
             if (Dialogue.isDialogueButton(button))
                 return true;
             if (StarterKitButtonPlugin.isButton(button))

@@ -86,17 +86,11 @@ public class TriviaBot {
     private static void answered(Player player, String answer) {
         String color = player.right.getColor();
         int reward = Utility.random(50, 150);
-        if (PlayerRight.isIronman(player)) {
-            player.bankVault.add(COINS, reward);
-            AchievementHandler.activate(player, AchievementKey.TRIVIABOT, 1);
-            player.answeredTrivias += 1;
-            player.send(new SendMessage(Utility.formatDigits(reward) + " coins were added into your bank vault."));
-        } else {
-            player.bankVault.add(BLOOD_MONEY, reward);
-            player.answeredTrivias += 1;
-            AchievementHandler.activate(player, AchievementKey.TRIVIABOT, 1);
-            player.send(new SendMessage(Utility.formatDigits(reward) + " blood money were added into your bank vault."));
-        }
+        player.bankVault.add(BLOOD_MONEY, reward);
+        player.answeredTrivias += 1;
+        AchievementHandler.activate(player, AchievementKey.TRIVIABOT, 1);
+        player.send(new SendMessage(Utility.formatDigits(reward) + " blood money were added into your bank vault."));
+
         World.sendMessage(COLOR + "<icon=21> TriviaBot: <col=" + color + ">" + player.getName() + "</col> has answered the question correctly!");
         CURRENT = null;
     }

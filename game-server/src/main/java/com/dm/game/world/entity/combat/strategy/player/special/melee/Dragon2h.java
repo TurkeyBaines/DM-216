@@ -31,7 +31,7 @@ public class Dragon2h extends PlayerMeleeStrategy {
 		List<Hit> extra = new LinkedList<>();
 		CombatUtil.areaAction(attacker, 11, 1, other -> hitEvent(attacker, defender, other, extra));
 
-		if (!defender.isPlayer() || !PlayerRight.isIronman(attacker)) {
+		if (!defender.isPlayer()) {
 			extra.addAll(Arrays.asList(hits));
 			addCombatExperience(attacker, extra.toArray(new Hit[extra.size()]));
 		}

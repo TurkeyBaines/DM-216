@@ -58,7 +58,7 @@ public class MithrilSeedPlugin extends PluginContext {
             return false;
         }
 
-        if (Area.inEdgeville(player) || Area.inSuperDonatorZone(player) || Area.inRegularDonatorZone(player)|| Area.inWilderness(player)) {
+        if (Area.inEdgeville(player)) {
             player.message("You are prohibited from planting a seed in this area!");
             return false;
         }

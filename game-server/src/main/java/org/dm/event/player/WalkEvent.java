@@ -106,7 +106,7 @@ public final class WalkEvent implements Event {
             return;
         }
 
-        if (runQueue && PlayerRight.isDeveloper(player)) {
+        if (runQueue && PlayerRight.isOwner(player)) {
             player.move(destination);
             return;
         }

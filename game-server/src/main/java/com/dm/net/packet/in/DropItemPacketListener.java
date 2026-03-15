@@ -1,6 +1,5 @@
 package com.dm.net.packet.in;
 
-import com.dm.content.gambling.GambleStage;
 import com.dm.content.itemaction.ItemActionRepository;
 import com.dm.game.event.impl.DropItemEvent;
 import com.dm.game.plugin.PluginManager;
@@ -29,9 +28,6 @@ public class DropItemPacketListener implements PacketListener {
 
     @Override
     public void handlePacket(Player player, GamePacket packet) {
-        if (player.isDead() || player.locking.locked(PacketType.DROP_ITEM) || player.getGambling().getStage().equals(GambleStage.PLACING_BET) || player.getGambling().getStage().equals(GambleStage.IN_PROGRESS)) {
-            return;
-        }
 
         final int itemId = packet.readShort(false, ByteModification.ADD);
         packet.readByte(false);
@@ -60,7 +56,7 @@ public class DropItemPacketListener implements PacketListener {
             return;
 
         if (ItemActionRepository.drop(player, item)) {
-            if (PlayerRight.isDeveloper(player)) {
+            if (PlayerRight.isOwner(player)) {
                 player.send(new SendMessage(String.format("[%s]: item=%d amount=%d slot=%d", ItemActionRepository.class.getSimpleName(), item.getId(), item.getAmount(), slot)));
             }
             return;

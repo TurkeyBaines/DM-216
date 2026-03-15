@@ -7,7 +7,7 @@ import java.awt.event.KeyEvent;
 /**
  * @author Jire
  */
-public final class KeyPacketEvent implements WidgetEvent {
+public class KeyPacketEvent implements WidgetEvent {
 
     private final int key;
 

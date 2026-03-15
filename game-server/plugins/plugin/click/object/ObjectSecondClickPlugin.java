@@ -3,7 +3,6 @@ package plugin.click.object;
 import com.dm.content.Obelisks;
 import com.dm.content.WellOfGoodwill;
 import com.dm.content.dialogue.DialogueFactory;
-import com.dm.content.shootingstar.ShootingStar;
 import com.dm.content.store.impl.PersonalStore;
 import com.dm.game.action.impl.FlaxPickingAction;
 import com.dm.game.event.impl.ObjectClickEvent;
@@ -21,18 +20,6 @@ public class ObjectSecondClickPlugin extends PluginContext {
         final GameObject object = event.getObject();
         final int id = object.getId();
         switch (id) {
-
-
-            case 41229:
-            case 41228:
-            case 41227:
-            case 41226:
-            case 41225:
-            case 41224:
-            case 41223:
-            case 41021:
-                ShootingStar.prospect(player);
-                break;
 
             case 26760:
                 player.message("There are " + World.get().getWildernessResourcePlayers() + " players in the wilderness resource area.");
@@ -66,10 +53,6 @@ public class ObjectSecondClickPlugin extends PluginContext {
 
          /* Grand exchange. */
             case 26044: {
-                if (PlayerRight.isIronman(player)) {
-                    player.send(new SendMessage("As an iron man you may not access player owned stores!"));
-                    break;
-                }
                 DialogueFactory f = player.dialogueFactory;
                 f.sendOption("Browse all stores", () -> f.onAction(() -> {
                     PersonalStore.openPanel(player);

@@ -16,8 +16,6 @@ public abstract class Area {
             new SquareArea("Edgeville Bank", 3091, 3488, 3098, 3499),
             new SquareArea("Edgeville Bank", 3091, 3507, 3100, 3513) };
 
-    private static final Area DZ = new SquareArea("Donator Zone", 2462, 10422, 2493, 10463);
-    private static final Area SDZ = new SquareArea("Super Donator Zone", 2398, 10404, 2444, 10440);
     /** The General Graardor room. */
     private static final Area BANDOS_ROOM = new SquareArea("General Graardor room", 2864, 5351, 2876, 5369, 2);
     private static final Area SARADOMIN_ROOM = new SquareArea("Saradomin room", 2889, 5258, 2907, 5275, 0);
@@ -26,7 +24,6 @@ public abstract class Area {
     public static final Boundary NEX = new Boundary(2900, 5183, 2943, 5227);
 
     public static final Area[] INFERNO = { new SquareArea("Arena Zone", 2243, 5314, 2300, 5372) };
-    //            new SquareArea("Inferno", 2243, 5372, 2300, 5314),
 
     /** The General Graardor room. */
     private static final Area RFD_MINIGAME = new SquareArea("RFD Minigame", 1889, 5345, 1910, 5366, 2);
@@ -39,10 +36,6 @@ public abstract class Area {
 
     /** The collection of areas that resemble the king black dragon area. */
     private static final Area[] KBD = { new SquareArea("King Black Dragon lair", 2256, 4680, 2287, 4711) };
-
-    private static final Area[] LMS_LOBBY = { new SquareArea("LMS Lobby", 3138, 3639, 3145, 3645) };
-
-    private static final Area[] LMS_BUILDING = { new SquareArea("LMS Lobby", 3140, 3632, 3144, 3638) };
 
     private static final Area[] FEROX_ENCLAVE = {
             new SquareArea(3125, 3618, 3143, 3639),
@@ -61,8 +54,6 @@ public abstract class Area {
     private static final Area[] KRAKEN = { new SquareArea("Kraken Cave", 2268, 10022, 2292, 10046) };
     private static final Area[] LMS_GAME = {new SquareArea("LMS Game", 3392, 5760, 3519, 5893) };
     private static final Area[] PEST_CONTROL_GAME = { new SquareArea("Pest Control Game", 2622, 2558, 2693, 2627) };
-
-    private static final Area[] EVENT_ARENA = { new SquareArea("Event Arena", 3082, 3506, 3089, 3513) };
 
     private static final Area[] BARROWS = { 
             new SquareArea("Barrows", 3533, 3261, 3585, 3328),
@@ -145,12 +136,6 @@ public abstract class Area {
     public static boolean inkolodionArena(Entity entity) {
         return entity.instance != Mob.DEFAULT_INSTANCE && inArea(entity, new Position(3092, 3921, entity.getHeight()), new Position(3117, 3947, entity.getHeight()));
     }
-    public static boolean inSuperDonatorZone(Interactable entity) {
-        return SDZ.inArea(entity.getPosition());
-    }
-    public static boolean inRegularDonatorZone(Interactable entity) {
-        return DZ.inArea(entity.getPosition());
-    }
 
     public static boolean inGnomeCourse(Interactable entity) {
         return inArea(entity, new Position(2464, 3412, entity.getHeight()), new Position(2490, 3444, entity.getHeight()));
@@ -210,26 +195,6 @@ public abstract class Area {
         return false;
     }
 
-
-    public static boolean inLMSLobby(Interactable entity) {
-        for(Area zone : LMS_LOBBY) {
-            if(zone.inArea(entity.getPosition())) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public static boolean inLMSBuilding(Interactable entity) {
-        for(Area zone : LMS_BUILDING) {
-            if(zone.inArea(entity.getPosition())) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-
     public static boolean inRFD(Interactable entity) {
         return RFD_MINIGAME.inArea(entity.getPosition());
     }
@@ -281,7 +246,7 @@ public abstract class Area {
     public static boolean inWilderness(Interactable entity) {
         if (entity == null) return false;
         if (inKingBlackDragon(entity)) return false;
-        if (inFeroxEnclave(entity) || inLMSLobby(entity) || inLMSBuilding(entity)) return false;
+        if (inFeroxEnclave(entity)) return false;
         for (Area wild : WILDERNESS) {
             if (wild.inArea(entity.getPosition())) {
                 return true;
@@ -386,8 +351,8 @@ public abstract class Area {
         return inGodwarsChambers(mob) || inCerberus(mob) || inBarbarianCourse(mob)
                 || inCyclops(mob) || inDuelArena(mob) || inDuelArenaLobby(mob) || inFightCaves(mob) || inDuelObsticleArena(mob)
                 || inGnomeCourse(mob) || inGodwars(mob) || inGodwarsChambers(mob) || inInferno(mob) || inKingBlackDragon(mob)
-                || inkolodionArena(mob) || inKraken(mob) || inLMSBuilding(mob) || inPestControl(mob)  || inRFD(mob)
-                || inVorkath(mob) || inVorkath(mob) || inWilderness(mob) || inZulrah(mob) || inLMSGame(mob) || inLMSLobby(mob);
+                || inkolodionArena(mob) || inKraken(mob) || inPestControl(mob)  || inRFD(mob)
+                || inVorkath(mob) || inVorkath(mob) || inWilderness(mob) || inZulrah(mob) || inLMSGame(mob);
          }
 
 

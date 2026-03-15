@@ -74,7 +74,7 @@ public class PlayerMagicStrategy extends MagicStrategy<Player> {
             }
         }
 
-        if (/*PlayerRight.isDeveloper(attacker) ||*/ spell.canCast(attacker, defender)) {
+        if (/*PlayerRight.isOwner(attacker) ||*/ spell.canCast(attacker, defender)) {
             return true;
         }
 
@@ -109,7 +109,7 @@ public class PlayerMagicStrategy extends MagicStrategy<Player> {
                     spell.getEffect().filter(filter).ifPresent(execute);
                 }
 
-                if (!defender.isPlayer() || !PlayerRight.isIronman(attacker)) {
+                if (!defender.isPlayer()) {
                     if (extra.isEmpty()) {
                         Collections.addAll(extra, hits);
                         addCombatExperience(attacker, spell.getBaseExperience(), extra.toArray(new Hit[0]));
@@ -119,7 +119,7 @@ public class PlayerMagicStrategy extends MagicStrategy<Player> {
                 } else {
                     attacker.skills.addExperience(Skill.MAGIC, spell.getBaseExperience());
                 }
-            } else if (!defender.isPlayer() || !PlayerRight.isIronman(attacker)) {
+            } else if (!defender.isPlayer()) {
                 addCombatExperience(attacker, spell.getBaseExperience(), hits);
             } else {
                 attacker.skills.addExperience(Skill.MAGIC, spell.getBaseExperience());

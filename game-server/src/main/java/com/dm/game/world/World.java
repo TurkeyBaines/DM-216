@@ -489,7 +489,7 @@ public final class World {
         int count = 0;
 
         for (Player player : getPlayers()) {
-            if (player != null && (PlayerRight.isModerator(player) || player.right == PlayerRight.HELPER))
+            if (player != null && (PlayerRight.isModerator(player)))
                 count++;
         }
 
@@ -512,7 +512,7 @@ public final class World {
         List<Player> staff = new ArrayList<>();
 
         for (Player player : getPlayers()) {
-            if (player != null && (PlayerRight.isModerator(player) || player.right == PlayerRight.HELPER))
+            if (player != null && (PlayerRight.isModerator(player)))
                 staff.add(player);
         }
 
@@ -543,8 +543,8 @@ public final class World {
         return get().regionManager;
     }
 
-    public TaskManager getTaskManager() {
-        return taskManager;
+    public static TaskManager getTaskManager() {
+        return get().taskManager;
     }
 
     public Queue<Player> getLogins() {

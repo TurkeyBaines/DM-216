@@ -68,7 +68,7 @@ public class UseItemPacketListener implements PacketListener {
         final int itemUsedSlot = packet.readShort(ByteOrder.LE, ByteModification.ADD);
         final int gItemX = packet.readShort();
 
-        if (PlayerRight.isDeveloper(player)) {
+        if (PlayerRight.isOwner(player)) {
             player.send(new SendMessage("[ItemUsed] - " + itemUsed + " groundItem: " + groundItem + " itemUsedSlot: " + itemUsedSlot + " gItemX: " + gItemX + " gItemY: " + gItemY + " a1: " + a1, MessageColor.DEVELOPER));
         }
 

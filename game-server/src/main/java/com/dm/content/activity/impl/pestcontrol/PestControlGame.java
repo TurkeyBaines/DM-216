@@ -341,7 +341,7 @@ public class PestControlGame extends LobbyNode {
                     return;
                 }
 
-                int points = PlayerRight.getBloodMoney(player) / 100;
+                int points = 25;
                 AchievementHandler.activate(player, AchievementKey.PEST_CONTROL);
                 player.activityLogger.add(ActivityLog.PEST_CONTROL);
                 player.pestPoints += points;

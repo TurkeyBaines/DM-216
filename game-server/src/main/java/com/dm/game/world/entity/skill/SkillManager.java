@@ -5,7 +5,6 @@ import com.dm.content.WellOfGoodwill;
 import com.dm.content.achievement.AchievementHandler;
 import com.dm.content.achievement.AchievementKey;
 import com.dm.content.event.InteractionEvent;
-import com.dm.content.lms.LMSGame;
 import com.dm.content.skill.impl.cooking.Cooking;
 import com.dm.content.skill.impl.crafting.Crafting;
 import com.dm.content.skill.impl.farming.Farming;
@@ -282,11 +281,6 @@ public class SkillManager {
         Skill skill = get(id);
         double old = skill.getExperience();
         double modified_experience = experience;
-
-        if(LMSGame.inGameArea(player)) {
-            player.send(new SendExpCounter(skill.getSkill(), (int) modified_experience, counter));
-            return;
-        }
 
         double bonusXp = 0;
         switch(id) {

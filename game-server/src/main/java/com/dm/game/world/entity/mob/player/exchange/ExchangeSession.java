@@ -2,7 +2,6 @@ package com.dm.game.world.entity.mob.player.exchange;
 
 import com.google.common.collect.ImmutableSet;
 import com.dm.content.activity.ActivityType;
-import com.dm.content.gambling.GambleStage;
 import com.dm.game.task.impl.DuelNotificationTask;
 import com.dm.game.task.impl.SessionRemovalNotificationTask;
 import com.dm.game.world.World;
@@ -87,11 +86,11 @@ public abstract class ExchangeSession {
             player.exchangeSession.reset();
             return false;
         }
-      /*  if (PlayerRight.isAdministrator(player) && !PlayerRight.isOwner(player) || !PlayerRight.isDeveloper(player)) {
+      /*  if (PlayerRight.isAdministrator(player) && !PlayerRight.isOwner(player) || !PlayerRight.isOwner(player)) {
             player.message("You can not exchange as an administrator.");
             return false;
         }
-        if (PlayerRight.isAdministrator(other) && !PlayerRight.isOwner(other) || !PlayerRight.isDeveloper(other)) {
+        if (PlayerRight.isAdministrator(other) && !PlayerRight.isOwner(other) || !PlayerRight.isOwner(other)) {
             player.message("You can not exchange an administrator.");
             return false;
         }*/
@@ -102,23 +101,6 @@ public abstract class ExchangeSession {
         }
         if (Objects.equals(player, other)) {
             player.message("You cannot " + type.name + " with yourself.");
-            return false;
-        }
-
-        if(player.getGambling().getStage().equals(GambleStage.PLACING_BET) || player.getGambling().getStage().equals(GambleStage.IN_PROGRESS)) {
-            return false;
-        }
-
-        if(other.getGambling().getStage().equals(GambleStage.PLACING_BET) || other.getGambling().getStage().equals(GambleStage.IN_PROGRESS)) {
-            return false;
-        }
-
-        if (PlayerRight.isIronman(player) && !PlayerRight.isOwner(other)) {
-            player.message("You can not " + type.name + " as you are an iron man.");
-            return false;
-        }
-        if (PlayerRight.isIronman(other) && !PlayerRight.isOwner(player)) {
-            player.message(other.getName() + " can not be " + type.name + "d as they are an iron man.");
             return false;
         }
         if (player.exchangeSession.requested_players.contains(other)) {

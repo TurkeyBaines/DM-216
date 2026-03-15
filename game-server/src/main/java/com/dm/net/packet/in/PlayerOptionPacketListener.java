@@ -35,9 +35,6 @@ public final class PlayerOptionPacketListener implements PacketListener {
     @Override
     public void handlePacket(Player player, GamePacket packet) {
         Event event = switch (packet.getOpcode()) {
-            case ClientPackets.GAMBLE_PLAYER -> walkTo(packet.readShort(), target ->
-                    player.getGambling().sendRequest(player, target)
-            );
 
             case 128 -> walkTo(packet.readShort(), target ->
                     player.exchangeSession.request(new StakeSession(player, target))

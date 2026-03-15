@@ -59,7 +59,7 @@ public class ModeratorCommandPlugin extends CommandExtension {
                 }
 
                 World.search(name.toString()).ifPresent(other -> {
-                    if (PlayerRight.isAdministrator(other) && !PlayerRight.isDeveloper(player)) {
+                    if (PlayerRight.isAdministrator(other) && !PlayerRight.isOwner(player)) {
                         player.message("Nice try bitch!");
                     }   else {
                     RottenTomatoePlugin.open(player, other);
@@ -82,7 +82,7 @@ public class ModeratorCommandPlugin extends CommandExtension {
                             return;
                         }
 
-                        if (target.getCombat().inCombat() && !PlayerRight.isDeveloper(player)) {
+                        if (target.getCombat().inCombat() && !PlayerRight.isOwner(player)) {
                             player.message("That player is currently in combat!");
                             return;
                         }

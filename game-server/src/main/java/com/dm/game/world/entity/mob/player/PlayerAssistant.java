@@ -362,7 +362,7 @@ public class PlayerAssistant {
 
     /** Handles the running. */
     private void run() {
-        if (player.movement.isRunning() && player.movement.isMoving() && !player.isBot && !PlayerRight.isDeveloper(player)) {
+        if (player.movement.isRunning() && player.movement.isMoving() && !player.isBot && !PlayerRight.isOwner(player)) {
             player.runEnergy--;
             if (player.runEnergy < 0)
                 player.runEnergy = 0;
@@ -439,19 +439,6 @@ public class PlayerAssistant {
                 player.prayer.reset();
                 player.getPlayer().send(new SendConfig(659, 0));
             }
-        }
-    }
-
-    public void claimIronmanArmour() {
-        if (player.right == PlayerRight.IRONMAN) {
-            player.inventory.addOrDrop(new Item(12810), new Item(12811), new Item(12812));
-        } else if (player.right == PlayerRight.ULTIMATE_IRONMAN) {
-            player.inventory.addOrDrop(new Item(12813), new Item(12814), new Item(12815));
-        } else if (player.right == PlayerRight.HARDCORE_IRONMAN) {
-            player.inventory.addOrDrop(new Item(20792), new Item(20794), new Item(20796));
-        }
-        else {
-            player.message("You must be an ironman to claim this armour.");
         }
     }
 

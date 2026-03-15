@@ -53,7 +53,7 @@ public class SpellCasting {
             return false;
         }
 
-        if (!PlayerRight.isDeveloper(player) && !player.isBot && !MagicRune.hasRunes(player, s.getRunes())) {
+        if (!PlayerRight.isOwner(player) && !player.isBot && !MagicRune.hasRunes(player, s.getRunes())) {
             player.send(new SendMessage("You do not have the required runes to cast this spell."));
             return false;
         }
@@ -74,7 +74,7 @@ public class SpellCasting {
             return;
         }
         if (spell.getRunes() != null) {
-            if (!PlayerRight.isDeveloper(player) && !player.isBot && !MagicRune.hasRunes(player, spell.getRunes())) {
+            if (!PlayerRight.isOwner(player) && !player.isBot && !MagicRune.hasRunes(player, spell.getRunes())) {
                 player.send(new SendMessage("You do not have the required runes to do this!"));
                 return;
             }

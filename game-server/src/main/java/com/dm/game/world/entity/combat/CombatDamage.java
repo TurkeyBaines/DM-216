@@ -109,9 +109,6 @@ public final class CombatDamage {
             if (mob.isDead() || !mob.isValid() || counter.isTimeout())
                 continue;
 
-            if (attackers.size() > 1 && mob.isPlayer() && PlayerRight.isIronman(mob.getPlayer()))
-                continue;
-
             if (counter.getAmount() > amount) {
                 amount = counter.getAmount();
                 killer = mob;

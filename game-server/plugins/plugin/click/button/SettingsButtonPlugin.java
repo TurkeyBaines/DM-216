@@ -86,10 +86,6 @@ public class SettingsButtonPlugin extends PluginContext {
                 player.send(new SendConfig(980, 3));
                 return true;
             case -15528:
-                if (!PlayerRight.isDonator(player)) {
-                    player.dialogueFactory.sendStatement("You need to be a donator to access this tab!").execute();
-                    return true;
-                }
                 player.interfaceManager.setSidebar(Config.WRENCH_TAB, 50400);
                 player.send(new SendConfig(980, 4));
                 return true;
@@ -131,10 +127,6 @@ public class SettingsButtonPlugin extends PluginContext {
                 return true;
 
             case -15530:
-                if (PlayerRight.isIronman(player)) {
-                    player.send(new SendMessage("As an iron man you can not do this!"));
-                    return true;
-                }
                 player.settings.acceptAid = !player.settings.acceptAid;
                 player.send(new SendConfig(427, player.settings.acceptAid ? 1 : 0));
                 return true;

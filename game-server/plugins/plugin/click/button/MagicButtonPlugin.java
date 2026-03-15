@@ -2,8 +2,6 @@ package plugin.click.button;
 
 import com.dm.Config;
 import com.dm.content.activity.Activity;
-import com.dm.content.lms.LMSGame;
-import com.dm.content.lms.lobby.LMSLobby;
 import com.dm.content.skill.impl.magic.spell.impl.BonesToBananas;
 import com.dm.content.skill.impl.magic.spell.impl.BonesToPeaches;
 import com.dm.content.skill.impl.magic.spell.impl.MagicTeleports;
@@ -25,15 +23,15 @@ public class MagicButtonPlugin extends PluginContext {
 
     private boolean canTele(Player player) {
         int wilderness = 20;
-        if (player.getCombat().isUnderAttackByPlayer() && !PlayerRight.isDeveloper(player)) {
+        if (player.getCombat().isUnderAttackByPlayer() && !PlayerRight.isOwner(player)) {
             player.message("You can't do this right now!");
             return true;
         }
-        if (player.isTeleblocked()  && !PlayerRight.isDeveloper(player)) {
+        if (player.isTeleblocked()  && !PlayerRight.isOwner(player)) {
             player.message("You are currently under the affects of a teleblock spell and can not teleport!");
             return true;
         }
-        if (player.wilderness > wilderness  && !PlayerRight.isDeveloper(player)) {
+        if (player.wilderness > wilderness  && !PlayerRight.isOwner(player)) {
             player.send(new SendMessage("You can't teleport past " + wilderness + " wilderness!"));
             return true;
         }
@@ -44,11 +42,6 @@ public class MagicButtonPlugin extends PluginContext {
         player.interfaceManager.close(false);
 
         if (Activity.evaluate(player, it -> !it.canTeleport(player))) {
-            return true;
-        }
-
-        if(LMSLobby.lobbyMembers.contains(player) || LMSGame.isActivePlayer(player)) {
-            player.message("You cannot teleport while in the lobby or in a game!");
             return true;
         }
 
@@ -76,7 +69,7 @@ public class MagicButtonPlugin extends PluginContext {
                 return false;
             }
             if (teleport.getRunes() != null) {
-                if (!PlayerRight.isDeveloper(player) && !player.isBot && !MagicRune.hasRunes(player, teleport.getRunes())) {
+                if (!PlayerRight.isOwner(player) && !player.isBot && !MagicRune.hasRunes(player, teleport.getRunes())) {
                     player.send(new SendMessage("You do not have the required runes to do this!"));
                     return false;
                 }
@@ -126,7 +119,7 @@ public class MagicButtonPlugin extends PluginContext {
             case 21741:
             case 30000:
             case -25436:
-                if (player.getCombat().isUnderAttackByPlayer() && !PlayerRight.isDeveloper(player)) {
+                if (player.getCombat().isUnderAttackByPlayer() && !PlayerRight.isOwner(player)) {
                     player.message("You can not teleport whilst in combat!");
                     return true;
                 }

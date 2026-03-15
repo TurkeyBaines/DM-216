@@ -68,7 +68,7 @@ public class ToxicBlowpipeStrategy extends RangedStrategy<Player> {
             attacker.animate(getAttackAnimation(attacker, defender), true);
             attacker.rangedAmmo.sendProjectile(attacker, defender);
 
-            if (!defender.isPlayer() || !PlayerRight.isIronman(attacker)) {
+            if (!defender.isPlayer()) {
                 addCombatExperience(attacker, hits);
             }
         }

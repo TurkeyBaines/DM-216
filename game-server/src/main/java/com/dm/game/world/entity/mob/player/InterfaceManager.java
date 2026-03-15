@@ -125,10 +125,6 @@ public class InterfaceManager {
             player.exchangeSession.reset(ExchangeSessionType.DUEL);
         }
 
-        if (player.attributes.is("DONATOR_DEPOSIT_KEY")) {
-            player.donatorDeposit.close();
-        }
-
         if(main == TradingPost.BUYING_PAGE_INTERFACE_ID) {
             player.tradingPost.cleanUp();
         }

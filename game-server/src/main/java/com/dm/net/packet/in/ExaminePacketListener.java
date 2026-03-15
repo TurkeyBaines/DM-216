@@ -61,7 +61,7 @@ public class ExaminePacketListener implements PacketListener {
         int interfaceId = packet.readShort();
         int itemId = packet.readShort();
 
-        if (PlayerRight.isDeveloper(player)) {
+        if (PlayerRight.isOwner(player)) {
             player.send(new SendMessage("[Examine] - slot: " + slot + " -- interfaceId: " + interfaceId + " -- itemId: " + itemId, MessageColor.DEVELOPER));
         }
 

@@ -892,7 +892,7 @@ public class DeveloperCommandPlugin extends CommandExtension {
 
     @Override
     public boolean canAccess(Player player) {
-        return PlayerRight.isDeveloper(player);
+        return PlayerRight.isOwner(player);
     }
 
 }

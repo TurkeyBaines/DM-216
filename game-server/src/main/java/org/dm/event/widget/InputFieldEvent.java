@@ -3,7 +3,6 @@ package org.dm.event.widget;
 import com.dm.content.DropDisplay;
 import com.dm.content.DropDisplay.DropType;
 import com.dm.content.ProfileViewer;
-import com.dm.content.famehall.FameHandler;
 import com.dm.content.simulator.DropSimulator;
 import com.dm.content.store.impl.PersonalStore;
 import com.dm.game.world.World;
@@ -29,7 +28,7 @@ public final class InputFieldEvent implements WidgetEvent {
     public void handle(Player player) {
         if (component < 0) return;
 
-        if (PlayerRight.isDeveloper(player)) {
+        if (PlayerRight.isOwner(player)) {
             player.send(new SendMessage(
                     "[InputField] - Text: " + context + " Component: " + component,
                     MessageColor.DEVELOPER
@@ -82,8 +81,6 @@ public final class InputFieldEvent implements WidgetEvent {
             case 38309 -> PersonalStore.changeName(player, context, true);
             case 26810 -> DropSimulator.drawList(player, context);
             case 48508 -> player.priceChecker.searchItem(context);
-            case 58506 -> FameHandler.search(player, context);
-            case 57021 -> player.presetManager.name(context);
             case 54506 -> DropDisplay.search(player, context, DropType.ITEM);
             case 54507 -> DropDisplay.search(player, context, DropType.NPC);
 

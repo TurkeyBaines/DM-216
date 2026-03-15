@@ -64,7 +64,7 @@ public class TridentOfTheSwampStrategy extends MagicStrategy<Player> {
             defender.graphic(endGraphic);
         }
 
-        if (!defender.isPlayer() || !PlayerRight.isIronman(attacker)) {
+        if (!defender.isPlayer()) {
             for (Hit hit : hits) {
                 int exp = 2 * hit.getDamage();
                 attacker.skills.addExperience(Skill.MAGIC, exp * Config.COMBAT_MODIFICATION);

@@ -37,10 +37,6 @@ public class Obelisks {
     }
 
     public void open(Player player, int obj) {
-        if (!PlayerRight.isSuper(player)) {
-            player.dialogueFactory.sendStatement("You need to be a super donator to use this feature!").execute();
-            return;
-        }
         player.attributes.set("OBELISK", obj);
         InterfaceWriter.write(new ObeliskWriter(player));
         player.send(new SendString("Wilderness Obelisk", 51002));

@@ -16,9 +16,13 @@ public final class MagicOnPlayerEvent implements PlayerEvent {
         this.spell = spell;
     }
 
-    @Override
     public int getIndex() {
         return index;
+    }
+
+    @Override
+    public int index() {
+        return 0;
     }
 
     @Override

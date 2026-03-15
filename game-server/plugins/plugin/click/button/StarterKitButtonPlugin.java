@@ -37,18 +37,6 @@ public class StarterKitButtonPlugin extends PluginContext {
             case -20524:
                 refresh(player, StarterKit.KitData.NORMAL);
                 return true;
-            case -20527:
-            case -20523:
-                refresh(player, StarterKit.KitData.IRONMAN);
-                return true;
-            case -20526:
-            case -20522:
-                refresh(player, StarterKit.KitData.ULTIMATE_IRONMAN);
-                return true;
-            case -20525:
-            case -20521:
-                refresh(player, StarterKit.KitData.HARDCORE_IRONMAN);
-                return true;
             case -20520:
                 confirm(player);
                 return true;

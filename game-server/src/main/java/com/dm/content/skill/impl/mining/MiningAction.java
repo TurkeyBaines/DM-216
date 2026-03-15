@@ -108,7 +108,7 @@ public class MiningAction extends SkillIdAction<Player> {
                 }
             }
 
-            if (object.active() && (!ore.equals(OreData.RUNE_ESSENCE) && Utility.random(8) <= 0 && !Area.inSuperDonatorZone(object) && !Area.inRegularDonatorZone(object))) {
+            if (object.active() && (!ore.equals(OreData.RUNE_ESSENCE) && Utility.random(8) <= 0)) {
                 this.cancel();
                 getMob().resetAnimation();
                 object.getGenericAttributes().set("ores", -1);
