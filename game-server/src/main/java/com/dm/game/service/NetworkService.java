@@ -11,7 +11,7 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.util.ResourceLeakDetector;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.jire.tarnishps.BootstrapFactory;
+import org.dm.BootstrapFactory;
 
 import java.util.concurrent.TimeUnit;
 

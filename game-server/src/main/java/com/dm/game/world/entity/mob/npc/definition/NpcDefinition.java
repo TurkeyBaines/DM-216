@@ -7,8 +7,8 @@ import com.dm.game.world.entity.combat.CombatType;
 import com.dm.game.world.entity.combat.projectile.CombatProjectile;
 import com.dm.game.world.entity.mob.player.Player;
 import com.dm.util.parser.GsonParser;
-import org.jire.tarnishps.OldToNew;
-import org.jire.tarnishps.defs.MonsterDefLoader;
+import org.dm.OldToNew;
+import org.dm.defs.MonsterDefLoader;
 
 import java.util.*;
 

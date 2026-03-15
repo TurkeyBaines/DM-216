@@ -4,7 +4,7 @@ import com.dm.game.world.entity.mob.player.Player;
 import com.dm.net.session.GameSession;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.jire.tarnishps.event.Events;
+import org.dm.event.Events;
 
 public final class PlayerPreUpdateTask extends SynchronizationTask {
 

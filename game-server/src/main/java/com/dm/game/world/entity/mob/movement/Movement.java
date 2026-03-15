@@ -49,7 +49,7 @@ public class Movement {
     private boolean runToggled = false;
 
     /** Run for this queue (CTRL-CLICK) toggle. */
-    private boolean runQueue = false;
+    public boolean runQueue = false;
 
     private int walkingDirection = -1;
     private int runningDirection = -1;

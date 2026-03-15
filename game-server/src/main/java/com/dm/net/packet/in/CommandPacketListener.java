@@ -6,6 +6,7 @@ import com.dm.net.packet.ClientPackets;
 import com.dm.net.packet.GamePacket;
 import com.dm.net.packet.PacketListener;
 import com.dm.net.packet.PacketListenerMeta;
+import org.dm.event.widget.CommandEvent;
 
 /**
  * The {@code GamePacket} responsible for handling user commands send from the
@@ -23,7 +24,7 @@ public final class CommandPacketListener implements PacketListener {
             return;
         }
 
-        player.getEvents().widget(player, new org.jire.tarnishps.event.widget.CommandEvent(input));
+        player.getEvents().widget(player, new CommandEvent(input));
     }
 
 }

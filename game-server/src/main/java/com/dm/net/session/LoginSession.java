@@ -22,7 +22,7 @@ import de.mkammerer.argon2.Argon2Factory.Argon2Types;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelPipeline;
-import org.jire.tarnishps.Argon2;
+import org.dm.Argon2Util;
 import org.mindrot.jbcrypt.BCrypt;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -103,13 +103,13 @@ public final class LoginSession extends Session {
             return;
         }
 
-        final Argon2Types argon2Type = Argon2.argon2Type(player.getPassword());
-        if (argon2Type != Argon2.DEFAULT_TYPE) {
+        final Argon2Types argon2Type = Argon2Util.argon2Type(player.getPassword());
+        if (argon2Type != Argon2Util.DEFAULT_TYPE) {
             // needs rehashing (this should be moved onto another thread, as hashing is slow)
-            final String passwordHash = Argon2.getDefault().hash(
-                    Argon2.DEFAULT_ITERATIONS,
-                    Argon2.DEFAULT_MEMORY,
-                    Argon2.DEFAULT_PARALLELISM,
+            final String passwordHash = Argon2Util.getDefault().hash(
+                    Argon2Util.DEFAULT_ITERATIONS,
+                    Argon2Util.DEFAULT_MEMORY,
+                    Argon2Util.DEFAULT_PARALLELISM,
                     password);
             player.setPassword(passwordHash); // update password to hashed version
         }

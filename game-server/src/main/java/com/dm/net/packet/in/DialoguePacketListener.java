@@ -4,7 +4,7 @@ import com.dm.game.world.entity.mob.player.Player;
 import com.dm.net.packet.GamePacket;
 import com.dm.net.packet.PacketListener;
 import com.dm.net.packet.PacketListenerMeta;
-import org.jire.tarnishps.event.widget.DialogueEvent;
+import org.dm.event.widget.DialogueEvent;
 
 /**
  * The {@link GamePacket} responsible for dialogues.

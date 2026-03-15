@@ -8,7 +8,7 @@ import com.dm.net.packet.GamePacket;
 import com.dm.net.packet.PacketListener;
 import com.dm.net.packet.PacketListenerMeta;
 import com.dm.net.packet.out.SendMessage;
-import org.jire.tarnishps.event.widget.AppearanceChangeEvent;
+import org.dm.event.widget.AppearanceChangeEvent;
 
 /**
  * The packet responsible for changing a characters appearance.

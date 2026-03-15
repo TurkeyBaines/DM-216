@@ -11,11 +11,11 @@ import com.dm.net.packet.PacketListenerMeta;
 import com.dm.net.packet.out.SendMessage;
 import com.dm.util.MessageColor;
 import com.dm.util.Utility;
-import org.jire.tarnishps.defs.ItemDef;
-import org.jire.tarnishps.defs.ItemDefLoader;
-import org.jire.tarnishps.event.item.ItemExamineEvent;
-import org.jire.tarnishps.event.npc.NpcExamineEvent;
-import org.jire.tarnishps.event.object.ObjectExamineEvent;
+import org.dm.defs.ItemDef;
+import org.dm.defs.ItemDefLoader;
+import org.dm.event.item.ItemExamineEvent;
+import org.dm.event.npc.NpcExamineEvent;
+import org.dm.event.object.ObjectExamineEvent;
 
 /**
  * Handles the in examine packet.

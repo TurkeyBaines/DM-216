@@ -11,7 +11,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.jire.tarnishps.ByteBufUtil;
+import org.dm.ByteBufUtil;
 
 import java.math.BigInteger;
 import java.net.InetSocketAddress;

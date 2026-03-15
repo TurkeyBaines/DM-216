@@ -17,7 +17,7 @@ import com.dm.game.world.entity.combat.strategy.basic.RangedStrategy;
 import com.dm.game.world.entity.mob.Mob;
 import com.dm.game.world.entity.mob.npc.Npc;
 import com.dm.util.RandomUtils;
-import org.jire.tarnishps.WorldTask;
+import org.dm.WorldTask;
 
 import javax.annotation.Nullable;
 import java.util.Optional;

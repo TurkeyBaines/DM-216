@@ -15,7 +15,7 @@ import com.dm.game.world.entity.mob.player.Player;
 import com.dm.util.Stopwatch;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.jire.tarnishps.MainThread;
+import org.dm.MainThread;
 
 import java.util.concurrent.TimeUnit;
 

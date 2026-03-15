@@ -21,6 +21,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11">
+      <module name="Dead_Men]#.game-server" target="21" />
+      <module name="Dead_Men]#.game-server.main" target="21" />
+      <module name="Dead_Men]#.game-server.test" target="21" />
       <module name="tarnish.game-server" target="21" />
       <module name="tarnish.game-server.main" target="21" />
       <module name="tarnish.game-server.test" target="21" />

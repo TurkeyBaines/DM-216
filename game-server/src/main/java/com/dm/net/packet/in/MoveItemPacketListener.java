@@ -7,7 +7,7 @@ import com.dm.net.packet.ClientPackets;
 import com.dm.net.packet.GamePacket;
 import com.dm.net.packet.PacketListener;
 import com.dm.net.packet.PacketListenerMeta;
-import org.jire.tarnishps.event.widget.MoveItemEvent;
+import org.dm.event.widget.MoveItemEvent;
 
 @PacketListenerMeta(ClientPackets.MOVE_ITEM)
 public class MoveItemPacketListener implements PacketListener {

@@ -5,7 +5,7 @@ import com.dm.net.packet.ClientPackets;
 import com.dm.net.packet.GamePacket;
 import com.dm.net.packet.PacketListener;
 import com.dm.net.packet.PacketListenerMeta;
-import org.jire.tarnishps.event.widget.PlayerRelationEvent;
+import org.dm.event.widget.PlayerRelationEvent;
 
 /**
  * The {@link GamePacket}'s responsible for player communication.

@@ -29,7 +29,7 @@ import com.dm.util.GameSaver;
 import com.dm.util.Utility;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.jire.tarnishps.task.TaskManager;
+import org.dm.task.TaskManager;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentLinkedQueue;

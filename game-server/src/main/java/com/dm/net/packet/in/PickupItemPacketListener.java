@@ -7,7 +7,7 @@ import com.dm.net.packet.ClientPackets;
 import com.dm.net.packet.GamePacket;
 import com.dm.net.packet.PacketListener;
 import com.dm.net.packet.PacketListenerMeta;
-import org.jire.tarnishps.event.item.PickupItemEvent;
+import org.dm.event.item.PickupItemEvent;
 
 /**
  * The {@link GamePacket} responsible for picking up an item on the ground.

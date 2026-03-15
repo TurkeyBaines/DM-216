@@ -4,7 +4,7 @@ import com.dm.game.world.entity.mob.player.Player;
 import com.dm.net.packet.GamePacket;
 import com.dm.net.packet.PacketListener;
 import com.dm.net.packet.PacketListenerMeta;
-import org.jire.tarnishps.event.widget.InputStringEvent;
+import org.dm.event.widget.InputStringEvent;
 
 /**
  * The {@link GamePacket} responsible for reciving a string sent by the

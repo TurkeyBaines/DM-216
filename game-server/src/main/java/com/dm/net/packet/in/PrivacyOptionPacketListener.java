@@ -5,7 +5,7 @@ import com.dm.net.packet.ClientPackets;
 import com.dm.net.packet.GamePacket;
 import com.dm.net.packet.PacketListener;
 import com.dm.net.packet.PacketListenerMeta;
-import org.jire.tarnishps.event.widget.PrivacyOptionEvent;
+import org.dm.event.widget.PrivacyOptionEvent;
 
 @PacketListenerMeta({ClientPackets.PRIVACY_OPTIONS})
 public final class PrivacyOptionPacketListener implements PacketListener {

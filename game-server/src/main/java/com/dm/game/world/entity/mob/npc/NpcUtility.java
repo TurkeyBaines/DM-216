@@ -20,7 +20,7 @@ import com.dm.game.world.entity.combat.strategy.npc.boss.scorpia.Scorpia;
 import com.dm.game.world.entity.combat.strategy.npc.boss.scorpia.ScorpiaGuardian;
 import com.dm.game.world.entity.combat.strategy.npc.boss.scorpia.ScorpiaOffspring;
 import com.dm.game.world.entity.combat.strategy.npc.boss.skotizo.Skotizo;
-import org.jire.tarnishps.kalphitequeen.KalphiteQueen;
+import org.dm.kalphitequeen.KalphiteQueen;
 
 import java.util.HashMap;
 import java.util.Map;

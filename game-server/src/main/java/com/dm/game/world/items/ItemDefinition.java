@@ -13,7 +13,7 @@ import com.dm.game.world.entity.mob.MobAnimation;
 import com.dm.game.world.items.containers.equipment.EquipmentType;
 import com.dm.util.parser.GsonParser;
 import com.dm.util.parser.JsonSaver;
-import org.jire.tarnishps.defs.ItemDefLoader;
+import org.dm.defs.ItemDefLoader;
 
 import java.util.*;
 

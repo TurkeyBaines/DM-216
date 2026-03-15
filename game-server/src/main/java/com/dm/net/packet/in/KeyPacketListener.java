@@ -5,7 +5,7 @@ import com.dm.game.world.entity.mob.player.Player;
 import com.dm.net.packet.GamePacket;
 import com.dm.net.packet.PacketListener;
 import com.dm.net.packet.PacketListenerMeta;
-import org.jire.tarnishps.event.widget.KeyPacketEvent;
+import org.dm.event.widget.KeyPacketEvent;
 
 /**
  * The {@code GamePacket} responsible for clicking keyboard buttons.

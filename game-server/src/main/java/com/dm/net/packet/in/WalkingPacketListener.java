@@ -8,7 +8,7 @@ import com.dm.net.packet.ClientPackets;
 import com.dm.net.packet.GamePacket;
 import com.dm.net.packet.PacketListener;
 import com.dm.net.packet.PacketListenerMeta;
-import org.jire.tarnishps.event.player.WalkEvent;
+import org.dm.event.player.WalkEvent;
 
 /**
  * A packet which handles walking requests.

@@ -5,7 +5,7 @@ import com.dm.game.world.entity.mob.npc.Npc;
 import com.dm.game.world.position.Position;
 import com.dm.util.Utility;
 import com.dm.util.parser.GsonParser;
-import org.jire.tarnishps.OldToNew;
+import org.dm.OldToNew;
 
 import java.util.HashMap;
 import java.util.Map;

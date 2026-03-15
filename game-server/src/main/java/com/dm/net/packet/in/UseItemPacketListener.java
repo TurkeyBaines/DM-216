@@ -18,9 +18,9 @@ import com.dm.net.packet.PacketListener;
 import com.dm.net.packet.PacketListenerMeta;
 import com.dm.net.packet.out.SendMessage;
 import com.dm.util.MessageColor;
-import org.jire.tarnishps.event.npc.ItemOnNpcEvent;
-import org.jire.tarnishps.event.object.ItemOnObjectEvent;
-import org.jire.tarnishps.event.player.ItemOnPlayerEvent;
+import org.dm.event.npc.ItemOnNpcEvent;
+import org.dm.event.object.ItemOnObjectEvent;
+import org.dm.event.player.ItemOnPlayerEvent;
 
 /**
  * The {@link GamePacket}'s responsible for an items "use" option.

@@ -9,7 +9,7 @@ import com.dm.game.world.items.ItemDefinition;
 import com.dm.util.parser.GsonParser;
 import it.unimi.dsi.fastutil.ints.IntOpenHashSet;
 import it.unimi.dsi.fastutil.ints.IntSet;
-import org.jire.tarnishps.OldToNew;
+import org.dm.OldToNew;
 
 import java.util.Arrays;
 import java.util.LinkedList;

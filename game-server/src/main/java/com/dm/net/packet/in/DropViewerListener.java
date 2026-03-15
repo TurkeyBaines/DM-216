@@ -5,7 +5,7 @@ import com.dm.net.packet.ClientPackets;
 import com.dm.net.packet.GamePacket;
 import com.dm.net.packet.PacketListener;
 import com.dm.net.packet.PacketListenerMeta;
-import org.jire.tarnishps.event.widget.DropViewerEvent;
+import org.dm.event.widget.DropViewerEvent;
 
 @PacketListenerMeta({ClientPackets.NPC_DROP_VIEWER})
 public class DropViewerListener implements PacketListener {

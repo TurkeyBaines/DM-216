@@ -45,7 +45,7 @@ import com.dm.util.Utility;
 import de.mkammerer.argon2.Argon2Factory.Argon2Types;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.jire.tarnishps.Argon2;
+import org.dm.Argon2Util;
 
 import java.io.FileReader;
 import java.io.Reader;
@@ -132,12 +132,12 @@ public final class PlayerPersistFile implements PlayerPersistable {
                 return LoginResponse.NORMAL; // fallback to support old unhashed passwords
             }
 
-            final Argon2Types type = Argon2.argon2Type(password);
+            final Argon2Types type = Argon2Util.argon2Type(password);
             if (type == null) {
                 return LoginResponse.INVALID_CREDENTIALS;
             }
 
-            final var argon2 = Argon2.forType(type);
+            final var argon2 = Argon2Util.forType(type);
             if (!argon2.verify(password, expectedPassword)) {
                 return LoginResponse.INVALID_CREDENTIALS;
             }

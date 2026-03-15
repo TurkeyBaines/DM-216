@@ -108,7 +108,7 @@ import com.dm.net.session.GameSession;
 import com.dm.util.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.jire.tarnishps.event.Events;
+import org.dm.event.Events;
 
 import java.util.*;
 import java.util.concurrent.TimeUnit;

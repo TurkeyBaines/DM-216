@@ -10,7 +10,7 @@ import com.dm.net.packet.GamePacket;
 import com.dm.net.packet.PacketListener;
 import com.dm.net.packet.PacketListenerMeta;
 import com.dm.net.packet.out.SendMessage;
-import org.jire.tarnishps.event.widget.ChatMessageEvent;
+import org.dm.event.widget.ChatMessageEvent;
 
 
 /**

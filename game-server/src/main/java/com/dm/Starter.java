@@ -43,8 +43,8 @@ import com.dm.util.Stopwatch;
 import com.dm.util.parser.impl.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.jire.tarnishps.OldToNew;
-import org.jire.tarnishps.objectexamines.ObjectExamines;
+import org.dm.OldToNew;
+import org.dm.objectexamines.ObjectExamines;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 import plugin.click.item.ClueScrollPlugin;
@@ -64,7 +64,7 @@ public final class Starter implements Runnable {
 
     private volatile boolean started;
 
-    private void processSequentialStatupTasks() {
+    private void processSequentialStatupTasks() throws IOException {
         OldToNew.load();
         try {
             //object/region decoding must be done before parallel.
