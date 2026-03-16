@@ -73,6 +73,18 @@ public class ObjectFirstClickPlugin extends PluginContext {
         switch (id) {
 
             /**
+             * World Teleporters
+             */
+//            case 33181:
+//                TeleportNetworkPlugin.showTeleportMessage(player);
+//                break;
+
+            /**
+             * Citadel Teleporter
+             */
+
+
+            /**
              * Wilderness Slayer Cave
              */
             case 40388:

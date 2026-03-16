@@ -8,8 +8,8 @@ import com.dm.content.mysterybox.MysteryBox;
 import com.dm.content.preloads.PreloadRepository;
 import com.dm.content.skill.SkillRepository;
 import com.dm.content.tradingpost.TradingPost;
-import com.dm.content.triviabot.TriviaBot;
 import com.dm.content.wintertodt.Wintertodt;
+import com.dm.deadman.DeadmanMode;
 import com.dm.fs.cache.FileSystem;
 import com.dm.fs.cache.decoder.*;
 import com.dm.game.engine.GameThread;
@@ -32,7 +32,6 @@ import com.dm.game.world.entity.mob.player.profile.ProfileRepository;
 import com.dm.game.world.items.ItemDefinition;
 import com.dm.io.PacketListenerLoader;
 import com.dm.net.LoginExecutorService;
-import com.dm.net.discord.Discord;
 import com.dm.net.discord.DiscordPlugin;
 import com.dm.util.GameSaver;
 import com.dm.util.Stopwatch;
@@ -95,8 +94,8 @@ public final class Starter implements Runnable {
     private void processParallelStatupTasks() {
         startupService.submit(new PacketSizeParser());
         startupService.submit(new PacketListenerLoader());
-        startupService.submit(TriviaBot::declare);
-//        startupService.submit(PersonalStoreSaver::loadPayments);
+        //  startupService.submit(TriviaBot::declare);
+        //  startupService.submit(PersonalStoreSaver::loadPayments);
         startupService.submit(ClanRepository::loadChannels);
         //  startupService.submit(GlobalRecords::load);
         startupService.submit(SkillRepository::load);
@@ -104,13 +103,14 @@ public final class Starter implements Runnable {
         startupService.submit(ItemActionRepository::declare);
         startupService.submit(ClueScrollPlugin::declare);
         startupService.submit(MysteryBox::load);
-        startupService.submit(() -> Discord.start(this));
+        //  startupService.submit(() -> Discord.start(this));
         startupService.submit(GameSaver::load);
         DiscordPlugin.startUp();
         startupService.submit(PreloadRepository::declare);
         startupService.submit(TradingPost::loadAllListings);
         startupService.submit(TradingPost::loadItemHistory);
         startupService.submit(TradingPost::loadRecentItemHistory);
+        startupService.submit(DeadmanMode::load);
         startupService.shutdown();
     }
 

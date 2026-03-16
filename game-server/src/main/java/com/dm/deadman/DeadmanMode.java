@@ -1,10 +1,10 @@
 package com.dm.deadman;
 
-import com.dm.deadman.content.sigils.Sigils;
+import com.dm.deadman.content.objects.Teleporters;
 
 public class DeadmanMode {
 
-    static {
-
+    public static void load() {
+        Teleporters.register();
     }
 }

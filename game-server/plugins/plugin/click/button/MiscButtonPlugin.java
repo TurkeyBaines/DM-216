@@ -44,12 +44,6 @@ public class MiscButtonPlugin extends PluginContext {
             case 2458:
                 player.logout();
                 return true;
-            case 21304:
-                player.send(new SendURL(Config.LATEST_ANNOUNCEMENT_THREAD));
-                return true;
-            case 21307:
-                player.send(new SendURL(Config.LATEST_UPDATE_THREAD));
-                return true;
             case 850:
                 if (player.house.isInside()) {
                     BuildableInterface.open(player, BuildableType.MAIN_OBJECT);

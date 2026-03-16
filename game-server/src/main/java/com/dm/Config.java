@@ -1,5 +1,6 @@
 package com.dm;
 
+import com.dm.game.world.position.Area;
 import com.moandjiezana.toml.Toml;
 import com.dm.game.world.WorldType;
 import com.dm.game.world.entity.mob.player.appearance.Appearance;
@@ -23,24 +24,14 @@ import java.util.Arrays;
  */
 public final class Config {
 
-    /** The latest announcement thread link. */
-    public static final String LATEST_ANNOUNCEMENT_THREAD = "https://tarnishps.com/";
-
-    /** The latest update thread link. */
-    public static final String LATEST_UPDATE_THREAD = "https://tarnishps.com/";
-
     /** The welcome marquee. */
     public static final String[] WELCOME_MARQUEE = {
-            "There are currently #players players online!",
-            "Make sure to vote daily for great rewards!",
-            "Donating really helps us with keeping the server alive"
+            "There are currently #players players online!"
     };
 
     /** The welcome dialogue. */
     public static final String[] WELCOME_DIALOGUE = {
-            "Update threads are released every tuesday",
-            "The owner is Apollo",
-            "The community manager is Prodigy"
+            "Fuck this WELCOME_DIALOGUE"
     };
 
     /** The welcome announcement. */
@@ -104,7 +95,7 @@ public final class Config {
 
     public static final boolean LOG_PLAYER;
 
-    /** This will use the parallel game game. */
+    /** This will use the parallel game. */
     public static final boolean PARALLEL_GAME_ENGINE;
 
     /** The name of the server. */
@@ -191,19 +182,10 @@ public final class Config {
     public static final int ATTACK_TAB = 0, SKILL_TAB = 1, QUEST_TAB = 2, INVENTORY_TAB = 3, EQUIPMENT_TAB = 4, PRAYER_TAB = 5, MAGIC_TAB = 6, ACTIVITY_TAB = 7, FRIENDS_TAB = 8, IGNORE_TAB = 9, CLAN_TAB = 10, WRENCH_TAB = 11, EMOTE_TAB = 12, MUSIC_TAB = 13, LOGOUT_TAB = 14;
 
     /** The default, i.e. onSpawn, location. */
-    public static final Position DEFAULT_POSITION = new Position(3087, 3497, 0);
-
-    /** The donator zone. */
-    public static final Position SUPER_DONATOR_ZONE = new Position(2426, 10419, 0);
-    public static final Position REGULAR_DONATOR_ZONE = new Position(2478, 10435, 0);
-
-    /** The staff zone. */
-    public static final Position STAFF_ZONE = new Position(2602, 3874, 0);
+    public static final Position DEFAULT_POSITION = Area.CITADEL_SPAWN.getRandomLocation();
 
     /** The Jail zone. */
     public static final Position JAIL_ZONE = new Position(2713, 2564, 0);
-
-    public static final Position GAMBLING_ZONE = new Position(1886, 5025, 0);
 
     /** The default appearance of a player. */
     public static final Appearance DEFAULT_APPEARANCE = new Appearance(Gender.MALE,
@@ -220,7 +202,7 @@ public final class Config {
     /* SEARCH SERVER MESSAGES */
     /** Messages that are sent periodically to all players. */
     public static final String[] MESSAGES = {
-            "Our website is located at: http://www.tarnishps.com/"
+            "Our website is under construction"
     };
 
     /**

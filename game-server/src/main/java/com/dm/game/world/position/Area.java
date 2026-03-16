@@ -16,6 +16,10 @@ public abstract class Area {
             new SquareArea("Edgeville Bank", 3091, 3488, 3098, 3499),
             new SquareArea("Edgeville Bank", 3091, 3507, 3100, 3513) };
 
+    /* Citadel */
+        /* Spawn Area */
+    public static final Area CITADEL_SPAWN = new SquareArea("Citadel Spawn area", 2967, 3339, 2977, 3344, 0);
+
     /** The General Graardor room. */
     private static final Area BANDOS_ROOM = new SquareArea("General Graardor room", 2864, 5351, 2876, 5369, 2);
     private static final Area SARADOMIN_ROOM = new SquareArea("Saradomin room", 2889, 5258, 2907, 5275, 0);
@@ -385,4 +389,5 @@ public abstract class Area {
     public abstract boolean inArea(Position position);
 
     public abstract Position getRandomLocation();
+
 }

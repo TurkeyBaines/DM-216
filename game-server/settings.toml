@@ -1,7 +1,7 @@
 [server]
-server_name = "Tarnish"
+server_name = "Dead Men"
 server_port = 43594
-server_debug = false
+server_debug = true
 server_cycle_debug = false
 parallel_game_engine = false
 website_integration = false
@@ -22,7 +22,7 @@ npc_bits = 16
 npc_walking_radius = 5
 max_players = 2048
 max_npcs = 32000
-max_bots = 10
+max_bots = 0
 npc_definition_limit = 32767
 item_definition_limit = 28473
 combat_modifier = 1250.0

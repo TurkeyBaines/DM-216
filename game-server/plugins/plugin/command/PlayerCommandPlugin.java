@@ -5,7 +5,6 @@ import com.dm.Config;
 import com.dm.content.DropDisplay;
 import com.dm.content.Waypoints;
 import com.dm.content.skill.impl.magic.teleport.Teleportation;
-import com.dm.content.triviabot.TriviaBot;
 import com.dm.game.plugin.extension.CommandExtension;
 import com.dm.game.world.World;
 import com.dm.game.world.entity.mob.player.Player;
@@ -362,19 +361,6 @@ public class PlayerCommandPlugin extends CommandExtension {
                     player.dialogueFactory.clear();
                 }, "Nevermind", () -> player.dialogueFactory.clear());
                 player.dialogueFactory.execute();
-            }
-        });
-
-        commands.add(new Command("ans", "answer", "answers") {
-            @Override
-            public void execute(Player player, CommandParser parser) {
-                if (parser.hasNext()) {
-                    StringBuilder answer = new StringBuilder();
-                    while (parser.hasNext()) {
-                        answer.append(parser.nextString()).append(" ");
-                    }
-                    TriviaBot.answer(player, answer.toString().trim());
-                }
             }
         });
     }

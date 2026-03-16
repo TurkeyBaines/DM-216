@@ -23,7 +23,7 @@ public class PlayerKilling {
         }
 
         if (killer.clanChannel != null && victim.clanChannel != null && killer.clanChannel.getName().equalsIgnoreCase(victim.clanChannel.getName())) {
-            if (!killer.clanChannel.getName().equals("Dead Men")) {
+            if (!killer.clanChannel.equals(victim.clanChannel)) {
                 killer.message("<col=FF0019>You were not rewarded since you killed someone from your clan.");
                 return;
             }

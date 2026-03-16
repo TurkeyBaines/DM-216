@@ -1,7 +1,6 @@
 package com.dm.game.task.impl;
 
 import com.dm.Config;
-import com.dm.content.triviabot.TriviaBot;
 import com.dm.game.task.Task;
 import com.dm.game.world.World;
 import com.dm.util.Utility;
@@ -29,8 +28,6 @@ public class MessageEvent extends Task {
         if (tick % 2 == 0) {
             String message = Utility.randomElement(Config.MESSAGES);
             World.sendMessage("<img=15> <col=2C7526>Broadcast: </col>" + message);
-        } else {
-            TriviaBot.assign();
         }
     }
 }
