@@ -26,7 +26,7 @@ public class Blowpipe extends RangedStrategy<Player> {
         attacker.animate(getAttackAnimation(attacker, defender), true);
         SPECIAL_PROJ.send(attacker, defender);
 
-        if (!defender.isPlayer()) {
+        if (!defender.isPlayer() || !PlayerRight.isIronman(attacker)) {
             addCombatExperience(attacker, hits);
         }
 

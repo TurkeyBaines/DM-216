@@ -99,7 +99,7 @@ public class PlayerRangedStrategy extends RangedStrategy<Player> {
                     Consumer<CombatImpact> execute = effect -> effect.impact(attacker, defender, hit, extra);
                     attacker.rangedAmmo.getEffect(id).filter(filter).ifPresent(execute);
                 }
-                if (!defender.isPlayer()) {
+                if (!defender.isPlayer() || !PlayerRight.isIronman(attacker)) {
                     if (extra.isEmpty()) {
                         Collections.addAll(extra, hits);
                         addCombatExperience(attacker, extra.toArray(new Hit[0]));
@@ -107,7 +107,7 @@ public class PlayerRangedStrategy extends RangedStrategy<Player> {
                         addCombatExperience(attacker, hits);
                     }
                 }
-            } else if (!defender.isPlayer()) {
+            } else if (!defender.isPlayer() || !PlayerRight.isIronman(attacker)) {
                 addCombatExperience(attacker, hits);
             }
         }

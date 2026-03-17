@@ -108,7 +108,7 @@ public class Slayer {
         }
 
         if (requiresCost) {
-            int cost = 25;
+            int cost = PlayerRight.isDonator(player) ? 20 : 25;
             if (points < cost) {
                 player.message("You need " + cost + " slayer points to cancel a task.");
                 return false;

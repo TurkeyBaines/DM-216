@@ -103,6 +103,10 @@ public class ClanChannelHandler {
             player.send(new SendMessage("Connection was refused: Currently banned from channel!"));
             return;
         }
+        if (channel.getDetails().type == ClanType.IRON_MAN && !PlayerRight.isIronman(player)) {
+            player.message("Only Iron-man accounts can join this clan!");
+            return;
+        }
         channel.connect(player);
     }
 
@@ -146,7 +150,7 @@ public class ClanChannelHandler {
         if (member.rank.equals(ClanRank.MEMBER)) {
             if (ProfileRepository.isFriend(player, channel.getOwner()))
                 member.rank = ClanRank.FRIEND;
-            if (PlayerRight.isAdministrator(player))
+            if (PlayerRight.isDeveloper(player))
                 member.rank = ClanRank.SYSTEM;
         }
 

@@ -1,6 +1,7 @@
 package plugin.click.npc;
 
 import com.dm.content.dialogue.DialogueFactory;
+import com.dm.content.dialogue.impl.RoyalKingDialogue;
 import com.dm.content.skill.impl.slayer.SlayerTab;
 import com.dm.content.store.Store;
 import com.dm.content.store.impl.RecipeForDisasterStore;
@@ -17,6 +18,9 @@ public class NpcSecondClickPlugin extends PluginContext {
         switch (id) {
             case 6526:
                 new RecipeForDisasterStore().open(player);
+                break;
+            case 5523:
+                player.dialogueFactory.sendDialogue(new RoyalKingDialogue(2));
                 break;
             case 3089:
             case 1634:
@@ -45,6 +49,27 @@ public class NpcSecondClickPlugin extends PluginContext {
 //            case 1032:
 //                Store.STORES.get("The General Store").open(player);
 //                break;
+
+            case 311: {
+                DialogueFactory factory = player.dialogueFactory;
+
+                if (!PlayerRight.isIronman(player) && !PlayerRight.isDeveloper(player)) {
+                    factory.sendStatement("You do not have any permission to use this store!");
+                    factory.execute();
+                    return true;
+                }
+
+                factory.sendOption("Ironman Store", () -> {
+                    Store.STORES.get("Ironman General Store").open(player);
+                }, "Skilling Tools", () -> {
+                    Store.STORES.get("Ironman Skilling Tools").open(player);
+                }, "Herblore Supplies", () -> {
+                    Store.STORES.get("Herblore Supplies").open(player);
+                });
+
+                factory.execute();
+                break;
+            }
 
 		/* Nieve */
             case 6797:

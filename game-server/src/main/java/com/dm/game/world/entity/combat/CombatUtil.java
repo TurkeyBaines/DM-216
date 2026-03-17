@@ -2,6 +2,7 @@ package com.dm.game.world.entity.combat;
 
 import com.dm.content.activity.Activity;
 import com.dm.content.activity.ActivityType;
+import com.dm.content.lms.LMSGame;
 import com.dm.content.skill.impl.slayer.SlayerTask;
 import com.dm.game.Animation;
 import com.dm.game.Projectile;
@@ -252,6 +253,10 @@ public final class CombatUtil {
         if (defender.isPlayer()) {
             if (attacker.locking.locked(PacketType.COMBAT)) {
                 return false;
+            }
+
+            if (LMSGame.inGameArea(attacker) && LMSGame.canAttack(attacker, defender.getPlayer())) {
+                return true;
             }
 
             if (Activity.evaluate(attacker, activity -> defender.activity == activity) && attacker.inActivity(ActivityType.DUEL_ARENA)) {

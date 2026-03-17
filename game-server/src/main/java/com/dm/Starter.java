@@ -4,8 +4,12 @@ import com.dm.content.WellOfGoodwill;
 import com.dm.content.bloodmoney.BloodChestEvent;
 import com.dm.content.clanchannel.ClanRepository;
 import com.dm.content.itemaction.ItemActionRepository;
+import com.dm.content.lms.LMSGameEvent;
+import com.dm.content.lms.loadouts.LMSLoadoutManager;
+import com.dm.content.lms.lobby.LMSLobbyEvent;
 import com.dm.content.mysterybox.MysteryBox;
 import com.dm.content.preloads.PreloadRepository;
+import com.dm.content.shootingstar.ShootingStar;
 import com.dm.content.skill.SkillRepository;
 import com.dm.content.tradingpost.TradingPost;
 import com.dm.content.wintertodt.Wintertodt;
@@ -83,6 +87,7 @@ public final class Starter implements Runnable {
         new NpcForceChatParser().run();
         new StoreParser().run();
         new GlobalObjectParser().run();
+        ShootingStar.init();
         Wintertodt.init();
     }
 
@@ -128,6 +133,8 @@ public final class Starter implements Runnable {
         World.schedule(new PlayerSaveEvent());
 //        World.schedule(new BotStartupEvent());
         World.schedule(new BloodChestEvent());
+        World.schedule(new LMSLobbyEvent());
+        World.schedule(new LMSGameEvent());
         logger.info("Events have been scheduled");
     }
 
@@ -162,6 +169,8 @@ public final class Starter implements Runnable {
 
         startupService.awaitUntilFinished(5, TimeUnit.MINUTES);
         logger.info("Startup service finished");
+
+        LMSLoadoutManager.load();
 
         PluginManager.load("plugin");
 

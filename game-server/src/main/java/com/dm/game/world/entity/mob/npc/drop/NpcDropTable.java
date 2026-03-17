@@ -70,7 +70,7 @@ public final class NpcDropTable {
         int roll = RandomUtils.inclusive(maxRoll);
         if (player.equipment.hasRow()) {
             int old = roll;
-            roll = 1;
+            roll = PlayerRight.dropRateIncrease(player, roll);
 
             if (roll < rollData[0] && old >= rollData[0]) {
                 if (!simulated) {

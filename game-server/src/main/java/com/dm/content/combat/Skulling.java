@@ -1,6 +1,7 @@
 package com.dm.content.combat;
 
 import com.dm.Config;
+import com.dm.content.lms.LMSGame;
 import com.dm.game.task.impl.SkullRemoveTask;
 import com.dm.game.world.World;
 import com.dm.game.world.entity.mob.UpdateFlag;
@@ -68,6 +69,8 @@ public class Skulling {
         if (attacking.inActivity()) {
             return;
         }
+
+        if(LMSGame.inGameArea(attacking)) return;
 
         if (attacking != player) {
             attacked.add(attacking.getName());

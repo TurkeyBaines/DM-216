@@ -29,6 +29,10 @@ public class PrayerButtonPlugin extends PluginContext {
                 return true;
             }
             if (prayer == Prayer.PROTECT_ITEM) {
+                if (player.right.equals(PlayerRight.ULTIMATE_IRONMAN)) {
+                    player.send(new SendMessage("As an ultimate iron man you do not have access to this prayer!"));
+                    return true;
+                }
                 if (player.skulling.getHeadIconType() == SkullHeadIconType.RED_SKULL) {
                     player.message("You can not use this prayer with a red skull!");
                     return true;
@@ -118,6 +122,12 @@ public class PrayerButtonPlugin extends PluginContext {
             }
 
             if (prayer == Prayer.PROTECT_ITEM) {
+                if (player.right.equals(PlayerRight.ULTIMATE_IRONMAN)) {
+                    String message = "As an ultimate iron man you do not have access to this prayer!";
+                    prayer.reset(player, message);
+                    player.dialogueFactory.sendStatement(message).execute();
+                    return true;
+                }
                 if (player.skulling.getHeadIconType() == SkullHeadIconType.RED_SKULL) {
                     String message = "You can not use this prayer with a red skull!";
                     prayer.reset(player, message);

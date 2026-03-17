@@ -222,7 +222,7 @@ public final class NpcDropManager {
         }
         WeightedCollection<NpcDrop> rc = new WeightedCollection<>();
         for (NpcDrop drop : drops) {
-            double drOffset = 1;
+            double drOffset = 1 + (PlayerRight.getDropRateBonus(player) / 100.0); // dr bonus is in percent, conversion is 1 + (percent / 100.0)
             int weightMultiplier = 1;
             double dropChance = (drop.getWeight() * weightMultiplier) / drOffset;
             if (dropChance < 1) {

@@ -24,6 +24,10 @@ public class Yell {
 
     /** Yells a message to the server. */
     public static void yell(Player player, String message) {
+        if (!PlayerRight.isDonator(player) && !PlayerRight.isHelper(player) && !PlayerRight.isOwner(player)) {
+            player.send(new SendMessage("You must be a donator to use this command!"));
+            return;
+        }
 
         if (!player.settings.yell) {
             player.send(new SendMessage("You can not send a yell message as you have the yell setting disabled!"));

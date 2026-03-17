@@ -114,6 +114,10 @@ public abstract class Store {
             player.send(new SendMessage("There is none of this item left in stock!"));
             return false;
         }
+        if(PlayerRight.isIronman(player)) {
+            player.send(new SendMessage("Ironman-players cannot buy items sold by players."));
+            return false;
+        }
 
         if (item.getAmount() > storeItem.getAmount())
             item.setAmount(storeItem.getAmount());

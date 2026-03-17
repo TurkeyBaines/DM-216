@@ -1,6 +1,9 @@
 package com.dm.content.mysterybox;
 
-import com.dm.content.mysterybox.impl.MagicMysteryBox;
+import com.dm.content.mysterybox.impl.BronzeMysteryBox;
+import com.dm.content.mysterybox.impl.GoldMysteryBox;
+import com.dm.content.mysterybox.impl.PetMysteryBox;
+import com.dm.content.mysterybox.impl.SilverMysteryBox;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -18,9 +21,15 @@ public abstract class MysteryBox {
 
     /** Handles loading the mystery boxes. */
     public static void load() {
-        MysteryBox MAGIC_MYSTERY_BOX = new MagicMysteryBox();
+        MysteryBox BRONZE_BOX = new BronzeMysteryBox();
+        MysteryBox SILVER_BOX = new SilverMysteryBox();
+        MysteryBox GOLD_BOX = new GoldMysteryBox();
+        MysteryBox PET_BOX = new PetMysteryBox();
 
-        MYSTERY_BOXES.put(MAGIC_MYSTERY_BOX.item(), MAGIC_MYSTERY_BOX);
+        MYSTERY_BOXES.put(BRONZE_BOX.item(), BRONZE_BOX);
+        MYSTERY_BOXES.put(SILVER_BOX.item(), SILVER_BOX);
+        MYSTERY_BOXES.put(GOLD_BOX.item(), GOLD_BOX);
+        MYSTERY_BOXES.put(PET_BOX.item(), PET_BOX);
     }
 
     /** Handles getting the mystery box. */

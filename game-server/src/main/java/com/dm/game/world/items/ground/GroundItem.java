@@ -100,6 +100,11 @@ public final class GroundItem extends Entity {
             return;
         }
 
+        if (PlayerRight.isIronman(player) && (!result.canIronMenPickThisItemUp || result.player.usernameLong != player.usernameLong)) {
+            player.send(new SendMessage("As an iron man you may not pick up this item."));
+            return;
+        }
+
         if (!player.inventory.hasCapacityFor(item)) {
             player.send(new SendMessage("You don't have enough inventory space."));
             return;

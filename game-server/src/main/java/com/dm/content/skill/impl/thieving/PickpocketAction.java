@@ -56,7 +56,7 @@ public final class PickpocketAction extends Action<Player> {
             return;
         }
 
-        double experience = pickpocket.getExperience();
+        double experience = Area.inSuperDonatorZone(getMob()) || Area.inRegularDonatorZone(getMob()) ? pickpocket.getExperience() * 2 : pickpocket.getExperience();
         getMob().skills.addExperience(Skill.THIEVING, experience * Config.THIEVING_MODIFICATION);
         getMob().send(new SendMessage("You have successfully pickpocket the " + npc.getName() + "."));
         getMob().inventory.add(Utility.randomElement(pickpocket.getLoot()));

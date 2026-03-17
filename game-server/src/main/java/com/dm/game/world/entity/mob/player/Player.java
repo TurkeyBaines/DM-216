@@ -20,18 +20,25 @@ import com.dm.content.combat.Killstreak;
 import com.dm.content.combat.Skulling;
 import com.dm.content.dailyeffect.DailyEffect;
 import com.dm.content.dailyeffect.impl.DailySlayerTaskSkip;
+import com.dm.content.dailyeffect.impl.DailySlayerTaskTeleport;
 import com.dm.content.dailyeffect.impl.DailySpellBookSwap;
 import com.dm.content.dialogue.ChatBoxItemDialogue;
 import com.dm.content.dialogue.Dialogue;
 import com.dm.content.dialogue.DialogueFactory;
 import com.dm.content.dialogue.OptionDialogue;
+import com.dm.content.donators.Donation;
 import com.dm.content.emote.EmoteUnlockable;
 import com.dm.content.event.EventDispatcher;
 import com.dm.content.event.impl.LogInEvent;
+import com.dm.content.gambling.GambleManager;
+import com.dm.content.lms.LMSGame;
+import com.dm.content.lms.lobby.LMSLobby;
+import com.dm.content.lms.lobby.LMSLobbyEvent;
 import com.dm.content.mysterybox.MysteryBoxManager;
 import com.dm.content.overrides.Overrides;
 import com.dm.content.pet.PetData;
 import com.dm.content.pet.Pets;
+import com.dm.content.preset.PresetManager;
 import com.dm.content.prestige.Prestige;
 import com.dm.content.puzzle.PuzzleDisplay;
 import com.dm.content.skill.impl.construction.House;
@@ -82,6 +89,7 @@ import com.dm.game.world.items.Item;
 import com.dm.game.world.items.containers.bank.Bank;
 import com.dm.game.world.items.containers.bank.BankPin;
 import com.dm.game.world.items.containers.bank.BankVault;
+import com.dm.game.world.items.containers.bank.DonatorDeposit;
 import com.dm.game.world.items.containers.equipment.Equipment;
 import com.dm.game.world.items.containers.impl.LootingBag;
 import com.dm.game.world.items.containers.impl.LostUntradeables;
@@ -91,6 +99,7 @@ import com.dm.game.world.object.CustomGameObject;
 import com.dm.game.world.object.ObjectDirection;
 import com.dm.game.world.object.ObjectType;
 import com.dm.game.world.position.Area;
+import com.dm.game.world.position.Boundary;
 import com.dm.game.world.position.Position;
 import com.dm.game.world.region.Region;
 import com.dm.net.packet.OutgoingPacket;
@@ -121,8 +130,12 @@ public class Player extends Mob {
     public int wintertodtPoints;
     public int menuOpened, optionOpened = -1;
 
+    private final GambleManager gamblingManager = new GambleManager();
     public Map<String, Position> waypoints = new HashMap<>();
     public Teleport lastTeleport = null;
+    public GambleManager getGambling() {
+        return gamblingManager;
+    }
 
     private long lastModification;
 
@@ -193,6 +206,7 @@ public class Player extends Mob {
     public Spellbook spellbook_copy = Spellbook.MODERN;
     public ChatBoxItemDialogue chatBoxItemDialogue;
     private Optional<ChatMessage> chatMessage = Optional.empty();
+    public DailyEffect dailySlayerTaskTeleport = new DailySlayerTaskTeleport();
     public DailyEffect dailySlayerTaskSkip = new DailySlayerTaskSkip();
     public DailyEffect dailySpellBookSwap = new DailySpellBookSwap();
     public PrayerBook quickPrayers = new PrayerBook();
@@ -212,6 +226,7 @@ public class Player extends Mob {
     public Optional<Consumer<String>> enterInputListener = Optional.empty();
     public boolean[] barrowKills = new boolean[BrotherData.values().length];
     public final PlayerRelation relations = new PlayerRelation(this);
+    public final Donation donation = new Donation(this);
     public final LostUntradeables lostUntradeables = new LostUntradeables(this);
     public LinkedList<Item> lostItems = new LinkedList<>();
     public BrotherData hiddenBrother;
@@ -306,8 +321,10 @@ public class Player extends Mob {
     public final PlayerPunishment punishment = new PlayerPunishment(this);
     public final Equipment equipment = new Equipment(this);
     public final Equipment equipment_copy = new Equipment(this);
+    public final PresetManager presetManager = new PresetManager(this);
     public final Prestige prestige = new Prestige(this);
     public final PriceChecker priceChecker = new PriceChecker(this);
+    public final DonatorDeposit donatorDeposit = new DonatorDeposit(this);
     public DialogueFactory dialogueFactory = new DialogueFactory(this);
     public final House house = new House(this);
     public Slayer slayer = new Slayer(this);
@@ -522,7 +539,7 @@ public class Player extends Mob {
         farming.regionChange(this);
         TrapManager.handleRegionChange(this);
 
-        if (debug && PlayerRight.isOwner(this)) {
+        if (debug && PlayerRight.isDeveloper(this)) {
             send(new SendMessage("[REGION] Loaded new region.", MessageColor.DEVELOPER));
         }
     }
@@ -568,6 +585,8 @@ public class Player extends Mob {
         if (!World.getPlayers().contains(this)) {
             return;
         }
+        if (LMSGame.isActivePlayer(this))
+            LMSGame.onDeath(this, true);
         World.sendMessage("<img=15> " +getPlayer().getName()+ " has logged out.");
         send(new SendLogout());
         Activity.forActivity(this, minigame -> minigame.onLogout(this));
@@ -581,6 +600,7 @@ public class Player extends Mob {
         Pets.onLogout(this);
         CollectionLogSaving.save(this);
         World.getPlayers().remove((Player) destroy());
+        getGambling().decline(this);
         logger.info(String.format("[UNREGISTERED]: %s [%s]", getName(), lastHost));
     }
 
@@ -604,6 +624,13 @@ public class Player extends Mob {
         action.sequence();
         playerAssistant.sequence();
         sequence++;
+
+        if(Area.inLMSLobby(this) || Area.inLMSBuilding(this)) {
+            send(new SendString("Next Game: ", 44654));
+            send(new SendString("" + ((LMSLobbyEvent.lobbyTicks * 600) / 1000), 44655));
+            send(new SendString("" + LMSLobby.currentGameType.getClass().getSimpleName(), 44657));
+            send(new SendString("<col="+(LMSLobby.lobbyMembers.size() >= LMSLobby.requiredPlayers ? "65280" : "ff0000")+">" + LMSLobby.lobbyMembers.size() + "/" + LMSLobby.maxPlayers + "</col>", 44659));
+        }
     }
 
     @Override
@@ -623,8 +650,21 @@ public class Player extends Mob {
         send(new SendPlayerOption(PlayerOption.TRADE_REQUEST, false));
         send(new SendPlayerOption(PlayerOption.VIEW_PROFILE, false));
 
+        if(Boundary.isIn(this, GambleManager.GAMBLING_ZONE)) {
+            //send(new SendPlayerOption(PlayerOption.TRADE_REQUEST, false, true));
+            send(new SendPlayerOption(PlayerOption.GAMBLE_REQUEST, false));
+        }
+        else if(LMSGame.inGameArea(this)){
+            send(new SendPlayerOption(PlayerOption.ATTACK, true));
+            if (interfaceManager.getWalkable() != 44660)
+                interfaceManager.openWalkable(44660);
+        }
+        else if(Area.inLMSLobby(this) || Area.inLMSBuilding(this)) {
+            if (interfaceManager.getWalkable() != 44650)
+                interfaceManager.openWalkable(44650);
+        }
         // pvp instance
-        if (pvpInstance) {
+        else if (pvpInstance) {
             if (hasPvPTimer) {
                 send(new SendPlayerOption(PlayerOption.ATTACK, true));
                 send(new SendPlayerOption(PlayerOption.DUEL_REQUEST, false, true));
@@ -681,6 +721,11 @@ public class Player extends Mob {
                 interfaceManager.openWalkable(23400);*/
 
             //
+        } else if (Area.inSuperDonatorZone(this) && (Area.inRegularDonatorZone(this) && !PlayerRight.isDonator(this))) {
+            move(Config.DEFAULT_POSITION);
+            send(new SendMessage("You're not supposed to be here!"));
+
+            // clear
         } else if (!inActivity()) {
             send(new SendPlayerOption(PlayerOption.GAMBLE_REQUEST, false, true));
             send(new SendPlayerOption(PlayerOption.ATTACK, false, true));

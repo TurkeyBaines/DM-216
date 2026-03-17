@@ -42,7 +42,7 @@ public class MagicOnItemPacketListener implements PacketListener {
             return;
         }
 
-        if (PlayerRight.isOwner(player) ) {
+        if (PlayerRight.isDeveloper(player) ) {
             player.message("[MagicOnItemPacket] spell=" + spell + " itemId=" + itemId + " slot=" + slot + " childId=" + childId);
         }
 

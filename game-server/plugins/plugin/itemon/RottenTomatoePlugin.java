@@ -47,7 +47,7 @@ public class RottenTomatoePlugin extends PluginContext {
     @Override
     protected boolean itemOnNpc(Player player, ItemOnNpcEvent event) {
         if (event.getUsed().getId() == ROTTEN_TOMATOE && canUse(player)) {
-            if (!PlayerRight.isAdministrator(player)) {
+            if (!PlayerRight.isManager(player)) {
                 player.message("Only managers can do this!");
                 return true;
             }

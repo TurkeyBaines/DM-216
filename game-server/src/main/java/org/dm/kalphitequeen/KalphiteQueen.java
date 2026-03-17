@@ -2,7 +2,6 @@ package org.dm.kalphitequeen;
 
 import com.dm.game.Animation;
 import com.dm.game.Graphic;
-import com.dm.game.world.World;
 import com.dm.game.world.entity.combat.CombatType;
 import com.dm.game.world.entity.combat.CombatUtil;
 import com.dm.game.world.entity.combat.attack.FightType;
@@ -103,38 +102,21 @@ public class KalphiteQueen extends MultiStrategy {
             defender.locking.lock();
             transforming = true;
 
-//            WorldTask.schedule(5, () -> {
-//                currentStrategy = CombatUtil.randomStrategy(phase2Strats);
-//                defender.transform(PHASE2_ID);
-//                defender.canAttack = false;
-//                defender.graphic(PHASE_SWITCH_GFX);
-//                defender.animate(PHASE_SWITCH_ANIM);
-//
-//                WorldTask.schedule(8, () -> {
-//                    transforming = false;
-//                    defender.getCombat().reset(true);
-//                    defender.canAttack = true;
-//                    defender.locking.unlock();
-//                    defender.getCombat().attack(attacker);
-//                });
-//            });
+            WorldTask.schedule(5, () -> {
+                currentStrategy = CombatUtil.randomStrategy(phase2Strats);
+                defender.transform(PHASE2_ID);
+                defender.canAttack = false;
+                defender.graphic(PHASE_SWITCH_GFX);
+                defender.animate(PHASE_SWITCH_ANIM);
 
-            org.jire.tarnishps.task.TaskSequence.create()
-                    .then(5, () -> {
-                        currentStrategy = CombatUtil.randomStrategy(phase2Strats);
-                        defender.transform(PHASE2_ID);
-                        defender.canAttack = false;
-                        defender.graphic(PHASE_SWITCH_GFX);
-                        defender.animate(PHASE_SWITCH_ANIM);
-                    })
-                    .then(8, () -> {
-                        transforming = false;
-                        defender.getCombat().reset();
-                        defender.canAttack = true;
-                        defender.locking.unlock();
-                        defender.getCombat().attack(attacker);
-                    })
-                    .submit(World.getTaskManager());
+                WorldTask.schedule(8, () -> {
+                    transforming = false;
+                    defender.getCombat().reset(true);
+                    defender.canAttack = true;
+                    defender.locking.unlock();
+                    defender.getCombat().attack(attacker);
+                });
+            });
             return;
         }
 

@@ -217,7 +217,12 @@ public enum PlayerManagement implements ActionEffect {
             if (PlayerRight.isAdministrator(player) && player.managing.isPresent()) {
                 Player other = player.managing.get();
 
-                player.dialogueFactory.sendOption("Moderator", () -> {
+                player.dialogueFactory.sendOption("Helper", () -> {
+                    other.right = PlayerRight.HELPER;
+                    other.updateFlags.add(UpdateFlag.APPEARANCE);
+                    other.dialogueFactory.sendStatement("You were promoted to helper by " + player.getName()).execute();
+                    player.message("You have promoted " + other.getName() + " to helper.");
+                }, "Moderator", () -> {
                     other.right = PlayerRight.MODERATOR;
                     other.updateFlags.add(UpdateFlag.APPEARANCE);
                     other.dialogueFactory.sendStatement("You were promoted to moderator by " + player.getName()).execute();

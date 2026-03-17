@@ -31,7 +31,7 @@ public class DinhsBulwark extends PlayerMeleeStrategy {
 		List<Hit> extra = new LinkedList<>();
 		CombatUtil.areaAction(attacker, 10, 11, other -> hitEvent(attacker, defender, other, extra));
 
-		if (!defender.isPlayer()) {
+		if (!defender.isPlayer() || !PlayerRight.isIronman(attacker)) {
 			Collections.addAll(extra, hits);
 			addCombatExperience(attacker, extra.toArray(new Hit[extra.size()]));
 		}

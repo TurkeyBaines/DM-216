@@ -87,7 +87,7 @@ public class Thieving extends Skill {
                 return;
             }
 
-            double experience = pickpocket.getExperience();
+            double experience = Area.inSuperDonatorZone(player) || Area.inRegularDonatorZone(player) ? pickpocket.getExperience() * 2 : pickpocket.getExperience();
 
             player.skills.get(THIEVING).setDoingSkill(false);
             player.inventory.add(Utility.randomElement(pickpocket.getLoot()));
@@ -134,7 +134,8 @@ public class Thieving extends Skill {
         }
 
         int base_chance = 50;
-        int modified_chance = (int) (SkillCape.isEquipped(player, SkillCape.THIEVING) ? 2.2 : base_chance);
+        int modified_chance = (int) (PlayerRight.isDonator(player) ? base_chance * 2.3
+                : SkillCape.isEquipped(player, SkillCape.THIEVING) ? 2.2 : base_chance);
         boolean failed = Utility.random(modified_chance) == 0;
 
         player.animate(new Animation(832));
@@ -143,7 +144,7 @@ public class Thieving extends Skill {
 
         World.schedule(3, () -> {
             double experience = stall.getExperience() * Config.THIEVING_MODIFICATION;
-            double newExperience = experience;
+            double newExperience = Area.inSuperDonatorZone(player) || Area.inRegularDonatorZone(player)? experience * 2 : experience;
 
             if (failed) {
                 player.damage(new Hit(Utility.random(3, 6)));
@@ -153,6 +154,10 @@ public class Thieving extends Skill {
             }
 
             player.inventory.add(stall.getItem());
+
+            if (PlayerRight.isSuper(player) && Utility.random(0, 10) > 8) {
+                player.inventory.addOrDrop(stall.getItem());
+            }
 
             player.skills.get(THIEVING).setDoingSkill(false);
             player.skills.addExperience(THIEVING, newExperience);

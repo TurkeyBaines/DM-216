@@ -64,7 +64,7 @@ public class PlayerMeleeStrategy extends MeleeStrategy<Player> {
 
         attacker.animate(getAttackAnimation(attacker, defender), true);
 
-        if (!defender.isPlayer())
+        if (!defender.isPlayer() || !PlayerRight.isIronman(attacker))
             addCombatExperience(attacker, hits);
     }
 

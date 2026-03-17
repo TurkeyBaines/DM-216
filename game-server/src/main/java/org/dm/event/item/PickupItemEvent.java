@@ -29,7 +29,7 @@ public final class PickupItemEvent implements ItemEvent {
         Position position = Position.create(x, y, player.getHeight());
 
         if (EventDispatcher.execute(player, new PickupItemInteractionEvent(item, position))) {
-            if (PlayerRight.isOwner(player)) {
+            if (PlayerRight.isDeveloper(player)) {
                 player.send(
                         new SendMessage(
                                 String.format(

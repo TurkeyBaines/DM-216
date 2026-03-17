@@ -35,6 +35,11 @@ public class OpenBankObjectClickPlugin extends PluginContext {
 
         final String name = def.getName().toLowerCase();
 
+        if (name.contains("bank booth") || name.contains("clan bank")) {
+            player.presetManager.open();
+            return true;
+        }
+
         return false;
     }
 

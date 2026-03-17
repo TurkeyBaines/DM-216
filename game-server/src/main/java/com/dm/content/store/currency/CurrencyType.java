@@ -27,7 +27,11 @@ public enum CurrencyType {
     PRESTIGE_POINTS(8, new PrestigePointCurrency()),
     KOLODION_POINTS(9, new MageArenaCurrency()),
     GRACEFUL_TOKEN(10, new ItemCurrency(11849)),
-    PLATINUM_TOKEN(13, new ItemCurrency(13204));
+    DONATOR_POINTS(11, new DonatorPointCurrency()),
+    SKILLING_POINTS(12, new SkillingPointCurrency()),
+    PLATINUM_TOKEN(13, new ItemCurrency(13204)),
+    ROYALE_TOKEN(14, new ItemCurrency(20527)),
+    PARAMAYA_TICKET(15, new ItemCurrency(620));
 
     private static final ImmutableSet<CurrencyType> VALUES = ImmutableSet.copyOf(values());
 
@@ -74,6 +78,9 @@ public enum CurrencyType {
             case PLATINUM_TOKEN:
                 value = "Platinum Token: " + Utility.formatDigits(player.inventory.contains(13204) ? player.inventory.computeAmountForId(13204) : 0);
                 break;
+            case ROYALE_TOKEN:
+                value = "Royale Token: " + Utility.formatDigits(player.inventory.contains(20527) ? player.inventory.computeAmountForId(20527) : 0);
+                break;
             case SLAYER_POINTS:
                 value = "Points: " + Utility.formatDigits(player.slayer.getPoints());
                 break;
@@ -88,6 +95,12 @@ public enum CurrencyType {
                 break;
             case PRESTIGE_POINTS:
                 value = "Points: " + Utility.formatDigits(player.prestige.getPrestigePoint());
+                break;
+            case DONATOR_POINTS:
+                value = "Credits: " + Utility.formatDigits(player.donation.getCredits());
+                break;
+            case SKILLING_POINTS:
+                value = "Points: " + Utility.formatDigits(player.skillingPoints);
                 break;
             case STARDUST:
                 value = "Stardust: " + Utility.formatDigits(player.inventory.contains(25527) ? player.inventory.computeAmountForId(25527) : 0);

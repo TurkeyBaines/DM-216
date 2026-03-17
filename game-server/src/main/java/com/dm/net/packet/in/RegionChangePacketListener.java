@@ -24,7 +24,7 @@ public class RegionChangePacketListener implements PacketListener {
         switch (packet.getOpcode()) {
             case ClientPackets.ENTER_REGION:
                 int a = packet.readInt();
-                if (player.debug && PlayerRight.isOwner(player)) {
+                if (player.debug && PlayerRight.isDeveloper(player)) {
                     player.send(new SendMessage("[REGION] Entered new region: " + a, MessageColor.DEVELOPER));
                 }
                 if (a != 0x3f008edd) {

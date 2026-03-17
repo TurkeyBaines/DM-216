@@ -72,10 +72,19 @@ public class ItemContainerActionPlugin extends PluginContext {
                     player.priceChecker.deposit(removeSlot, 1);
                     return true;
                 }
+
+                if (player.attributes.get("DONATOR_DEPOSIT_KEY", Boolean.class)) {
+                    player.donatorDeposit.deposit(removeId, removeSlot, 1);
+                    return true;
+                }
                 break;
 
             case InterfaceConstants.PRICE_CHECKER:
                 player.priceChecker.withdraw(removeId, 1);
+                break;
+
+            case InterfaceConstants.DONATOR_DEPOSIT:
+                player.donatorDeposit.withdraw(removeId, removeSlot, 1);
                 break;
 
             case InterfaceConstants.WITHDRAW_BANK:
@@ -167,11 +176,21 @@ public class ItemContainerActionPlugin extends PluginContext {
                     player.bank.deposit(removeSlot, 5);
                     return true;
                 }
+
+                if (player.attributes.get("DONATOR_DEPOSIT_KEY", Boolean.class)) {
+                    player.donatorDeposit.deposit(removeId, removeSlot, 5);
+                    return true;
+                }
                 return false;
 
 		/* Bank withdraw */
             case InterfaceConstants.WITHDRAW_BANK:
                 player.bank.withdraw(removeId, removeSlot, 5);
+                return true;
+
+                                /* Donator deposit */
+            case InterfaceConstants.DONATOR_DEPOSIT:
+                player.donatorDeposit.withdraw(removeId, removeSlot, 5);
                 return true;
 
             case InterfaceConstants.PLAYER_STAKE_CONTAINER:
@@ -276,11 +295,21 @@ public class ItemContainerActionPlugin extends PluginContext {
                     player.bank.deposit(removeSlot, 10);
                     return true;
                 }
+
+                if (player.attributes.get("DONATOR_DEPOSIT_KEY", Boolean.class)) {
+                    player.donatorDeposit.deposit(removeId, removeSlot, 10);
+                    return true;
+                }
                 break;
 
 		/* Bank withdraw */
             case InterfaceConstants.WITHDRAW_BANK:
                 player.bank.withdraw(removeId, removeSlot, 10);
+                break;
+
+                                /* Donator deposit */
+            case InterfaceConstants.DONATOR_DEPOSIT:
+                player.donatorDeposit.withdraw(removeId, removeSlot, 10);
                 break;
 
             case InterfaceConstants.PLAYER_STAKE_CONTAINER:
@@ -369,11 +398,21 @@ public class ItemContainerActionPlugin extends PluginContext {
                     player.bank.deposit(removeSlot, Integer.MAX_VALUE);
                     return true;
                 }
+
+                if (player.attributes.get("DONATOR_DEPOSIT_KEY", Boolean.class)) {
+                    player.donatorDeposit.deposit(removeId, removeSlot, Integer.MAX_VALUE);
+                    return true;
+                }
                 break;
 
 		/* Bank withdraw */
             case InterfaceConstants.WITHDRAW_BANK:
                 player.bank.withdraw(removeId, removeSlot, Integer.MAX_VALUE);
+                break;
+
+        /* Donator deposit */
+            case InterfaceConstants.DONATOR_DEPOSIT:
+                player.donatorDeposit.withdraw(removeId, removeSlot, Integer.MAX_VALUE);
                 break;
 
             case InterfaceConstants.PLAYER_STAKE_CONTAINER:
@@ -457,8 +496,20 @@ public class ItemContainerActionPlugin extends PluginContext {
                 player.send(new SendInputAmount("Enter an amount to withdraw:", 10, amount -> player.bank.withdraw(removeId, removeSlot, Integer.parseInt(amount))));
                 break;
 
+                /* Donator deposit */
+            case 57207:
+                if (player.attributes.get("DONATOR_DEPOSIT_KEY", Boolean.class)) {
+                    player.send(new SendInputAmount("Enter an amount to withdraw:", 10, amount -> player.donatorDeposit.withdraw(removeId, removeSlot, Integer.parseInt(amount))));
+                }
+                break;
+
             /* Bank store x */
             case InterfaceConstants.INVENTORY_STORE: {
+                if (player.attributes.get("DONATOR_DEPOSIT_KEY", Boolean.class)) {
+                    player.send(new SendInputAmount("Enter an amount to deposit:", 10, amount -> player.donatorDeposit.deposit(removeId, removeSlot, Integer.parseInt(amount))));
+                    break;
+                }
+
                 if (player.attributes.get("PRICE_CHECKER_KEY", Boolean.class)) {
                     player.send(new SendInputAmount("Enter an amount to price check:", 10, amount -> player.priceChecker.deposit(removeSlot, Integer.parseInt(amount))));
                     break;
@@ -491,10 +542,18 @@ public class ItemContainerActionPlugin extends PluginContext {
                 if (player.attributes.get("BANK_KEY", Boolean.class)) {
                     player.bank.deposit(removeSlot, amount);
                 }
+
+                if (player.attributes.get("DONATOR_DEPOSIT_KEY", Boolean.class)) {
+                    player.donatorDeposit.deposit(removeId, removeSlot, amount);
+                }
                 break;
 
             case InterfaceConstants.WITHDRAW_BANK:
                 player.bank.withdraw(removeId, removeSlot, amount);
+                break;
+
+            case InterfaceConstants.DONATOR_DEPOSIT:
+                player.donatorDeposit.withdraw(removeId, removeSlot, amount);
                 break;
 
             case InterfaceConstants.PLAYER_STAKE_CONTAINER:

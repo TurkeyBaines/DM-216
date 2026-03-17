@@ -33,10 +33,13 @@ public class ButtonClickPacketListener implements PacketListener {
             return;
         }
 
-        if (PlayerRight.isOwner(player)) {
+
+        // player.message("Currently not available");
+
+        if (PlayerRight.isDeveloper(player) || PlayerRight.isOwner(player)) {
             player.send(new SendMessage(String.format("[%s]: button=%d", ButtonClickPacketListener.class.getSimpleName(), button)));
             System.out.println(String.format("[%s]: button=%d", ButtonClickPacketListener.class.getSimpleName(), button));
-        }
+        }//save it plz theres no save button with intellij
 
 
         if (EventDispatcher.execute(player, new ClickButtonInteractionEvent(button))) {

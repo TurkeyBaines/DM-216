@@ -12,6 +12,7 @@ import com.dm.content.activity.impl.warriorguild.WarriorGuild;
 import com.dm.content.activity.impl.zulrah.ZulrahActivity;
 import com.dm.content.combat.cannon.CannonManager;
 import com.dm.content.dialogue.impl.WellOfGoodwillDialogue;
+import com.dm.content.shootingstar.ShootingStar;
 import com.dm.content.skill.impl.magic.Spellbook;
 import com.dm.content.skill.impl.magic.teleport.Teleportation;
 import com.dm.content.skill.impl.slayer.SlayerTask;
@@ -71,6 +72,17 @@ public class ObjectFirstClickPlugin extends PluginContext {
         final int id = object.getId();
 
         switch (id) {
+
+            case 41229:
+            case 41228:
+            case 41227:
+            case 41226:
+            case 41225:
+            case 41224:
+            case 41223:
+            case 41021:
+                ShootingStar.mine(player, object);
+                break;
 
             /**
              * World Teleporters
@@ -216,6 +228,10 @@ public class ObjectFirstClickPlugin extends PluginContext {
             case 13607:
                 if (player.getCombat().inCombat()) {
                     player.message("You cannot open this while in combat.");
+                    break;
+                }
+                if (PlayerRight.isIronman(player)) {
+                    player.message("You can not use the Trading Post as an Ironman.");
                     break;
                 }
                 player.tradingPost.openOverviewInterface();
@@ -406,6 +422,11 @@ public class ObjectFirstClickPlugin extends PluginContext {
 
                 //Skill Area:
                 if (player.getY() == 3483) {
+                    if (player.skills.getTotalLevel() < 800 && !PlayerRight.isDonator(player)) {
+                        player.dialogueFactory.sendStatement("You need a total skill level of 800", "to enter this skilling area!");
+                        player.dialogueFactory.execute();
+                        return true;
+                    }
                     player.walk(new Position(player.getX(), 3481), true);
                     player.face(Direction.NORTH);
                     return true;
@@ -500,8 +521,9 @@ public class ObjectFirstClickPlugin extends PluginContext {
             }
 
             case 26760: {
+                boolean isSuperDonator = PlayerRight.isSuper(player);
 
-                if (!player.inventory.contains(995, 5000)) {
+                if (!isSuperDonator && !player.inventory.contains(995, 5000)) {
                     player.dialogueFactory.sendStatement("You need 5,000 coins to do this!").execute();
                     return true;
                 }
@@ -527,7 +549,8 @@ public class ObjectFirstClickPlugin extends PluginContext {
                     player.getCombat().reset();
                     player.face(direction);
                     player.locking.lock(1, LockType.MASTER_WITH_MOVEMENT);
-                    player.inventory.remove(995, 5000);
+                    if (!isSuperDonator)
+                        player.inventory.remove(995, 5000);
                     player.movement.walkTo(destination);
                 }
                 break;
@@ -958,7 +981,7 @@ public class ObjectFirstClickPlugin extends PluginContext {
                     return true;
                 }
 
-                int duration = 2;
+                int duration = PlayerRight.isDonator(player) ? 1 : 2;
                 if (!player.restoreDelay.elapsed(duration, TimeUnit.MINUTES)) {
                     player.send(new SendMessage("You can only do this once every " + duration + " minutes! Time Passed: " + Utility.getTime(player.restoreDelay.elapsedTime())));
                     return true;
@@ -976,6 +999,11 @@ public class ObjectFirstClickPlugin extends PluginContext {
                 player.send(new SendMessage("Your health & special attack have been restored!"));
                 player.restoreDelay.reset();
             break;
+
+            /* Donator deposit. */
+            case 26254:
+                player.donatorDeposit.open();
+                break;
 
             /* Construction. */
             case 15478:
@@ -1046,7 +1074,7 @@ public class ObjectFirstClickPlugin extends PluginContext {
             case 26364:
             case 26363:
 
-                int length = 10;
+                int length = PlayerRight.isDonator(player) ? 5 : 10;
                 if (!player.godwarsDelay.elapsed(length, TimeUnit.MINUTES)) {
                     player.dialogueFactory.sendStatement("You can only do this once every " + length + " minutes!", "Time Passed: " + Utility.getTime(player.godwarsDelay.elapsedTime())).execute();
                     return true;

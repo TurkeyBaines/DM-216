@@ -397,6 +397,46 @@ public class OwnerCommandPlugin extends CommandExtension {
             }
         });
 
+        commands.add(new Command("setrank", "giverank", "rank") {
+            @Override
+            public void execute(Player player, CommandParser parser) {
+                if (parser.hasNext()) {
+                    StringBuilder name = new StringBuilder(parser.nextString());
+
+                    while (parser.hasNext()) {
+                        name.append(" ").append(parser.nextString());
+                    }
+
+                    World.search(name.toString()).ifPresent(other -> {
+                        DialogueFactory factory = player.dialogueFactory;
+                        factory.sendOption("Ironman", () -> {
+                            other.right = PlayerRight.IRONMAN;
+                            player.message("You have promoted " + other.getName() + ": " + other.right.getName());
+                            other.message("You have been promoted: " + other.right.getName());
+                        }, "Ultimate Ironman", () -> {
+                            other.right = PlayerRight.ULTIMATE_IRONMAN;
+                            player.message("You have promoted " + other.getName() + ": " + other.right.getName());
+                            other.message("You have been promoted: " + other.right.getName());
+                        }, "Hardcore Ironman", () -> {
+                            other.right = PlayerRight.HARDCORE_IRONMAN;
+                            player.message("You have promoted " + other.getName() + ": " + other.right.getName());
+                            other.message("You have been promoted: " + other.right.getName());
+                        }, "Manager", () -> {
+                            other.right = PlayerRight.MANAGER;
+                            player.message("You have promoted " + other.getName() + ": " + other.right.getName());
+                            other.message("You have been promoted: " + other.right.getName());
+                        }, "Developer", () -> {
+                            other.right = PlayerRight.DEVELOPER;
+                            player.message("You have promoted " + other.getName() + ": " + other.right.getName());
+                            other.message("You have been promoted: " + other.right.getName());
+                        }).execute();
+                    });
+                } else {
+                    player.message("Invalid command use; ::setrank settings");
+                }
+            }
+        });
+
         commands.add(new Command("fight") {
             @Override
             public void execute(Player player, CommandParser parser) {

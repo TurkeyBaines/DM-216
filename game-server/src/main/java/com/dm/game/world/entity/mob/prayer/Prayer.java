@@ -245,6 +245,9 @@ public enum Prayer {
         if ((this == PIETY || this == RIGOUR || this == AUGURY) && player.skills.getMaxLevel(Skill.DEFENCE) < 70) {
             return false;
         }
+        if (this == PROTECT_ITEM && player.right.equals(PlayerRight.ULTIMATE_IRONMAN)) {
+            return false;
+        }
       /*  if ((this == PROTECT_FROM_MAGIC || this == PROTECT_FROM_MELEE || this == PROTECT_FROM_RANGE) && Area.inEventArena(player)) {
             return false;
         }*/

@@ -39,6 +39,7 @@ public class InformationWriter extends InterfaceWriter {
             "  -Deaths: <col=FFB83F> " + player.death,
             "  -KDR: <col=FFB83F>" + player.playerAssistant.kdr(),
             "  -Killstreak: <col=FFB83F>" + player.killstreak.streak,
+            "  -Donator Credits: <col=FFB83F>" + Utility.formatDigits(player.donation.getCredits()),
             "  -Vote Points: <col=FFB83F>" + Utility.formatDigits(player.votePoints),
             "  -Skilling Points: <col=FFB83F>" + Utility.formatDigits(player.skillingPoints),
             "  -Trivia Answered: <col=FFB83F>" + Utility.formatDigits(player.answeredTrivias),

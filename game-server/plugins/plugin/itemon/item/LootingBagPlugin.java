@@ -30,6 +30,10 @@ public class LootingBagPlugin extends PluginContext {
             return false;
         }
 
+        if (player.right != PlayerRight.ULTIMATE_IRONMAN) {
+            return false;
+        }
+
         if (player.lootingBag.isEmpty()) {
             player.dialogueFactory.sendStatement("Your looting bag is empty!").execute();
             return true;

@@ -12,6 +12,7 @@ import com.dm.content.event.impl.OnKillEvent;
 import com.dm.content.itemaction.impl.CrawsBow;
 import com.dm.content.itemaction.impl.ThammaronsSceptre;
 import com.dm.content.itemaction.impl.ViggorasChainmace;
+import com.dm.content.lms.LMSGame;
 import com.dm.content.pet.Pets;
 import com.dm.content.writer.InterfaceWriter;
 import com.dm.content.writer.impl.InformationWriter;
@@ -113,6 +114,12 @@ public final class PlayerDeath extends MobDeath<Player> {
             return;
         }*/
 
+        if(mob.isPlayer() && LMSGame.inGameArea(mob.getPlayer()) && killer != null && killer.isPlayer()) {
+            safe = true;
+            LMSGame.onKill(killer.getPlayer());
+            return;
+        }
+
         if (!PlayerRight.isAdministrator(mob)) {
             Pets.onDeath(mob);
             calculateDropItems(mob, killer, false);
@@ -153,6 +160,11 @@ public final class PlayerDeath extends MobDeath<Player> {
 
         mob.playerAssistant.restore();
 
+        if(mob.isPlayer() && LMSGame.isActivePlayer(mob.getPlayer())) {
+            LMSGame.onDeath(mob.getPlayer(), false);
+            return;
+        }
+
         if (mob.inActivity()) {
             Activity.forActivity(mob, it -> it.onDeath(mob));
             return;
@@ -177,6 +189,16 @@ public final class PlayerDeath extends MobDeath<Player> {
             if (killer != null && killer.isPlayer() && !mob.equals(killer)) {
                 mob.killstreak.end(killer.getPlayer());
             }
+            if (mob.right == PlayerRight.HARDCORE_IRONMAN) {
+                mob.right = PlayerRight.IRONMAN;
+                mob.updateFlags.add(UpdateFlag.APPEARANCE);
+                mob.send(new SendMessage("You have lost your hardcore iron man status since you died!"));
+                World.sendMessage("<icon=1> <col=FF0000>Dead Men: <col=" + mob.right.getColor() + ">" + mob.getName() + "</col>'s hardcore iron man account was lost!");
+            }
+        }
+
+        if (mob.presetManager.deathOpen) {
+            World.schedule(1, mob.presetManager::open);
         }
 
         if (!mob.lostItems.isEmpty()) {
@@ -187,6 +209,26 @@ public final class PlayerDeath extends MobDeath<Player> {
     /** Calculates and drops all of the items from {@code character} for {@code killer}. */
     private void calculateDropItems(Player character, Mob killer, boolean purchase) {
         Player theKiller = killer == null || killer.isNpc() ? character : killer.getPlayer();
+
+        if (character.right.equals(PlayerRight.ULTIMATE_IRONMAN)) {
+            List<Item> items = new LinkedList<>();
+            character.equipment.forEach(items::add);
+            character.inventory.forEach(items::add);
+            character.lootingBag.forEach(items::add);
+            character.equipment.clear();
+            character.inventory.clear();
+            character.lootingBag.clear();
+            items.forEach(item -> {
+                if (!item.isTradeable()) {
+                    if (!character.lostUntradeables.deposit(item)) {
+                        GroundItem.create(character, item);
+                    }
+                } else {
+                    GroundItem.create(theKiller, item, character.getPosition());
+                }
+            });
+            return;
+        }
 
         LinkedList<Item> toDrop = new LinkedList<>();
         List<Item> keep = new LinkedList<>();
@@ -254,6 +296,9 @@ public final class PlayerDeath extends MobDeath<Player> {
             });
 
             GroundItem drop = GroundItem.create(theKiller, new Item(526), character.getPosition());
+            if (!theKiller.equals(character) && PlayerRight.isIronman(theKiller)) {
+                drop.canIronMenPickThisItemUp = false;
+            }
             return;
         }
 
@@ -284,24 +329,39 @@ public final class PlayerDeath extends MobDeath<Player> {
                 case CrawsBow.CRAWS_CHARGED_ID -> {
                     item.setId(CrawsBow.CRAWS_UNCHARGED_ID);
                     GroundItem drop = GroundItem.create(theKiller, new Item(CrawsBow.ETHER_ID, 1000 + character.crawsBowCharges), character.getPosition());
+                    if (!theKiller.equals(character) && PlayerRight.isIronman(theKiller)) {
+                        drop.canIronMenPickThisItemUp = false;
+                    }
                     character.crawsBowCharges = 0;
                 }
                 case ViggorasChainmace.VIGGORAS_CHAINMACE_CHARGED_ID -> {
                     item.setId(ViggorasChainmace.VIGGORAS_CHAINMACE_UNCHARGED_ID);
                     GroundItem drop = GroundItem.create(theKiller, new Item(CrawsBow.ETHER_ID, 1000 + character.viggorasChainmaceCharges), character.getPosition());
+                    if (!theKiller.equals(character) && PlayerRight.isIronman(theKiller)) {
+                        drop.canIronMenPickThisItemUp = false;
+                    }
                     character.viggorasChainmaceCharges = 0;
                 }
                 case ThammaronsSceptre.THAMMARONS_SCEPTRE_CHARGED_ID -> {
                     item.setId(ViggorasChainmace.VIGGORAS_CHAINMACE_UNCHARGED_ID);
                     GroundItem drop = GroundItem.create(theKiller, new Item(CrawsBow.ETHER_ID, 1000 + character.thammoranSceptreCharges), character.getPosition());
+                    if (!theKiller.equals(character) && PlayerRight.isIronman(theKiller)) {
+                        drop.canIronMenPickThisItemUp = false;
+                    }
                     character.thammoranSceptreCharges = 0;
                 }
             }
 
             GroundItem drop = GroundItem.create(theKiller, item, character.getPosition());
+            if (!theKiller.equals(character) && PlayerRight.isIronman(theKiller)) {
+                drop.canIronMenPickThisItemUp = false;
+            }
         });
 
         GroundItem drop = GroundItem.create(theKiller, new Item(526), character.getPosition());
+        if (!theKiller.equals(character) && PlayerRight.isIronman(theKiller)) {
+            drop.canIronMenPickThisItemUp = false;
+        }
     }
 
 }

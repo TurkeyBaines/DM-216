@@ -107,6 +107,12 @@ public final class DefaultStore extends Store {
 
     @Override
     public void open(Player player) {
+        if (PlayerRight.isIronman(player)) {
+            if (Arrays.stream(StoreConstant.IRON_MAN_STORES).noneMatch(s -> s.equalsIgnoreCase(name))) {
+                player.send(new SendMessage("As an iron man you do not have access to this store!"));
+                return;
+            }
+        }
 
         player.attributes.set("SHOP", name);
 
